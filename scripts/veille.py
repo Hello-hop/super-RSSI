@@ -18,11 +18,13 @@ Tout ce qui se règle est dans le bloc CONFIGURATION ci-dessous.
 Test en local :  python3 scripts/veille.py
 """
 
+import difflib
 import json
 import os
 import re
 import sys
 import time
+import unicodedata
 import urllib.request
 import urllib.error
 from datetime import datetime, timezone
@@ -71,18 +73,47 @@ SOURCES = [
 MOTS_CLES = [
     (r"iso ?2700[15]|27005|ebios|smsi",                4),
     (r"grc|gouvernance|conformit[ée]",                 2),
-    (r"rssi|ciso",                                     2),
+    (r"rssi|ciso",                                     3),
     (r"analyse de risque|pssi|audit",                  3),
     (r"nis ?2|dora|rgpd|hds",                          1),
     (r"toulouse|occitanie",                            3),
     (r"t[ée]l[ée]travail|remote",                      1),
     (r"sant[ée]|h[ôo]pital|chu|laboratoire|collectivit[ée]|territorial", 2),
-    (r"senior|lead|expert",                            1),
+    (r"senior|lead|expert|confirm[ée]",                1),
 ]
 
+# Planchers manuels : certains intitulés doivent atteindre une note minimale
+# même si le comptage par mots-clés n'y suffit pas — un titre de 3 mots ne
+# peut pas cumuler assez de catégories pour franchir /3 tout seul.
+# Format : (motif sur le TITRE, Toulouse requis ?, note plancher).
+REGLES_PLANCHER = [
+    (r"adjoint.{0,25}rssi|rssi.{0,25}adjoint", True, 5),   # Adjoint RSSI confirmé, à Toulouse
+    (r"chef de projet cybers[ée]curit[ée]",   False, 4),   # quel que soit le lieu
+]
+
+
+def scorer(texte: str, titre: str = "", toulouse: bool = False) -> int:
+    """Note /5. `texte` porte le score de base ; `titre` peut déclencher un plancher."""
+    t = (texte or "").lower()
+    pts = sum(p for motif, p in MOTS_CLES if re.search(motif, t))
+    note = min(5, round(pts / 3))
+    tt = (titre or "").lower()
+    for motif, toulouse_requis, plancher in REGLES_PLANCHER:
+        if re.search(motif, tt) and (not toulouse_requis or toulouse):
+            note = max(note, plancher)
+    return note
+
+
+# Bruit à écarter — titre ET texte complet de l'annonce sont vérifiés (un
+# poste "OT" n'a pas toujours "OT" dans son titre). Les motifs courts comme
+# "ot" DOIVENT être encadrés par \b : sans ça, "photo" ou "pilote" seraient
+# exclus par erreur, puisque la recherche est une simple sous-chaîne sinon.
 EXCLUSIONS = [
-    "alternance", "stage", "stagiaire", "apprenti", "pentest", "soc analyst",
-    "développeur", "developpeur", "commercial", "business developer", "recruteur",
+    r"alternance", r"\bstage\b", r"stagiaire", r"apprenti",
+    r"\bpentest", r"soc analyst", r"d[ée]veloppeur", r"\bcommercial\b",
+    r"business developer", r"\brecruteur\b",
+    r"\bqualit[ée]\b", r"\bquality\b", r"\bconformance\b",
+    r"\bot\b",  # réseaux industriels / operational technology — hors périmètre voulu
 ]
 
 # Détection du lieu, appliquée au texte complet de l'annonce (pas seulement au titre).
@@ -117,6 +148,7 @@ RE_FREEWORK_CARTE = re.compile(
     r'href="(/fr/tech-it/job-mission/[^"]+)"[^>]*>\s*<span[^>]*>(.*?)</span>', re.S)
 RE_FREEWORK_LIEU = re.compile(r"<h1>.*?</h1><h2>([^<]+)</h2>", re.S)
 RE_FREEWORK_FICHE = re.compile(r'class="w-full text-sm line-clamp-2">([^<]+)</span>')
+RE_FREEWORK_ENTREPRISE = re.compile(r"<title>(.*?)\s*—\s*Offre d.?emploi", re.S)
 
 
 def lister_freework(url: str):
@@ -143,6 +175,9 @@ def enrichir_freework(lien: str):
     m_lieu = RE_FREEWORK_LIEU.search(html_src)
     lieu = nettoyer(m_lieu.group(1)) if m_lieu else ""
 
+    m_ent = RE_FREEWORK_ENTREPRISE.search(html_src)
+    entreprise = nettoyer(m_ent.group(1)) if m_ent else ""
+
     i1_marqueur = html_src.find("html-renderer prose-content")
     i1 = html_src.find(">", i1_marqueur) + 1 if i1_marqueur != -1 else -1
     i2 = html_src.find("Postulez à cette offre", i1) if i1 > 0 else -1
@@ -155,11 +190,13 @@ def enrichir_freework(lien: str):
     fiche = " · ".join(nettoyer(f) for f in faits)  # ex. "18 mois · 210-500 €/j · Télétravail partiel"
 
     apercu = corps[:180]
-    extrait = (fiche + " — " + apercu) if fiche else apercu
+    prefixe = (entreprise + " — ") if entreprise else ""
+    extrait = prefixe + ((fiche + " — " + apercu) if fiche else apercu)
 
-    contexte = " ".join([lieu, fiche, corps])
+    contexte = " ".join([lieu, entreprise, fiche, corps])
     return {
         "lieu": lieu,
+        "entreprise": entreprise,
         "extrait": extrait[:260],
         "contexte": contexte[:6000],
         "toulouse": bool(RE_TOULOUSE.search(lieu) or RE_TOULOUSE.search(contexte)),
@@ -245,6 +282,7 @@ def enrichir_hellowork(lien: str):
     contexte = " ".join([titre, lieu, organisation, tags, description])
     return {
         "titre": titre,
+        "entreprise": organisation,
         "extrait": extrait[:260],
         "contexte": contexte[:6000],
         "toulouse": bool(RE_TOULOUSE.search(lieu) or cp.startswith("31")),
@@ -275,16 +313,51 @@ def lire_rss(url: str):
 # ──────────────────────────── NOTATION ────────────────────────────
 
 
-def scorer(texte: str) -> int:
-    """Note /5. Le titre pèse via le contexte complet de l'annonce."""
+def exclu(texte: str) -> bool:
     t = (texte or "").lower()
-    pts = sum(p for motif, p in MOTS_CLES if re.search(motif, t))
-    return min(5, round(pts / 3))
+    return any(re.search(pat, t) for pat in EXCLUSIONS)
 
 
-def exclu(titre: str) -> bool:
-    t = (titre or "").lower()
-    return any(x in t for x in EXCLUSIONS)
+# ──────────────────────────── DOUBLONS ────────────────────────────
+# La même mission est souvent republiée sous des intitulés légèrement
+# différents sur deux plateformes (ex. "Consultant GRC H/F" chez Devoteam,
+# postée deux fois). On rapproche par similarité de titre + même entreprise
+# + même statut Toulouse, plutôt que sur une correspondance exacte.
+
+RE_BRUIT_TITRE = re.compile(
+    r"\b(h\s?/\s?f|f\s?/\s?h|hf|fh|cdi|cdd|freelance|junior|senior|confirm[ée])\b")
+
+
+def normaliser(s: str) -> str:
+    s = unicodedata.normalize("NFKD", (s or "").lower())
+    s = "".join(c for c in s if not unicodedata.combining(c))
+    s = RE_BRUIT_TITRE.sub(" ", s)
+    s = re.sub(r"[^a-z0-9 ]", " ", s)
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def est_doublon(candidat: dict, pool: list) -> bool:
+    t_cand = normaliser(candidat["titre"])
+    e_cand = normaliser(candidat.get("entreprise", ""))
+    for autre in pool:
+        if autre.get("lien") == candidat["lien"]:
+            continue
+        if bool(autre.get("toulouse")) != bool(candidat.get("toulouse")):
+            continue
+        t_autre = normaliser(autre.get("titre", ""))
+        if difflib.SequenceMatcher(None, t_cand, t_autre).ratio() < 0.82:
+            continue
+        e_autre = normaliser(autre.get("entreprise", ""))
+        if e_cand and e_autre:
+            # Titres très proches mais entreprises clairement différentes :
+            # deux clients distincts qui recrutent sur un intitulé générique
+            # ("Consultant GRC H/F") — ce n'est pas un doublon.
+            proche = (e_cand in e_autre or e_autre in e_cand or
+                      difflib.SequenceMatcher(None, e_cand, e_autre).ratio() >= 0.6)
+            if not proche:
+                continue
+        return True
+    return False
 
 
 # ────────────────────────────── MAIN ──────────────────────────────
@@ -302,6 +375,7 @@ def main() -> int:
     aujourdhui = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     nouvelles, incidents = [], []
     enrichissements_faits = 0
+    doublons_ecartes = 0
 
     for src in SOURCES:
         try:
@@ -322,6 +396,7 @@ def main() -> int:
             if not lien or lien in index:
                 continue
 
+            entreprise = ""
             if src["type"] == "hellowork":
                 # Hellowork ne donne aucun titre au niveau du listing : sans
                 # budget d'enrichissement, impossible de savoir de quoi il
@@ -339,8 +414,9 @@ def main() -> int:
                 index.add(lien)
                 if not detail or exclu(detail["titre"]):
                     continue
-                titre, extrait, contexte, toulouse = (
-                    detail["titre"], detail["extrait"], detail["contexte"], detail["toulouse"])
+                titre, extrait, contexte, toulouse, entreprise = (
+                    detail["titre"], detail["extrait"], detail["contexte"],
+                    detail["toulouse"], detail.get("entreprise", ""))
 
             else:
                 titre = o.get("titre", "")
@@ -362,15 +438,27 @@ def main() -> int:
                     extrait = detail["extrait"]
                     contexte = titre + " " + detail["contexte"]
                     toulouse = detail["toulouse"]
+                    entreprise = detail.get("entreprise", "")
                 else:
                     extrait = o.get("extrait", "")
                     contexte = titre + " " + extrait
                     toulouse = bool(RE_TOULOUSE.search(contexte))
 
-            nouvelles.append({
+            # Second filtre, sur le texte complet cette fois : un poste "OT"
+            # ou "qualité" pas repéré au titre l'est souvent dans le corps.
+            if exclu(contexte):
+                continue
+
+            candidat = {
                 "date": aujourdhui, "source": src["nom"], "titre": titre, "lien": lien,
-                "extrait": extrait, "toulouse": toulouse, "score": scorer(contexte),
-            })
+                "entreprise": entreprise, "extrait": extrait, "toulouse": toulouse,
+                "score": scorer(contexte, titre, toulouse),
+            }
+            if est_doublon(candidat, connues) or est_doublon(candidat, nouvelles):
+                doublons_ecartes += 1
+                continue
+
+            nouvelles.append(candidat)
             retenues += 1
         print(f"  {src['nom']} : {len(cartes)} lues, {retenues} nouvelles")
 
@@ -382,8 +470,8 @@ def main() -> int:
             "offres": toutes,
         }, f, ensure_ascii=False, indent=1)
 
-    print(f"→ {len(nouvelles)} nouvelle(s) ({enrichissements_faits} fiche(s) enrichie(s)), "
-          f"{len(toutes)} au total dans {SORTIE}")
+    print(f"→ {len(nouvelles)} nouvelle(s) ({enrichissements_faits} fiche(s) enrichie(s), "
+          f"{doublons_ecartes} doublon(s) écarté(s)), {len(toutes)} au total dans {SORTIE}")
     return 0  # une source morte ne doit pas casser le workflow
 
 
