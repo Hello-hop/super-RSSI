@@ -61,11 +61,18 @@ Tout se règle dans `scripts/veille.py`, bloc `CONFIGURATION` :
   n'importe quel flux. Pour un site sans flux : crée une alerte sur
   [google.com/alerts](https://www.google.com/alerts), choisis *Diffusion : flux RSS*,
   et colle l'URL obtenue. C'est la façon d'ajouter APEC, Hellowork, LinkedIn ou un site
-  de collectivité.
-- **`MOTS_CLES`** — les pondérations. La note vaut `somme des points / 3`, plafonnée à 5,
-  et porte sur toute la carte de l'annonce (titre, compétences, description), pas
-  seulement sur le titre.
+  de collectivité — et c'est **obligatoire pour Malt**, qui bloque tout scraping direct
+  (Cloudflare). Marche à suivre : sur google.com/alerts, requête
+  `site:malt.fr ("ISO 27001" OR "EBIOS" OR GRC OR gouvernance) Toulouse`, fréquence
+  *Au fur et à mesure*, diffusion *Flux RSS* → copie l'URL du flux obtenue et colle-la
+  dans le bloc `SOURCES` (l'emplacement est déjà prêt, en commentaire).
+- **`MOTS_CLES`** — les pondérations. La note vaut `somme des points / 3`, plafonnée à 5.
+  Pour Free-Work, chaque nouvelle offre est enrichie via sa fiche détail (lieu, TJM,
+  durée, télétravail, description complète) avant d'être notée — pas seulement le
+  titre. Pour un flux RSS, la note porte sur le titre et le résumé fournis par le flux.
 - **`EXCLUSIONS`** — le bruit à écarter d'office.
+- **`MAX_ENRICHISSEMENTS`** — plafond de fiches détail visitées par scan (40 par défaut).
+  À la hausse seulement si tu élargis beaucoup les sources Free-Work.
 
 Après modification : Actions → Run workflow pour voir l'effet tout de suite.
 
