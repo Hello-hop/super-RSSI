@@ -44,12 +44,12 @@ SOURCES = [
     {"nom": "FW Consultant cyber", "type": "freework",
      "url": "https://www.free-work.com/fr/tech-it/jobs/consultant-cyber-securite/toulouse"},
 
-    # Malt bloque tout scraping (Cloudflare, 403 systématique, même avec un
-    # navigateur simulé). Le contournement : une Google Alert sur Malt,
-    # livrée en flux RSS. Voir le README pour la marche à suivre — une fois
-    # l'URL du flux obtenue, colle-la ci-dessous et décommente la ligne.
-    # {"nom": "Alerte Malt GRC", "type": "rss",
-    #  "url": "https://www.google.com/alerts/feeds/TON_ID/TON_FLUX"},
+    # Malt : ni scraping (Cloudflare bloque tout, y compris un navigateur
+    # simulé) ni Google Alert (Google n'indexe que les profils freelances de
+    # Malt, jamais les missions elles-mêmes — réservées aux comptes connectés).
+    # Pas de contournement automatisable ici. Solution : l'alerte email native
+    # de Malt (Rechercher des missions > sauvegarder la recherche > 🔔),
+    # à filtrer dans Gmail vers le même libellé que les autres sources.
 ]
 
 # Mots-clés pondérés : l'ADN de la recherche. Le total est divisé par 3,
