@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0d1620">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icone.svg">
+<title>Veille missions</title>
+<style>
+  :root{
+    --encre:#0d1620; --panneau:#16212e; --trait:#24323f;
+    --texte:#e7edf2; --sourdine:#7d8fa1;
+    --cotation:#e0a63c; --traite:#4fa88b; --echu:#d1665b; --rayon:10px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--encre);color:var(--texte);
+    font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+  body{padding:0 14px calc(24px + env(safe-area-inset-bottom))}
+  a{color:inherit}
+
+  header{position:sticky;top:0;z-index:5;background:var(--encre);padding:18px 0 10px;
+    border-bottom:1px solid var(--trait)}
+  .eyebrow{font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--sourdine)}
+  .titre-ligne{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+  h1{font-size:23px;margin:4px 0 10px;letter-spacing:-.02em;font-weight:650}
+  #menu{background:none;border:0;color:var(--sourdine);font-size:20px;cursor:pointer;padding:4px 8px}
+  #resume{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--sourdine);margin-bottom:12px}
+  #resume b{color:var(--cotation);font-weight:600}
+
+  nav{display:flex;gap:6px}
+  nav button{flex:1;background:transparent;border:1px solid var(--trait);color:var(--sourdine);
+    padding:9px 4px;border-radius:var(--rayon);font-size:12.5px;font-weight:600;cursor:pointer}
+  nav button[aria-selected="true"]{background:var(--panneau);color:var(--texte);border-color:var(--sourdine)}
+  :focus-visible{outline:2px solid var(--cotation);outline-offset:2px}
+
+  #liste{padding-top:14px;display:flex;flex-direction:column;gap:10px}
+  .card{background:var(--panneau);border:1px solid var(--trait);border-left:3px solid var(--trait);
+    border-radius:var(--rayon);padding:13px 14px}
+  .card.echu{border-left-color:var(--echu)}
+  .card.fort{border-left-color:var(--cotation)}
+
+  /* Signature : la cotation en 5 segments, comme une ligne de registre de risques */
+  .crit{display:flex;gap:3px;align-items:center;margin-bottom:9px}
+  .crit i{width:16px;height:5px;border-radius:1px;background:#22303c;display:block}
+  .crit i.on{background:var(--cotation)}
+  .crit span{font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.12em;
+    color:var(--sourdine);margin-left:7px;text-transform:uppercase}
+
+  .card h2{font-size:15.5px;line-height:1.35;margin:0 0 6px;font-weight:600}
+  .card h2 a{text-decoration:none}
+  .card h2 a:active{color:var(--cotation)}
+  .extrait{font-size:12.5px;line-height:1.45;color:var(--sourdine);margin:0 0 9px;
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .meta{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:var(--sourdine);margin-bottom:11px}
+  .meta .drapeau{color:var(--echu)} .meta .statut{color:var(--traite)}
+
+  .actions{display:flex;gap:6px}
+  .act{flex:1;background:#1d2937;border:1px solid var(--trait);color:var(--texte);
+    padding:9px 2px;border-radius:8px;font-size:12.5px;font-weight:600;cursor:pointer}
+  .act:active{transform:translateY(1px)}
+  .act.oui{border-color:var(--traite);color:var(--traite)}
+  .act.non{color:var(--sourdine)}
+
+  .vide{border:1px dashed var(--trait);border-radius:var(--rayon);padding:26px 18px;text-align:center;
+    color:var(--sourdine);font-size:13.5px;line-height:1.5}
+  dialog{background:var(--panneau);color:var(--texte);border:1px solid var(--trait);
+    border-radius:var(--rayon);padding:18px;max-width:320px}
+  dialog::backdrop{background:rgba(0,0,0,.6)}
+  dialog button{display:block;width:100%;margin-top:8px;background:#1d2937;border:1px solid var(--trait);
+    color:var(--texte);padding:11px;border-radius:8px;font-size:13.5px;cursor:pointer}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">registre des opportunités</div>
+  <div class="titre-ligne">
+    <h1>Veille missions</h1>
+    <button id="menu" aria-label="Sauvegarde et options">⋯</button>
+  </div>
+  <div id="resume">chargement…</div>
+  <nav id="onglets">
+    <button data-vue="qualifier" aria-selected="true">À qualifier</button>
+    <button data-vue="cours" aria-selected="false">En cours</button>
+    <button data-vue="relances" aria-selected="false">Relances</button>
+  </nav>
+</header>
+
+<main id="liste"></main>
+
+<dialog id="boite">
+  <div class="eyebrow">sauvegarde</div>
+  <p style="font-size:13px;line-height:1.5;color:#7d8fa1">
+    Tes statuts et relances restent sur cet appareil. Exporte-les avant de changer de téléphone
+    ou de vider le cache du navigateur.
+  </p>
+  <button id="exporter">Exporter le suivi</button>
+  <button id="importer">Importer un suivi</button>
+  <button id="fermer">Fermer</button>
+  <input type="file" id="fichier" accept="application/json" hidden>
+</dialog>
+
+<script>
+var CLE = 'veille.suivi.v1';
+var OFFRES = [], SUIVI = {}, VUE = 'qualifier';
+
+function lireSuivi(){
+  try { return JSON.parse(localStorage.getItem(CLE)) || {}; } catch(e){ return {}; }
+}
+function ecrireSuivi(){
+  try { localStorage.setItem(CLE, JSON.stringify(SUIVI)); } catch(e){}
+}
+function etat(lien){ return SUIVI[lien] || {}; }
+
+function charger(){
+  SUIVI = lireSuivi();
+  fetch('data/offres.json', {cache:'no-cache'})
+    .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function(d){ OFFRES = d.offres || []; rendre(); })
+    .catch(function(){
+      document.getElementById('liste').innerHTML =
+        '<div class="vide">Les offres n\'ont pas pu être chargées.<br>' +
+        'Reconnecte-toi au réseau, puis rouvre l\'application.</div>';
+    });
+}
+
+function estEchue(o){
+  var e = etat(o.lien);
+  if (!e.relance) return false;
+  if (['Perdu','Écarté','Gagné'].indexOf(e.statut) > -1) return false;
+  var fin = new Date(); fin.setHours(23,59,59,999);
+  return new Date(e.relance) <= fin;
+}
+
+function filtrer(){
+  return OFFRES.filter(function(o){
+    var s = etat(o.lien).statut;
+    if (VUE === 'qualifier') return !s;
+    if (VUE === 'cours') return ['Postulé','Entretien','Négociation'].indexOf(s) > -1;
+    return estEchue(o);
+  }).sort(function(a,b){ return b.score - a.score; });
+}
+
+function rendre(){
+  var aQualifier = OFFRES.filter(function(o){ return !etat(o.lien).statut; }).length;
+  var dues = OFFRES.filter(estEchue).length;
+  document.getElementById('resume').innerHTML =
+    '<b>' + aQualifier + '</b> à qualifier &nbsp;·&nbsp; <b>' + dues + '</b> relance' +
+    (dues > 1 ? 's' : '') + ' due' + (dues > 1 ? 's' : '');
+
+  var lot = filtrer(), html = '';
+  if (!lot.length){
+    html = '<div class="vide">' + (
+      VUE === 'relances' ? 'Aucune relance en retard. Le pipeline est à jour.' :
+      VUE === 'cours' ? 'Rien en cours. Qualifie une offre pour ouvrir un dossier.' :
+      'Tout est trié. Le prochain scan tourne demain matin.') + '</div>';
+  } else {
+    lot.forEach(function(o){
+      var e = etat(o.lien), echue = estEchue(o), segs = '';
+      for (var i = 1; i <= 5; i++) segs += '<i class="' + (i <= o.score ? 'on' : '') + '"></i>';
+      html += '<article class="card ' + (echue ? 'echu' : (o.score >= 4 ? 'fort' : '')) + '">' +
+        '<div class="crit" role="img" aria-label="Cotation ' + o.score + ' sur 5">' + segs +
+          '<span>cotation ' + o.score + '/5</span></div>' +
+        '<h2><a href="' + esc(o.lien) + '" target="_blank" rel="noopener">' + esc(o.titre) + '</a></h2>' +
+        (o.extrait ? '<p class="extrait">' + esc(o.extrait) + '</p>' : '') +
+        '<div class="meta">' + esc(o.source) + ' · ' + esc(o.date) +
+          (e.statut ? ' · <span class="statut">' + esc(e.statut) + '</span>' : '') +
+          (echue ? ' · <span class="drapeau">relance due</span>' : '') + '</div>' +
+        '<div class="actions">' +
+          bouton(o.lien, 'statut:Postulé', 'Postulé', 'oui') +
+          bouton(o.lien, 'relance:7', 'Relancer dans 7 j', '') +
+          bouton(o.lien, 'statut:Écarté', 'Écarter', 'non') +
+        '</div></article>';
+    });
+  }
+  document.getElementById('liste').innerHTML = html;
+}
+
+function bouton(lien, action, texte, classe){
+  return '<button class="act ' + classe + '" data-lien="' + esc(lien) +
+         '" data-action="' + action + '">' + texte + '</button>';
+}
+function esc(s){
+  return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+  });
+}
+function dans(jours){
+  var d = new Date(); d.setDate(d.getDate() + jours);
+  return d.toISOString().slice(0,10);
+}
+
+document.getElementById('liste').addEventListener('click', function(ev){
+  var b = ev.target.closest('.act'); if (!b) return;
+  var lien = b.getAttribute('data-lien');
+  var p = b.getAttribute('data-action').split(':');
+  var e = SUIVI[lien] || (SUIVI[lien] = {});
+  if (p[0] === 'statut'){
+    e.statut = p[1];
+    if (p[1] === 'Postulé') e.relance = dans(7);   // la relance se pose toute seule
+    if (p[1] === 'Écarté') delete e.relance;
+  } else {
+    e.relance = dans(parseInt(p[1], 10));
+  }
+  ecrireSuivi(); rendre();
+});
+
+document.getElementById('onglets').addEventListener('click', function(ev){
+  var b = ev.target.closest('button'); if (!b) return;
+  VUE = b.getAttribute('data-vue');
+  [].forEach.call(this.querySelectorAll('button'), function(x){
+    x.setAttribute('aria-selected', x === b ? 'true' : 'false');
+  });
+  rendre();
+});
+
+// ── Sauvegarde du suivi ───────────────────────────────────────────
+var boite = document.getElementById('boite');
+document.getElementById('menu').onclick = function(){ boite.showModal(); };
+document.getElementById('fermer').onclick = function(){ boite.close(); };
+document.getElementById('exporter').onclick = function(){
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(SUIVI)], {type:'application/json'}));
+  a.download = 'suivi-missions-' + new Date().toISOString().slice(0,10) + '.json';
+  a.click(); URL.revokeObjectURL(a.href);
+};
+document.getElementById('importer').onclick = function(){ document.getElementById('fichier').click(); };
+document.getElementById('fichier').onchange = function(ev){
+  var f = ev.target.files[0]; if (!f) return;
+  var lecteur = new FileReader();
+  lecteur.onload = function(){
+    try {
+      var recu = JSON.parse(lecteur.result);
+      Object.keys(recu).forEach(function(k){ SUIVI[k] = recu[k]; });
+      ecrireSuivi(); rendre(); boite.close();
+    } catch(e){ alert('Fichier illisible : ' + e.message); }
+  };
+  lecteur.readAsText(f);
+};
+
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
+charger();
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "Veille missions",
+  "short_name": "Veille",
+  "description": "Registre des opportunités de mission",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d1620",
+  "theme_color": "#0d1620",
+  "icons": [
+    { "src": "icone.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
