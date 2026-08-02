@@ -1,7 +1,151 @@
 {
- "scan": "2026-08-02T20:51:53+00:00",
+ "scan": "2026-08-02T20:53:30+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-08-02",
+   "source": "HW Conformité Occitanie",
+   "titre": "Contrôleur Qualité H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81872929.html",
+   "extrait": "Groupe Trèfle — Blagnac, Occitanie · ~25k€/an estimé — Les missions du poste Depuis plus de 20 ans, notre expertise est reconnue par une clientèle Grands Comptes, qui s'appuie sur nos compétences techniques et notre réactivité et que n",
+   "toulouse": true,
+   "score": 3
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW Conformité Occitanie",
+   "titre": "Qualiticien Produit H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/80615506.html",
+   "extrait": "Contact RH - Valence recrutement — Sommières, Occitanie — Les missions du poste CONTACT RH Occitanie est une équipe de recruteurs expérimentés, engagés pour l'emploi durable. Nous accompagnons les entreprises locales dans leurs recrutemen",
+   "toulouse": false,
+   "score": 3
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW Conformité Occitanie",
+   "titre": "Inspecteur Qualité en Formation H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/80531234.html",
+   "extrait": "ARTS Solutions SARL — Blagnac, Occitanie — Les missions du poste Ce que nous vous offrons : Un environnement de travail dynamique et stimulant avec des projets passionnants Prime de repas, mutuelle d'entreprise, CE partagé,",
+   "toulouse": true,
+   "score": 3
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI national",
+   "titre": "Chargé de Missions Cybersécurité H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/80863916.html",
+   "extrait": "EMEIS — Puteaux, Île-de-France · ~63k€/an estimé — Les missions du poste L'accompagnement et le soin personnalisés pour chaque personne fragilisée. Nous sommes 78 000 médecins, infirmier.ère.s, aides-soignant.e.s, auxiliaires de vi",
+   "toulouse": false,
+   "score": 5
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI national",
+   "titre": "Consultant Junior - Csirt H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/80848886.html",
+   "extrait": "Onepoint — Paris, Île-de-France · ~63k€/an estimé — Les missions du poste Contribuez aux grandes transformations des entreprises et des acteurs publics en alliant innovation technologique et expertise métier, au service de nos clien",
+   "toulouse": false,
+   "score": 4
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI national",
+   "titre": "Responsable Cyber Grc H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/80890324.html",
+   "extrait": "UMG Groupe VYV — Paris, Île-de-France · ~63k€/an estimé — Les missions du poste L'union mutualiste de groupe (UMG) est l'entité faîtière du Groupe VYV. Son rôle ? piloter la stratégie globale du groupe et sa trajectoire prudentielle, anim",
+   "toulouse": false,
+   "score": 5
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI national",
+   "titre": "Adjoint RSSI Industriel H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81953833.html",
+   "extrait": "Michael Page — Cherbourg-en-Cotentin, Normandie — Les missions du poste Cet acteur industriel majeur contribue à la souveraineté énergétique et au développement de technologies essentielles pour l'avenir. Engagé dans une transform",
+   "toulouse": false,
+   "score": 4
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI national",
+   "titre": "Consultant RSSI H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/67327877.html",
+   "extrait": "Almond — Sèvres, Île-de-France — Les missions du poste Almond est un acteur Cyber de référence en Europe. Rejoignez nos équipes spécialisées en cybersécurité, infrastructure et cloud qui sécurisent le monde numéri",
+   "toulouse": false,
+   "score": 3
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI national",
+   "titre": "RSSI H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81962010.html",
+   "extrait": "Noveocare — Paris, Île-de-France · ~63k€/an estimé — Les missions du poste À propos de NoveoCare Acteur reconnu de la gestion déléguée depuis plus de 35 ans, nous sommes spécialisés dans les domaines de la santé, de la prévoyance-déc",
+   "toulouse": false,
+   "score": 4
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI national",
+   "titre": "Responsable Cybersécurité du Programme de Mise en Conformité H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81926306.html",
+   "extrait": "Mobilize Financial Services — Paris, Île-de-France · ~63k€/an estimé — Les missions du poste En route vers Mobilize ! A l'écoute de tous nos clients, nous créons des services financiers innovants pour construire une mobilité durable pour tous. Rejoind",
+   "toulouse": false,
+   "score": 2
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI national",
+   "titre": "Chef de Projet Cybersécurité - Réseaux - Infrastructure H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/77420784.html",
+   "extrait": "Almond — Sèvres, Île-de-France · ~63k€/an estimé — Les missions du poste Almond est un acteur Cyber de référence en Europe. Rejoignez nos équipes spécialisées en cybersécurité, infrastructure et cloud qui sécurisent le monde numéri",
+   "toulouse": false,
+   "score": 3
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI national",
+   "titre": "Consultant Grc H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/76220552.html",
+   "extrait": "Squad — Nantes, Pays de la Loire — Les missions du poste Depuis sa création en 2011, le Groupe s'est imposé comme un leader de la cybersécurité. Grâce à son expertise technique pointue, Squad sécurise les environnem",
+   "toulouse": false,
+   "score": 2
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI national",
+   "titre": "Chef de Projet Cybersecurité et Automates H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/79659408.html",
+   "extrait": "Reboot Conseil — Strasbourg, Grand Est · ~55k€/an estimé — Détail du poste Dans le cadre de l'implémentation du Cyber Resilience Act : Main mission: - Implement cyber-security action plan across different products. - Manage automation proj",
+   "toulouse": false,
+   "score": 0
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI national",
+   "titre": "Chef de Section Dds H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/77435422.html",
+   "extrait": "Commissariat au Numérique de Défense (CND) — Lille, Hauts-de-France — Les missions du poste Placé sous l'autorité du ministre des Armées, le Commissariat au Numérique de Défense (CND) a pour mission d'apporter un appui numérique performant et résilie",
+   "toulouse": false,
+   "score": 0
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI national",
+   "titre": "Lead Voc Appsec H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/80819492.html",
+   "extrait": "Devoteam — Levallois-Perret, Île-de-France · ~63k€/an estimé — Les missions du poste Devoteam est une entreprise de conseil en technologies, cloud, cyber, IA et développement durable. Avec plus de 11 000 collaborateurs dans plus de 25 pays, no",
+   "toulouse": false,
+   "score": 2
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI national",
+   "titre": "Information Security Officer F - M - D - Corporate Operations People H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/77463182.html",
+   "extrait": "Decathlon Technology — Villeneuve-d'Ascq, Hauts-de-France · ~52k€/an estimé — Détail du poste Notre domaine Corporate Operations People recherche un·e Information Security Officer basé·e à Lille. Le périmètre Corporate Operations People, au sein duquel s'ins",
+   "toulouse": false,
+   "score": 2
+  },
   {
    "date": "2026-08-02",
    "source": "FW ISO 27001",
