@@ -57,15 +57,19 @@ Ouvre l'URL → menu du navigateur → **Installer l'application** (Android) ou
 
 Tout se règle dans `scripts/veille.py`, bloc `CONFIGURATION` :
 
-- **`SOURCES`** — ajoute une entrée `{"nom": ..., "type": "rss", "url": ...}` pour
-  n'importe quel flux. Pour un site sans flux : crée une alerte sur
-  [google.com/alerts](https://www.google.com/alerts), choisis *Diffusion : flux RSS*,
-  et colle l'URL obtenue. C'est la façon d'ajouter APEC, Hellowork, LinkedIn ou un site
-  de collectivité. **Ça ne marche pas pour Malt** : Google n'indexe que les profils de
-  freelances, jamais les missions (réservées aux comptes connectés) — une alerte
-  ramènerait des concurrents, pas des offres. Pour Malt, utilise son alerte email
-  native (Rechercher des missions → sauvegarder la recherche → 🔔), et filtre ces
-  emails dans Gmail vers le même endroit que le reste — ça reste manuel, hors de l'app.
+- **`SOURCES`** — trois types possibles :
+  - `"freework"` et `"hellowork"` sont déjà branchés avec plusieurs URLs chacun.
+    Pour Hellowork, ce sont des pages métier (`metier_<slug>-region_<région>.html`
+    ou `metier_<slug>.html` pour le national) — cherche le bon slug en visitant
+    le site et en copiant l'URL d'une recherche par métier.
+  - `"rss"` accepte n'importe quel flux. Pour un site sans flux : crée une alerte sur
+    [google.com/alerts](https://www.google.com/alerts), choisis *Diffusion : flux RSS*,
+    et colle l'URL obtenue. C'est la façon d'ajouter APEC, LinkedIn ou un site de
+    collectivité. **Ça ne marche pas pour Malt** : Google n'indexe que les profils de
+    freelances, jamais les missions (réservées aux comptes connectés) — une alerte
+    ramènerait des concurrents, pas des offres. Pour Malt, utilise son alerte email
+    native (Rechercher des missions → sauvegarder la recherche → 🔔), et filtre ces
+    emails dans Gmail vers le même endroit que le reste — ça reste manuel, hors de l'app.
 - **`MOTS_CLES`** — les pondérations. La note vaut `somme des points / 3`, plafonnée à 5.
   Pour Free-Work, chaque nouvelle offre est enrichie via sa fiche détail (lieu, TJM,
   durée, télétravail, description complète) avant d'être notée — pas seulement le

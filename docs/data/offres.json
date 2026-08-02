@@ -1,5 +1,5 @@
 {
- "scan": "2026-08-02T20:25:26+00:00",
+ "scan": "2026-08-02T20:51:53+00:00",
  "incidents": [],
  "offres": [
   {
@@ -266,15 +266,6 @@
   {
    "date": "2026-08-02",
    "source": "FW Cyber Toulouse",
-   "titre": "Expert IA Générative & LLM Cybersécurité",
-   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant-cyber-securite/expert-ia-generative-llm-cybersecurite",
-   "extrait": "Dès que possible · 6 mois renouvelable · 40k-54k €⁄an, 400-520 €⁄j · 5 à 10 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — Au sein du SOC et en étroite collaboration avec les équipes R&D Cyber, vous contribuez à la conception, l'entraînement et",
-   "toulouse": true,
-   "score": 2
-  },
-  {
-   "date": "2026-08-02",
-   "source": "FW Cyber Toulouse",
    "titre": "Ingénieur systèmes cybersécurité F/H",
    "lien": "https://www.free-work.com/fr/tech-it/job-mission/ingenieur-en-cyber-securite/ingenieur-systemes-cybersecurite-f-h",
    "extrait": "Dès que possible · 1 mois · 38k-45k €⁄an, 225-450 €⁄j · 2 à 5 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — - Analyser les besoins et exigences techniques des projets. - Participer à la conception et à l'architecture des systèmes déployés, - A",
@@ -284,20 +275,20 @@
   {
    "date": "2026-08-02",
    "source": "FW Sécu Toulouse",
-   "titre": "Cyber Security",
-   "lien": "https://www.free-work.com/fr/tech-it/job-mission/autre/cyber-security-ddos",
-   "extrait": "Dès que possible · 3 ans · 300-500 €⁄j · 2 à 5 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — Bonjour, Pour le compte d'un de mes clients, je recherche un profil remplissant pouvant executer ces missions : Définir les politiques et stratégies d",
-   "toulouse": true,
-   "score": 1
-  },
-  {
-   "date": "2026-08-02",
-   "source": "FW Sécu Toulouse",
    "titre": "Expert sécurité O365/MS - Toulouse (H/F)",
    "lien": "https://www.free-work.com/fr/tech-it/job-mission/administrateur-securite/expert-securite-o365-ms-toulouse-h-f",
    "extrait": "Dès que possible · 3 ans · 45k-50k €⁄an, 520 €⁄j · 5 à 10 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — Contexte : L’objectif de la mission est d’accompagner les projets de sécurité des solutions collaboratives , en particulier autour de l’éco",
    "toulouse": true,
    "score": 3
+  },
+  {
+   "date": "2026-08-02",
+   "source": "FW Sécu Toulouse",
+   "titre": "Cyber Security",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/autre/cyber-security-ddos",
+   "extrait": "Dès que possible · 3 ans · 300-500 €⁄j · 2 à 5 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — Bonjour, Pour le compte d'un de mes clients, je recherche un profil remplissant pouvant executer ces missions : Définir les politiques et stratégies d",
+   "toulouse": true,
+   "score": 1
   },
   {
    "date": "2026-08-02",
@@ -367,36 +358,315 @@
    "source": "FW Sécu Toulouse",
    "titre": "Expert IA Générative – LLM Engineer spécialisé Cybersécurité (H/F)",
    "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant-cyber-securite/expert-ia-generative-llm-engineer-specialise-cybersecurite-h-f",
-   "extrait": "",
-   "toulouse": false,
-   "score": 0
+   "extrait": "Dès que possible · 6 mois renouvelable · 250-550 €⁄j · 5 à 10 ans d’expérience · Toulouse, Occitanie — Dans le cadre du développement de notre Security Operations Center (SOC), nous intégrons des technologies d'Intelligence Artificielle Générative afin d'autom",
+   "toulouse": true,
+   "score": 2
   },
   {
    "date": "2026-08-02",
    "source": "FW Sécu Toulouse",
    "titre": "Référent Technique Back-End Java — Cartographie / API Management / Forge",
    "lien": "https://www.free-work.com/fr/tech-it/job-mission/developpeur-java-kotlin-groovy-scala/referent-technique-back-end-java-cartographie-api-management-forge",
-   "extrait": "",
-   "toulouse": false,
-   "score": 0
+   "extrait": "Dès que possible · 6 mois renouvelable · 5 à 10 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — MISSIONS PRINCIPALES Maîtrise d'Œuvre Technique Définir et maintenir le cadre technique de développement : normes, standards, architecture applicativ",
+   "toulouse": true,
+   "score": 3
   },
   {
    "date": "2026-08-02",
    "source": "FW Sécu Toulouse",
    "titre": "Expert Sécurité Microsoft 365 / Data Protection - Toulouse",
    "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant-microsoft-sharepoint-365/expert-securite-microsoft-365-data-protection-toulouse",
-   "extrait": "",
+   "extrait": "Dès que possible · 6 mois · 310-450 €⁄j · Télétravail partiel · Toulouse, Occitanie — Contexte Dans le cadre du renforcement de son dispositif de protection des données, un grand groupe du secteur bancaire recherche un Expert Sécurité Microsoft 365 expérimenté",
    "toulouse": true,
-   "score": 1
+   "score": 2
   },
   {
    "date": "2026-08-02",
    "source": "FW Sécu Toulouse",
    "titre": "Ingénieur python / Devops / réseau (H/F)",
    "lien": "https://www.free-work.com/fr/tech-it/job-mission/ingenieur-devops-cloud/ingenieur-python-devops-h-f-1",
-   "extrait": "",
+   "extrait": "Dès que possible · 3 ans · 40k-42k €⁄an, 400 €⁄j · 2 à 5 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — Contexte : L’équipe en charge des infrastructures de sécurité utilisateurs gère un périmètre étendu incluant : Firewalls campus et solutions",
+   "toulouse": true,
+   "score": 2
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI Occitanie",
+   "titre": "Cyber Security Manager Produits Solutions Digitales H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81953394.html",
+   "extrait": "Thales — Toulouse, Occitanie · ~49k€/an estimé — Les missions du poste Lieu : Toulouse, France Construisons ensemble un avenir de confiance Thales est un leader mondial des hautes technologies spécialisé dans trois secteurs d'act",
+   "toulouse": true,
+   "score": 4
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI Occitanie",
+   "titre": "Chef de Projet Cyber - Sécurité Projet H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81870465.html",
+   "extrait": "Klanik — Toulouse, Occitanie — Les missions du poste Depuis sa création, KLANIK s'est donnée pour mission de conjuguer expertise technologique et authenticité. Ce pari audacieux, né à Marseille en 2011, en Franc",
+   "toulouse": true,
+   "score": 4
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI Occitanie",
+   "titre": "Responsable de Mission Sécurité du Système d'Information RSSI - Region Occitanie H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81901904.html",
+   "extrait": "Conseils régionaux — Toulouse, Occitanie — Détail du poste La Direction de l'Information et du Numérique (DIN) incarne l'innovation et la transformation numérique au service de la collectivité. Son action s'articule autour ",
+   "toulouse": true,
+   "score": 4
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI Occitanie",
+   "titre": "Security Business Partner - Cybersécurité - Toulouse H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/79551653.html",
+   "extrait": "Sopra Steria — Colomiers, Occitanie · ~49k€/an estimé — Les missions du poste À propos de Sopra Steria Sopra Steria, acteur majeur de la Tech en Europe, avec 51 000 collaborateurs dans près de 30 pays, est reconnu pour ses activités de ",
+   "toulouse": true,
+   "score": 2
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI Occitanie",
+   "titre": "Manager de Transition Sécurité Applicative H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81863816.html",
+   "extrait": "Anderson RH — Toulouse, Occitanie — Détail du poste Le besoin Contexte Dans le cadre d'une mission de management de transition, un client recherche un Team Leader / Manager en Sécurité Applicative afin d'assurer le r",
+   "toulouse": true,
+   "score": 3
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI Occitanie",
+   "titre": "Expert Gestion des Vulnérabilités Cyber H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81659734.html",
+   "extrait": "LH & Tech — Toulouse, Occitanie — Les missions du poste LH&TECH est une société de conseil en ingénierie et recrutement, spécialisée dans les systèmes intelligents, connectés et sécurisés. LH&TECH Recruitment est u",
+   "toulouse": true,
+   "score": 3
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI Occitanie",
+   "titre": "Responsable Cybersécurité - Filiale IT en Grande Distribution H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81639865.html",
+   "extrait": "Silkhom — Toulouse, Occitanie — Les missions du poste Notre client est la filiale IT d'un acteur majeur de la grande distribution. Elle conçoit, déploie et maintient les solutions informatiques utilisées par plus",
+   "toulouse": true,
+   "score": 1
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI Occitanie",
+   "titre": "Adjoint RSSI Confirmé H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81688414.html",
+   "extrait": "Rheso.tech — Toulouse, Occitanie — Détail du poste Le besoin Adjoint RSSI H/F Type de contrat : CDI Localisation : Toulouse Ref : 1965 Mais aussi... Salaire :60-70K€ (Annuel)",
+   "toulouse": true,
+   "score": 2
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI Occitanie",
+   "titre": "Responsable Cybersécurité OT - 2242 H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81688222.html",
+   "extrait": "Rheso.tech — Toulouse, Occitanie · ~49k€/an estimé — Détail du poste Le besoin Responsable Cybersécurité OT H/F Type de contrat CDI Localisation Toulouse Référence 2242 Contact Mais aussi... Salaire :85-100K€ (Annuel)",
+   "toulouse": true,
+   "score": 1
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI Occitanie",
+   "titre": "Chef de Projet Gouvernance Cybersécurité - 1847 H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81690296.html",
+   "extrait": "Rheso.tech — Toulouse, Occitanie — Détail du poste Le besoin Chef de projet cyber Type de contrat Freelance portage Localisation Toulouse (31) Référence 1847 Contact Mais aussi... Taux journalier :250-350€ (Journali",
+   "toulouse": true,
+   "score": 2
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI Occitanie",
+   "titre": "Chef de Projet Gouvernance Cybersécurité H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81688768.html",
+   "extrait": "Rheso.tech — Toulouse, Occitanie — Détail du poste Le besoin Chef de projet cyber Type de contrat : Freelance portage Localisation : Toulouse (31) Référence : 1847 Mais aussi... Taux journalier :250-350€ (Journalier",
+   "toulouse": true,
+   "score": 2
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI Occitanie",
+   "titre": "Consultant Grc H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81534743.html",
+   "extrait": "Devoteam France — Toulouse, Occitanie · ~49k€/an estimé — Les missions du poste Devoteam Toulouse, avec ses 200 collaborateurs, est un acteur incontournable de la transformation digitale sur le bassin toulousain. Notre équipe de consultan",
+   "toulouse": true,
+   "score": 5
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI Occitanie",
+   "titre": "Assistant RSSI H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81417762.html",
+   "extrait": "Scalian — Languedoc-Roussillon — Les missions du poste Dans le TOP10 des Sociétés de Conseil en Ingénierie en France, le Groupe SCALIAN intervient sur des activités de services en management de projets industriels",
    "toulouse": false,
-   "score": 0
+   "score": 4
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI Occitanie",
+   "titre": "Cyber Security Authority H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/80363198.html",
+   "extrait": "Thales — Toulouse, Occitanie · ~49k€/an estimé — Les missions du poste Lieu : Toulouse, France Construisons ensemble un avenir de confiance Thales est un leader mondial des hautes technologies spécialisé dans trois secteurs d'act",
+   "toulouse": true,
+   "score": 4
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI Occitanie",
+   "titre": "Consultant Grc H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/76769381.html",
+   "extrait": "Devoteam — Toulouse, Occitanie · ~49k€/an estimé — Les missions du poste Devoteam Toulouse, avec ses 200 collaborateurs, est un acteur incontournable de la transformation digitale sur le bassin toulousain. Notre équipe de consultan",
+   "toulouse": true,
+   "score": 5
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI Occitanie",
+   "titre": "Cyber Security Manager Galileo H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/77777003.html",
+   "extrait": "Thales — Toulouse, Occitanie · ~49k€/an estimé — Les missions du poste Lieu : Toulouse, France Construisons ensemble un avenir de confiance Thales est un leader mondial des hautes technologies spécialisé dans trois secteurs d'act",
+   "toulouse": true,
+   "score": 1
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW Conformité Occitanie",
+   "titre": "Quality Conformance Manager H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81917852.html",
+   "extrait": "Consulting Technical Support — Toulouse, Occitanie — Les missions du poste CTS Consulting & Technical Support est une société de conseils en ingénierie et bureau d'études. L'attention réelle que nous portons a` nos consultants et le ",
+   "toulouse": true,
+   "score": 2
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW Conformité Occitanie",
+   "titre": "Responsable de la Conformité Qualité des Opérations Stc H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81895355.html",
+   "extrait": "Groupe Piment — Blagnac, Occitanie · ~48k€/an estimé — Les missions du poste Airbus recrute avec le Groupe Piment ! Partenaire de confiance du leader mondial de l'aéronautique, nous accompagnons ses sites en France dans la recherche de",
+   "toulouse": true,
+   "score": 3
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW Conformité Occitanie",
+   "titre": "Gestionnaire de la Conformité Qualité H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81730849.html",
+   "extrait": "Groupe Piment — Colomiers, Occitanie · ~48k€/an estimé — Les missions du poste Airbus recrute avec le Groupe Piment ! Partenaire de confiance du leader mondial de l'aéronautique, nous accompagnons ses sites en France dans la recherche de",
+   "toulouse": true,
+   "score": 2
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW Conformité Occitanie",
+   "titre": "Responsable Conformité Qualité H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81676792.html",
+   "extrait": "Groupe Piment — Toulouse, Occitanie · ~48k€/an estimé — Les missions du poste Airbus recrute avec le Groupe Piment ! Partenaire de confiance du leader mondial de l'aéronautique, nous accompagnons ses sites en France dans la recherche de",
+   "toulouse": true,
+   "score": 3
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW Conformité Occitanie",
+   "titre": "Responsable Qualité Conformité - Développement Programmes Customer Services H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81668243.html",
+   "extrait": "Groupe Piment — Blagnac, Occitanie · ~48k€/an estimé — Les missions du poste Airbus recrute avec le Groupe Piment ! Partenaire de confiance du leader mondial de l'aéronautique, nous accompagnons ses sites en France dans la recherche de",
+   "toulouse": true,
+   "score": 2
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW Conformité Occitanie",
+   "titre": "Chargé Contrôle Conformité H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/80469389.html",
+   "extrait": "Veolia Eau — Mauguio, Occitanie · ~48k€/an estimé — Les missions du poste Vous pensez que la préservation de l'eau et de l'environnement sont des enjeux majeurs pour notre société ? Vous souhaitez évoluer au sein d'une entreprise en",
+   "toulouse": false,
+   "score": 2
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW Conformité Occitanie",
+   "titre": "Chargé Contrôle Conformité H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/80469372.html",
+   "extrait": "Veolia Eau — Mauguio, Occitanie · ~48k€/an estimé — Les missions du poste Vous pensez que la préservation de l'eau et de l'environnement sont des enjeux majeurs pour notre société ? Vous souhaitez évoluer au sein d'une entreprise en",
+   "toulouse": false,
+   "score": 2
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW Conformité Occitanie",
+   "titre": "Consultant Conformité Réglementaire - IT - Cybersécurité - Toulouse H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/67880956.html",
+   "extrait": "Sopra Steria — Colomiers, Occitanie · ~48k€/an estimé — Les missions du poste À propos de Sopra Steria Sopra Steria, acteur majeur de la Tech en Europe, avec 51 000 collaborateurs dans près de 30 pays, est reconnu pour ses activités de ",
+   "toulouse": true,
+   "score": 3
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW Conformité Occitanie",
+   "titre": "Specialiste Excellente de la Conformité Reglementaire H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/76823049.html",
+   "extrait": "Randstad professional — Nîmes, Occitanie — Les missions du poste Expectra, leader en France de l'intérim spécialisé et du recrutement en CDI de cadres et agents de maîtrise. Les consultants du Département Ingénierie & Indus",
+   "toulouse": false,
+   "score": 3
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW Conformité Occitanie",
+   "titre": "Responsable Conformité Qualité H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/75357681.html",
+   "extrait": "SET-WAY — Toulouse, Occitanie — Les missions du poste Set-Way est une société de conseil en ingénierie à taille humaine et de proximité. Nos collaborateurs accompagnent depuis plus de 15 ans les défis de nos indu",
+   "toulouse": true,
+   "score": 2
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW Conformité Occitanie",
+   "titre": "Quality Conformance Manager - Sari H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/79835714.html",
+   "extrait": "NBtech — Toulouse, Occitanie — Les missions du poste NBtech, qui sommes-nous ? NBtech rassemble l'ensemble des activités et savoir-faire en matière d'études techniques, de conseils en technologie et d'ingénierie",
+   "toulouse": true,
+   "score": 2
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW Conformité Occitanie",
+   "titre": "Controleur Construction Mécanique H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/80836367.html",
+   "extrait": "Randstad — Figeac, Occitanie — Les missions du poste Randstad vous ouvre toutes les portes de l'emploi : intérim, CDD, CDI. Chaque année, 330 000 collaborateurs (f/h) travaillent dans nos 60 000 entreprises clie",
+   "toulouse": false,
+   "score": 2
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW Conformité Occitanie",
+   "titre": "Contrôleur Conformité Câblage Aéronautique H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81942834.html",
+   "extrait": "Manpower France — Toulouse, Occitanie — Détail du poste Manpower CABINET EXPERTS ENGINEERING TOULOUSE recherche pour son client, acteur reconnu dans la conception, l'intégration, l'installation et la maintenance d'ensemb",
+   "toulouse": true,
+   "score": 3
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW Conformité Occitanie",
+   "titre": "Animateur·trice Qualité Production H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/80848802.html",
+   "extrait": "Actia — Colomiers, Occitanie · ~29k€/an estimé — Les missions du poste Découvrir ACTIA Savez-vous qu'il existe une entreprise qui connecte les bus et les trains, qui fait rouler les vélos électriques, digitalise l'agriculture ou ",
+   "toulouse": true,
+   "score": 3
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW Conformité Occitanie",
+   "titre": "Responsable Règlementation Contrôle des Exportations H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81881565.html",
+   "extrait": "Liebherr-Aerospace Toulouse — Toulouse, Occitanie · ~48k€/an estimé — Les missions du poste Liebherr-Aerospace Toulouse SAS fait partie du Groupe Liebherr et développe, fabrique et assure la maintenance de systèmes de traitement de l'air pour l'aéron",
+   "toulouse": true,
+   "score": 3
   }
  ]
 }
