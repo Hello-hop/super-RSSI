@@ -1,0 +1,38 @@
+name: Veille missions
+
+on:
+  schedule:
+    - cron: '0 5 * * *'      # 5 h UTC = 7 h à Paris en été, 6 h en hiver
+  workflow_dispatch:          # bouton "Run workflow" — utilisable depuis le mobile
+
+permissions:
+  contents: write
+
+concurrency:
+  group: veille
+  cancel-in-progress: false
+
+jobs:
+  collecte:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Collecter les offres
+        run: python3 scripts/veille.py
+
+      - name: Publier les nouveautés
+        run: |
+          git config user.name  "veille-bot"
+          git config user.email "actions@github.com"
+          git add docs/data/offres.json
+          if git diff --staged --quiet; then
+            echo "Aucune nouvelle offre."
+          else
+            git commit -m "veille: scan du $(date -u +%Y-%m-%d)"
+            git push
+          fi
