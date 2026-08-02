@@ -1,7 +1,67 @@
 {
- "scan": "2026-08-02T22:03:02+00:00",
+ "scan": "2026-08-02T22:05:17+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI national",
+   "titre": "Chargé de Missions Cybersécurité H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/80863916.html",
+   "entreprise": "EMEIS",
+   "extrait": "EMEIS — Puteaux, Île-de-France · ~63k€/an estimé — Les missions du poste L'accompagnement et le soin personnalisés pour chaque personne fragilisée. Nous sommes 78 000 médecins, infirmier.ère.s, aides-soignant.e.s, auxiliaires de vi",
+   "toulouse": false,
+   "score": 5
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI national",
+   "titre": "Responsable Cyber Grc H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/80890324.html",
+   "entreprise": "UMG Groupe VYV",
+   "extrait": "UMG Groupe VYV — Paris, Île-de-France · ~63k€/an estimé — Les missions du poste L'union mutualiste de groupe (UMG) est l'entité faîtière du Groupe VYV. Son rôle ? piloter la stratégie globale du groupe et sa trajectoire prudentielle, anim",
+   "toulouse": false,
+   "score": 5
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI national",
+   "titre": "Consultant RSSI H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/67327877.html",
+   "entreprise": "Almond",
+   "extrait": "Almond — Sèvres, Île-de-France — Les missions du poste Almond est un acteur Cyber de référence en Europe. Rejoignez nos équipes spécialisées en cybersécurité, infrastructure et cloud qui sécurisent le monde numéri",
+   "toulouse": false,
+   "score": 3
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI national",
+   "titre": "Responsable Cybersécurité du Programme de Mise en Conformité H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81926306.html",
+   "entreprise": "Mobilize Financial Services",
+   "extrait": "Mobilize Financial Services — Paris, Île-de-France · ~63k€/an estimé — Les missions du poste En route vers Mobilize ! A l'écoute de tous nos clients, nous créons des services financiers innovants pour construire une mobilité durable pour tous. Rejoind",
+   "toulouse": false,
+   "score": 2
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI national",
+   "titre": "Chef de Projet Cybersecurité et Automates H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/79659408.html",
+   "entreprise": "Reboot Conseil",
+   "extrait": "Reboot Conseil — Strasbourg, Grand Est · ~55k€/an estimé — Détail du poste Dans le cadre de l'implémentation du Cyber Resilience Act : Main mission: - Implement cyber-security action plan across different products. - Manage automation proj",
+   "toulouse": false,
+   "score": 4
+  },
+  {
+   "date": "2026-08-02",
+   "source": "HW RSSI national",
+   "titre": "Information Security Officer F - M - D - Corporate Operations People H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/77463182.html",
+   "entreprise": "Decathlon Technology",
+   "extrait": "Decathlon Technology — Villeneuve-d'Ascq, Hauts-de-France · ~52k€/an estimé — Détail du poste Notre domaine Corporate Operations People recherche un·e Information Security Officer basé·e à Lille. Le périmètre Corporate Operations People, au sein duquel s'ins",
+   "toulouse": false,
+   "score": 2
+  },
   {
    "date": "2026-08-02",
    "source": "FW ISO 27001",
