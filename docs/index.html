@@ -11,7 +11,7 @@
   :root{
     --encre:#0d1620; --panneau:#16212e; --trait:#24323f;
     --texte:#e7edf2; --sourdine:#7d8fa1;
-    --cotation:#e0a63c; --traite:#4fa88b; --echu:#d1665b; --rayon:10px;
+    --cotation:#e0a63c; --traite:#4fa88b; --echu:#d1665b; --toulouse:#6ea8dc; --rayon:10px;
   }
   *{box-sizing:border-box}
   html,body{margin:0;background:var(--encre);color:var(--texte);
@@ -35,11 +35,22 @@
   nav button[aria-selected="true"]{background:var(--panneau);color:var(--texte);border-color:var(--sourdine)}
   :focus-visible{outline:2px solid var(--cotation);outline-offset:2px}
 
+  #filtre-lieu{display:block;width:100%;margin-top:8px;background:transparent;
+    border:1px solid var(--trait);color:var(--sourdine);padding:8px 4px;border-radius:var(--rayon);
+    font-size:12.5px;font-weight:600;cursor:pointer}
+  #filtre-lieu[aria-pressed="true"]{background:rgba(110,168,220,.14);color:var(--toulouse);
+    border-color:var(--toulouse)}
+
   #liste{padding-top:14px;display:flex;flex-direction:column;gap:10px}
   .card{background:var(--panneau);border:1px solid var(--trait);border-left:3px solid var(--trait);
     border-radius:var(--rayon);padding:13px 14px}
   .card.echu{border-left-color:var(--echu)}
   .card.fort{border-left-color:var(--cotation)}
+  /* Cadre distinct pour les missions toulousaines — indépendant de la cotation */
+  .card.toulouse{box-shadow:0 0 0 1.5px var(--toulouse)}
+  .puce-lieu{display:inline-flex;align-items:center;gap:4px;font-family:ui-monospace,Menlo,monospace;
+    font-size:10px;letter-spacing:.06em;color:var(--toulouse);border:1px solid var(--toulouse);
+    border-radius:20px;padding:2px 8px;margin-bottom:8px}
 
   /* Signature : la cotation en 5 segments, comme une ligne de registre de risques */
   .crit{display:flex;gap:3px;align-items:center;margin-bottom:9px}
@@ -87,6 +98,7 @@
     <button data-vue="cours" aria-selected="false">En cours</button>
     <button data-vue="relances" aria-selected="false">Relances</button>
   </nav>
+  <button id="filtre-lieu" aria-pressed="false">📍 Toulouse uniquement</button>
 </header>
 
 <main id="liste"></main>
@@ -105,7 +117,15 @@
 
 <script>
 var CLE = 'veille.suivi.v1';
-var OFFRES = [], SUIVI = {}, VUE = 'qualifier';
+var OFFRES = [], SUIVI = {}, VUE = 'qualifier', FILTRE_TOULOUSE = false;
+var RE_TOULOUSE = /toulouse|haute[- ]garonne|\b31\d{3}\b/i;
+
+function estToulouse(o){
+  // Les offres collectées après cette mise à jour portent le champ ; pour les
+  // plus anciennes on retombe sur une détection dans le titre et l'extrait.
+  if (typeof o.toulouse === 'boolean') return o.toulouse;
+  return RE_TOULOUSE.test((o.titre || '') + ' ' + (o.extrait || ''));
+}
 
 function lireSuivi(){
   try { return JSON.parse(localStorage.getItem(CLE)) || {}; } catch(e){ return {}; }
@@ -138,6 +158,7 @@ function estEchue(o){
 function filtrer(){
   return OFFRES.filter(function(o){
     var s = etat(o.lien).statut;
+    if (FILTRE_TOULOUSE && !estToulouse(o)) return false;
     if (VUE === 'qualifier') return !s;
     if (VUE === 'cours') return ['Postulé','Entretien','Négociation'].indexOf(s) > -1;
     return estEchue(o);
@@ -145,8 +166,9 @@ function filtrer(){
 }
 
 function rendre(){
-  var aQualifier = OFFRES.filter(function(o){ return !etat(o.lien).statut; }).length;
-  var dues = OFFRES.filter(estEchue).length;
+  var base = FILTRE_TOULOUSE ? OFFRES.filter(estToulouse) : OFFRES;
+  var aQualifier = base.filter(function(o){ return !etat(o.lien).statut; }).length;
+  var dues = base.filter(estEchue).length;
   document.getElementById('resume').innerHTML =
     '<b>' + aQualifier + '</b> à qualifier &nbsp;·&nbsp; <b>' + dues + '</b> relance' +
     (dues > 1 ? 's' : '') + ' due' + (dues > 1 ? 's' : '');
@@ -159,11 +181,13 @@ function rendre(){
       'Tout est trié. Le prochain scan tourne demain matin.') + '</div>';
   } else {
     lot.forEach(function(o){
-      var e = etat(o.lien), echue = estEchue(o), segs = '';
+      var e = etat(o.lien), echue = estEchue(o), toulouse = estToulouse(o), segs = '';
       for (var i = 1; i <= 5; i++) segs += '<i class="' + (i <= o.score ? 'on' : '') + '"></i>';
-      html += '<article class="card ' + (echue ? 'echu' : (o.score >= 4 ? 'fort' : '')) + '">' +
+      html += '<article class="card ' + (echue ? 'echu' : (o.score >= 4 ? 'fort' : '')) +
+        (toulouse ? ' toulouse' : '') + '">' +
         '<div class="crit" role="img" aria-label="Cotation ' + o.score + ' sur 5">' + segs +
           '<span>cotation ' + o.score + '/5</span></div>' +
+        (toulouse ? '<span class="puce-lieu">📍 Toulouse</span><br>' : '') +
         '<h2><a href="' + esc(o.lien) + '" target="_blank" rel="noopener">' + esc(o.titre) + '</a></h2>' +
         (o.extrait ? '<p class="extrait">' + esc(o.extrait) + '</p>' : '') +
         '<div class="meta">' + esc(o.source) + ' · ' + esc(o.date) +
@@ -214,6 +238,12 @@ document.getElementById('onglets').addEventListener('click', function(ev){
   [].forEach.call(this.querySelectorAll('button'), function(x){
     x.setAttribute('aria-selected', x === b ? 'true' : 'false');
   });
+  rendre();
+});
+
+document.getElementById('filtre-lieu').addEventListener('click', function(){
+  FILTRE_TOULOUSE = !FILTRE_TOULOUSE;
+  this.setAttribute('aria-pressed', String(FILTRE_TOULOUSE));
   rendre();
 });
 

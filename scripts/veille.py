@@ -54,6 +54,9 @@ EXCLUSIONS = [
     "développeur", "developpeur", "commercial", "business developer", "recruteur",
 ]
 
+# Détection du lieu, appliquée au texte complet de l'annonce (pas seulement au titre).
+RE_TOULOUSE = re.compile(r"toulouse|haute[- ]garonne|\b31\d{3}\b", re.I)
+
 SORTIE = os.path.join("docs", "data", "offres.json")
 MAX_OFFRES = 600          # on garde un historique glissant
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36"
@@ -181,6 +184,7 @@ def main() -> int:
                 "titre": o["titre"],
                 "lien": o["lien"],
                 "extrait": o.get("extrait", ""),
+                "toulouse": bool(RE_TOULOUSE.search(o.get("contexte") or o["titre"])),
                 "score": scorer(o.get("contexte") or o["titre"]),
             })
             retenues += 1
