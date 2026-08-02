@@ -6,6 +6,14 @@ Collecteur d'offres — tourne dans GitHub Actions, sans dépendance externe.
 Il interroge les sources, note chaque offre selon les mots-clés du profil,
 dédoublonne sur l'URL et écrit docs/data/offres.json que lit l'application.
 
+Pour Free-Work, chaque NOUVELLE offre est enrichie en visitant sa fiche
+détail : le lieu, la fourchette de TJM, la durée, le télétravail et la
+description complète en sont extraits. Le listing seul ne suffit pas à noter
+correctement — un extrait tronqué à 200 caractères rate souvent le
+référentiel exact ou la ville. Comme la déduplication ne rejoue jamais une
+offre déjà connue, ce coût supplémentaire ne pèse que sur les vraies
+nouveautés du jour, pas sur l'ensemble du catalogue à chaque scan.
+
 Tout ce qui se règle est dans le bloc CONFIGURATION ci-dessous.
 Test en local :  python3 scripts/veille.py
 """
@@ -14,6 +22,7 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.request
 import urllib.error
 from datetime import datetime, timezone
@@ -22,31 +31,41 @@ from xml.etree import ElementTree
 
 # ─────────────────────────── CONFIGURATION ───────────────────────────
 
-# type : "freework" (page de résultats Free-Work) ou "rss" (n'importe quel flux,
+# type : "freework" (scraping + fiche détail) ou "rss" (n'importe quel flux,
 # y compris une Google Alert livrée en RSS — c'est la façon d'ajouter un site
-# qui ne publie pas de flux.)
+# qui ne publie pas de flux, ou qui bloque le scraping comme Malt).
 SOURCES = [
-    {"nom": "FW ISO 27001",       "type": "freework",
+    {"nom": "FW ISO 27001",        "type": "freework",
      "url": "https://www.free-work.com/fr/tech-it/jobs/iso-27001"},
-    {"nom": "FW Cyber Toulouse",  "type": "freework",
+    {"nom": "FW Cyber Toulouse",   "type": "freework",
      "url": "https://www.free-work.com/fr/tech-it/jobs/cybersecurite/toulouse"},
-    {"nom": "FW Sécu Toulouse",   "type": "freework",
+    {"nom": "FW Sécu Toulouse",    "type": "freework",
      "url": "https://www.free-work.com/fr/tech-it/jobs/securite-informatique/toulouse"},
     {"nom": "FW Consultant cyber", "type": "freework",
      "url": "https://www.free-work.com/fr/tech-it/jobs/consultant-cyber-securite/toulouse"},
+
+    # Malt bloque tout scraping (Cloudflare, 403 systématique, même avec un
+    # navigateur simulé). Le contournement : une Google Alert sur Malt,
+    # livrée en flux RSS. Voir le README pour la marche à suivre — une fois
+    # l'URL du flux obtenue, colle-la ci-dessous et décommente la ligne.
+    # {"nom": "Alerte Malt GRC", "type": "rss",
+    #  "url": "https://www.google.com/alerts/feeds/TON_ID/TON_FLUX"},
 ]
 
-# Mots-clés pondérés : l'ADN de la recherche. Ajuste les points sur du réel.
+# Mots-clés pondérés : l'ADN de la recherche. Le total est divisé par 3,
+# plafonné à 5. Calibré sur une vraie offre (consultant analyse de risques
+# SSI, ISO 27005/EBIOS, collectivité) : 4/5 hors Toulouse, 5/5 à Toulouse —
+# c'est l'écart que "toulouse" doit produire à lui seul.
 MOTS_CLES = [
-    (r"iso ?2700[15]|27005|ebios|smsi", 3),
-    (r"grc|gouvernance|conformit[ée]", 2),
-    (r"rssi|ciso", 2),
-    (r"analyse de risque|pssi|audit", 2),
-    (r"nis ?2|dora|rgpd|hds", 1),
-    (r"toulouse|occitanie", 2),
-    (r"t[ée]l[ée]travail|remote", 1),
+    (r"iso ?2700[15]|27005|ebios|smsi",                4),
+    (r"grc|gouvernance|conformit[ée]",                 2),
+    (r"rssi|ciso",                                     2),
+    (r"analyse de risque|pssi|audit",                  3),
+    (r"nis ?2|dora|rgpd|hds",                          1),
+    (r"toulouse|occitanie",                            3),
+    (r"t[ée]l[ée]travail|remote",                      1),
     (r"sant[ée]|h[ôo]pital|chu|laboratoire|collectivit[ée]|territorial", 2),
-    (r"senior|lead|expert", 1),
+    (r"senior|lead|expert",                            1),
 ]
 
 EXCLUSIONS = [
@@ -58,13 +77,15 @@ EXCLUSIONS = [
 RE_TOULOUSE = re.compile(r"toulouse|haute[- ]garonne|\b31\d{3}\b", re.I)
 
 SORTIE = os.path.join("docs", "data", "offres.json")
-MAX_OFFRES = 600          # on garde un historique glissant
+MAX_OFFRES = 600           # on garde un historique glissant
+MAX_ENRICHISSEMENTS = 40   # garde-fou : plafond de fiches détail visitées par scan
+DELAI_ENRICHISSEMENT = 0.4  # secondes entre deux fiches — politesse envers le site
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36"
 
 # ──────────────────────────── COLLECTE ────────────────────────────
 
 
-def telecharger(url: str, timeout: int = 30) -> str:
+def telecharger(url: str, timeout: int = 25) -> str:
     req = urllib.request.Request(url, headers={
         "User-Agent": UA,
         "Accept-Language": "fr-FR,fr;q=0.9",
@@ -75,41 +96,61 @@ def telecharger(url: str, timeout: int = 30) -> str:
 
 def nettoyer(s: str) -> str:
     s = re.sub(r"<!--.*?-->", "", s or "", flags=re.S)
-    s = re.sub(r"<[^>]+>", "", s)
+    s = re.sub(r"<[^>]+>", " ", s)
     return unescape(re.sub(r"\s+", " ", s)).strip()
 
 
-RE_FREEWORK = re.compile(
+RE_FREEWORK_CARTE = re.compile(
     r'href="(/fr/tech-it/job-mission/[^"]+)"[^>]*>\s*<span[^>]*>(.*?)</span>', re.S)
+RE_FREEWORK_LIEU = re.compile(r"<h1>.*?</h1><h2>([^<]+)</h2>", re.S)
+RE_FREEWORK_FICHE = re.compile(r'class="w-full text-sm line-clamp-2">([^<]+)</span>')
 
 
-def lire_freework(url: str):
-    """Renvoie titre, lien, extrait et contexte (tags + description) de chaque carte.
-
-    Le contexte sert au scoring : le titre seul ne dit ni le lieu, ni le
-    référentiel, ni le secteur — la carte, si.
-    """
+def lister_freework(url: str):
+    """Liste légère : titre + lien de chaque carte. Un seul appel réseau."""
     html_src = telecharger(url)
     vus, out = set(), []
-    for m in RE_FREEWORK.finditer(html_src):
+    for m in RE_FREEWORK_CARTE.finditer(html_src):
         lien = "https://www.free-work.com" + m.group(1)
         titre = nettoyer(m.group(2))
-        if not titre or lien in vus:
-            continue
-        vus.add(lien)
-
-        bloc = html_src[m.end():m.end() + 9000]
-        coupe = bloc.find("/fr/tech-it/job-mission/")   # ne pas déborder sur la carte suivante
-        if coupe > 0:
-            bloc = bloc[:coupe]
-        contexte = nettoyer(bloc)
-        # la description utile commence après la date de publication de l'annonce
-        date_pub = re.search(r"\d{2}/\d{2}/\d{4}", contexte)
-        extrait = contexte[date_pub.end():].strip()[:200] if date_pub else contexte[:200]
-
-        out.append({"titre": titre, "lien": lien, "extrait": extrait,
-                    "contexte": (titre + " " + contexte)[:4000]})
+        if titre and lien not in vus:
+            vus.add(lien)
+            out.append({"titre": titre, "lien": lien})
     return out
+
+
+def enrichir_freework(lien: str):
+    """Visite la fiche détail : lieu fiable, TJM/durée/télétravail, texte complet.
+
+    Renvoie None si la structure de page attendue n'est pas trouvée (mise à
+    jour du site, page retirée) — l'appelant retombe alors sur le titre seul.
+    """
+    html_src = telecharger(lien)
+
+    m_lieu = RE_FREEWORK_LIEU.search(html_src)
+    lieu = nettoyer(m_lieu.group(1)) if m_lieu else ""
+
+    i1_marqueur = html_src.find("html-renderer prose-content")
+    i1 = html_src.find(">", i1_marqueur) + 1 if i1_marqueur != -1 else -1
+    i2 = html_src.find("Postulez à cette offre", i1) if i1 > 0 else -1
+    corps = nettoyer(html_src[i1:i2]) if i1 > 0 and i2 != -1 else ""
+    if not corps:
+        return None
+
+    i3 = html_src.find(">Le poste<")
+    faits = RE_FREEWORK_FICHE.findall(html_src[i3:i3 + 7000]) if i3 != -1 else []
+    fiche = " · ".join(nettoyer(f) for f in faits)  # ex. "18 mois · 210-500 €/j · Télétravail partiel"
+
+    apercu = corps[:180]
+    extrait = (fiche + " — " + apercu) if fiche else apercu
+
+    contexte = " ".join([lieu, fiche, corps])
+    return {
+        "lieu": lieu,
+        "extrait": extrait[:260],
+        "contexte": contexte[:6000],
+        "toulouse": bool(RE_TOULOUSE.search(lieu) or RE_TOULOUSE.search(contexte)),
+    }
 
 
 def lire_rss(url: str):
@@ -118,20 +159,18 @@ def lire_rss(url: str):
     canal = racine.find("channel")
     if canal is not None:                                   # RSS 2.0
         for item in canal.findall("item"):
-            out.append({"titre": nettoyer(item.findtext("title", "")),
-                        "lien": (item.findtext("link") or "").strip(),
-                        "extrait": nettoyer(item.findtext("description", ""))[:200],
-                        "contexte": nettoyer(item.findtext("title", "") + " " + (item.findtext("description") or ""))[:4000]})
+            titre = nettoyer(item.findtext("title", ""))
+            resume = nettoyer(item.findtext("description", ""))
+            out.append({"titre": titre, "lien": (item.findtext("link") or "").strip(),
+                        "extrait": resume[:200], "contexte": (titre + " " + resume)[:4000]})
         return out
     ns = {"a": "http://www.w3.org/2005/Atom"}               # Atom / Google Alerts
     for e in racine.findall("a:entry", ns):
         lien = e.find("a:link", ns)
-        resume = nettoyer(e.findtext("a:content", "", ns) or e.findtext("a:summary", "", ns))
         titre = nettoyer(e.findtext("a:title", "", ns))
-        out.append({"titre": titre,
-                    "lien": lien.get("href") if lien is not None else "",
-                    "extrait": resume[:200],
-                    "contexte": (titre + " " + resume)[:4000]})
+        resume = nettoyer(e.findtext("a:content", "", ns) or e.findtext("a:summary", "", ns))
+        out.append({"titre": titre, "lien": lien.get("href") if lien is not None else "",
+                    "extrait": resume[:200], "contexte": (titre + " " + resume)[:4000]})
     return out
 
 
@@ -164,31 +203,45 @@ def main() -> int:
     index = {o["lien"] for o in connues}
     aujourdhui = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     nouvelles, incidents = [], []
+    enrichissements_faits = 0
 
     for src in SOURCES:
         try:
-            brutes = lire_rss(src["url"]) if src["type"] == "rss" else lire_freework(src["url"])
+            cartes = lire_rss(src["url"]) if src["type"] == "rss" else lister_freework(src["url"])
         except (urllib.error.URLError, urllib.error.HTTPError, ElementTree.ParseError, OSError) as e:
             incidents.append(f"{src['nom']} : {e}")
             print(f"  ⚠ {src['nom']} injoignable — {e}", file=sys.stderr)
             continue
 
         retenues = 0
-        for o in brutes:
-            if not o["lien"] or o["lien"] in index or exclu(o["titre"]):
+        for o in cartes:
+            lien, titre = o.get("lien"), o.get("titre", "")
+            if not lien or lien in index or exclu(titre):
                 continue
-            index.add(o["lien"])
+            index.add(lien)
+
+            detail = None
+            if src["type"] == "freework" and enrichissements_faits < MAX_ENRICHISSEMENTS:
+                try:
+                    time.sleep(DELAI_ENRICHISSEMENT)
+                    detail = enrichir_freework(lien)
+                    enrichissements_faits += 1
+                except (urllib.error.URLError, urllib.error.HTTPError, OSError) as e:
+                    print(f"    (fiche détail indisponible pour {titre[:40]} — {e})", file=sys.stderr)
+
+            if detail:
+                extrait, contexte, toulouse = detail["extrait"], titre + " " + detail["contexte"], detail["toulouse"]
+            else:
+                extrait = o.get("extrait", "")
+                contexte = titre + " " + extrait
+                toulouse = bool(RE_TOULOUSE.search(contexte))
+
             nouvelles.append({
-                "date": aujourdhui,
-                "source": src["nom"],
-                "titre": o["titre"],
-                "lien": o["lien"],
-                "extrait": o.get("extrait", ""),
-                "toulouse": bool(RE_TOULOUSE.search(o.get("contexte") or o["titre"])),
-                "score": scorer(o.get("contexte") or o["titre"]),
+                "date": aujourdhui, "source": src["nom"], "titre": titre, "lien": lien,
+                "extrait": extrait, "toulouse": toulouse, "score": scorer(contexte),
             })
             retenues += 1
-        print(f"  {src['nom']} : {len(brutes)} lues, {retenues} nouvelles")
+        print(f"  {src['nom']} : {len(cartes)} lues, {retenues} nouvelles")
 
     toutes = (nouvelles + connues)[:MAX_OFFRES]
     with open(SORTIE, "w", encoding="utf-8") as f:
@@ -198,9 +251,9 @@ def main() -> int:
             "offres": toutes,
         }, f, ensure_ascii=False, indent=1)
 
-    print(f"→ {len(nouvelles)} nouvelle(s), {len(toutes)} au total dans {SORTIE}")
-    # Une source morte ne doit pas casser le workflow : on sort en succès.
-    return 0
+    print(f"→ {len(nouvelles)} nouvelle(s) ({enrichissements_faits} fiche(s) enrichie(s)), "
+          f"{len(toutes)} au total dans {SORTIE}")
+    return 0  # une source morte ne doit pas casser le workflow
 
 
 if __name__ == "__main__":
