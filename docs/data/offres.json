@@ -1,7 +1,161 @@
 {
- "scan": "2026-08-03T09:01:35+00:00",
+ "scan": "2026-08-03T09:09:05+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-08-03",
+   "source": "FW ISO 27001",
+   "titre": "Consultant(e) SSI / GRC – Secteur Banque/Finance",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant/consultant-e-ssi-grc-secteur-banque-finance",
+   "entreprise": "",
+   "extrait": "Dès que possible · 6 mois renouvelable · 5 à 10 ans d’expérience · Télétravail partiel · Hauts-de-Seine, France — Grand compte du secteur banque/finance engagé dans une démarche de renforcement de la maturité cybersécurité de son SI. Le/la consultant(e) interv",
+   "toulouse": false,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-08-03",
+   "source": "LI RSSI Toulouse",
+   "titre": "OpenAQ",
+   "lien": "https://fr.linkedin.com/jobs/view/openaq-at-earthbot-io-4445131576",
+   "entreprise": "earthbot.io",
+   "extrait": "earthbot.io — Pratviel — This information is for members only.<br><br>Members enjoy detailed insights including environmental impact, use cases, reviews, product updates and more.<br><br>Sign Up for Free<b",
+   "toulouse": false,
+   "remuneration": null,
+   "score": 0
+  },
+  {
+   "date": "2026-08-03",
+   "source": "LI RSSI Toulouse",
+   "titre": "Twinit",
+   "lien": "https://fr.linkedin.com/jobs/view/twinit-at-earthbot-io-4445128550",
+   "entreprise": "earthbot.io",
+   "extrait": "earthbot.io — Pratviel — This information is for members only.<br><br>Members enjoy detailed insights including environmental impact, use cases, reviews, product updates and more.<br><br>Sign Up for Free<b",
+   "toulouse": false,
+   "remuneration": null,
+   "score": 0
+  },
+  {
+   "date": "2026-08-03",
+   "source": "LI RSSI Toulouse",
+   "titre": "Délégué RAN1",
+   "lien": "https://fr.linkedin.com/jobs/view/d%C3%A9l%C3%A9gu%C3%A9-ran1-at-thales-4397330236",
+   "entreprise": "Thales",
+   "extrait": "Thales — Toulouse — Lieu : Toulouse, France<br><br><strong>Construisons ensemble un avenir de confiance<br><br></strong>Thales est un leader mondial des hautes technologies spécialisé dans trois secte",
+   "toulouse": true,
+   "remuneration": null,
+   "score": 1
+  },
+  {
+   "date": "2026-08-03",
+   "source": "LI RSSI Toulouse",
+   "titre": "Manipulatrice radio",
+   "lien": "https://fr.linkedin.com/jobs/view/manipulatrice-radio-at-gie-scanner-rive-gauche-4447296357",
+   "entreprise": "GIE SCANNER RIVE GAUCHE",
+   "extrait": "GIE SCANNER RIVE GAUCHE — Toulouse — <strong><p>Gie scanner Rive Gauche dans le quartier Saint-Cyprien à Toulouse, recherche un manipulateur ou manipulatrice en CDI 35 heures pour intégrer notre équipe dynamique.</p><",
+   "toulouse": true,
+   "remuneration": null,
+   "score": 1
+  },
+  {
+   "date": "2026-08-03",
+   "source": "LI RSSI Toulouse",
+   "titre": "Spontaneous Application (Full time contracts)",
+   "lien": "https://fr.linkedin.com/jobs/view/spontaneous-application-full-time-contracts-at-scaleway-4178288359",
+   "entreprise": "Scaleway",
+   "extrait": "Scaleway — Toulouse — <strong>OUR STORY:<br></strong>🇪🇺 Join Scaleway and shape the sovereign cloud of tomorrow !<br><br>Since 1999, we have been designing secure, sustainable infrastructures aimed at s",
+   "toulouse": true,
+   "remuneration": null,
+   "score": 1
+  },
+  {
+   "date": "2026-08-03",
+   "source": "LI RSSI Toulouse",
+   "titre": "Spontaneous Applications",
+   "lien": "https://fr.linkedin.com/jobs/view/spontaneous-applications-at-pangea-propulsion-4444443025",
+   "entreprise": "Pangea Propulsion",
+   "extrait": "Pangea Propulsion — Toulouse — Chez Pangea Propulsion, nous sommes convaincus que la passion et le talent ne devraient jamais passer inaperçus. Même si vous ne trouvez pas aujourd’hui de poste correspondant à vo",
+   "toulouse": true,
+   "remuneration": null,
+   "score": 1
+  },
+  {
+   "date": "2026-08-03",
+   "source": "LI RSSI Toulouse",
+   "titre": "Analyste SOC et référent technique pour le pôle Supervision et Permanence Opérationnelle",
+   "lien": "https://fr.linkedin.com/jobs/view/analyste-soc-et-r%C3%A9f%C3%A9rent-technique-pour-le-p%C3%B4le-supervision-et-permanence-op%C3%A9rationnelle-at-minist%C3%A8re-de-l-int%C3%A9rieur-4437405540",
+   "entreprise": "Ministère de l'Intérieur",
+   "extrait": "Ministère de l'Intérieur — Toulouse — <p><strong>Vos activités principales</strong></p><p><br></p><p>Identifier et qualifier les incidents de sécurité :</p><p><br></p><ul><li>Prise en charge des alertes de sécurité (té",
+   "toulouse": true,
+   "remuneration": null,
+   "score": 2
+  },
+  {
+   "date": "2026-08-03",
+   "source": "LI ISO 27001 France",
+   "titre": "Director of Information Security",
+   "lien": "https://fr.linkedin.com/jobs/view/director-of-information-security-at-triple-4408759775",
+   "entreprise": "Triple",
+   "extrait": "Triple · France",
+   "toulouse": false,
+   "remuneration": null,
+   "score": 0
+  },
+  {
+   "date": "2026-08-03",
+   "source": "LI ISO 27001 France",
+   "titre": "Information Security Analyst",
+   "lien": "https://fr.linkedin.com/jobs/view/information-security-analyst-at-didomi-4442119721",
+   "entreprise": "Didomi",
+   "extrait": "Didomi — Paris · 60k€/an — <p>We are looking for an Information Security Analyst to join our Security &amp; IT team and become the operational backbone of our ISO 27001 program. You will support the day-to-d",
+   "toulouse": false,
+   "remuneration": false,
+   "score": 3
+  },
+  {
+   "date": "2026-08-03",
+   "source": "LI ISO 27001 France",
+   "titre": "Global Head of Information Security",
+   "lien": "https://fr.linkedin.com/jobs/view/global-head-of-information-security-at-modaxo-4446900389",
+   "entreprise": "Modaxo",
+   "extrait": "Modaxo · France",
+   "toulouse": false,
+   "remuneration": null,
+   "score": 0
+  },
+  {
+   "date": "2026-08-03",
+   "source": "LI ISO 27001 France",
+   "titre": "Chargé(e) de la Sécurité de l’Information",
+   "lien": "https://fr.linkedin.com/jobs/view/charg%C3%A9-e-de-la-s%C3%A9curit%C3%A9-de-l%E2%80%99information-at-dedomainia-4427740573",
+   "entreprise": "Dedomainia",
+   "extrait": "Dedomainia — Bordeaux · 45k€/an — <strong>À PROPOS DE NOUS<br><br></strong><strong>Rejoignez Dedomainia, le leader de l'automatisation des processus actuariels ! 🚀<br><br></strong><strong>Depuis 2016</strong>, nos ",
+   "toulouse": false,
+   "remuneration": false,
+   "score": 4
+  },
+  {
+   "date": "2026-08-03",
+   "source": "LI ISO 27001 France",
+   "titre": "Global Head of IT",
+   "lien": "https://fr.linkedin.com/jobs/view/global-head-of-it-at-modaxo-4446904168",
+   "entreprise": "Modaxo",
+   "extrait": "Modaxo · France",
+   "toulouse": false,
+   "remuneration": null,
+   "score": 0
+  },
+  {
+   "date": "2026-08-03",
+   "source": "LI ISO 27001 France",
+   "titre": "Consultant Cybersécurité Gouvernance / GRC (H/F)",
+   "lien": "https://fr.linkedin.com/jobs/view/consultant-cybers%C3%A9curit%C3%A9-gouvernance-grc-h-f-at-keyrus-4335981923",
+   "entreprise": "Keyrus",
+   "extrait": "Keyrus · France",
+   "toulouse": false,
+   "remuneration": null,
+   "score": 1
+  },
   {
    "date": "2026-08-03",
    "source": "FW ISO 27001",
