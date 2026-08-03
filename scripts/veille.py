@@ -58,6 +58,18 @@ SOURCES = [
     {"nom": "HW RSSI national",      "type": "hellowork",
      "url": "https://www.hellowork.com/fr-fr/emploi/metier_responsable-securite-des-systemes-informatiques.html"},
 
+    # LinkedIn via son API « invité » : l'interface normale exige un compte,
+    # mais cet endpoint renvoie les offres sans authentification, 10 par appel.
+    # Réserve : LinkedIn bloque souvent les IP des serveurs d'intégration
+    # continue — si ça tombe en 403 depuis GitHub Actions, l'incident est
+    # tracé dans offres.json et les autres sources continuent.
+    {"nom": "LI RSSI Toulouse", "type": "linkedin",
+     "url": "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=RSSI&location=Toulouse"},
+    {"nom": "LI GRC Toulouse", "type": "linkedin",
+     "url": "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=GRC%20cybers%C3%A9curit%C3%A9&location=Toulouse"},
+    {"nom": "LI ISO 27001 France", "type": "linkedin",
+     "url": "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=ISO%2027001&location=France&f_WT=2"},
+
     # Malt : ni scraping (Cloudflare bloque tout, y compris un navigateur
     # simulé) ni Google Alert (Google n'indexe que les profils freelances de
     # Malt, jamais les missions elles-mêmes — réservées aux comptes connectés).
@@ -91,9 +103,64 @@ REGLES_PLANCHER = [
     (r"chef de projet cybers[ée]curit[ée]",   False, 4),   # quel que soit le lieu
 ]
 
+# ── Seuils de rémunération ──
+# Le 5/5 est réservé aux offres dont la rémunération est CONFIRMÉE au niveau
+# attendu. Une offre moins bien payée, ou dont la rémunération est inconnue,
+# plafonne à 4 : elle reste visible et bien classée, mais le 5/5 garde son sens.
+TJM_MINI = 550          # €/jour
+TJM_MAXI = 800          # €/jour — borne haute de la fourchette visée
+SALAIRE_MINI = 60000    # €/an brut pour un CDI
 
-def scorer(texte: str, titre: str = "", toulouse: bool = False) -> int:
-    """Note /5. `texte` porte le score de base ; `titre` peut déclencher un plancher."""
+# Passer à False pour autoriser le 5/5 quand la rémunération n'est pas publiée.
+# À considérer : seule une offre sur trois affiche un montant (les autres
+# plateformes ne le publient tout simplement pas).
+EXIGER_REMUNERATION_CONNUE = True
+
+RE_TJM = re.compile(r"(\d{2,4})\s*(?:-|à|–)?\s*(\d{2,4})?\s*€\s*[⁄/]?\s*j", re.I)
+RE_ANNUEL_K = re.compile(r"(\d{2,3})\s*k\s*(?:-|à|–)\s*(\d{2,3})\s*k\s*€|~?\s*(\d{2,3})\s*k\s*€", re.I)
+
+
+def extraire_remuneration(texte: str):
+    """Renvoie (tjm_max, annuel_max) en euros, ou None quand l'info est absente.
+
+    On retient le HAUT de fourchette : une annonce affichant « 210-500 €/j »
+    plafonne à 500, donc sous le seuil ; « 400-750 €/j » atteint 750 et passe.
+    """
+    t = (texte or "").replace("\u2044", "/")
+    tjm = annuel = None
+
+    m = RE_TJM.search(t)
+    if m:
+        bornes = [int(x) for x in m.groups() if x]
+        if bornes:
+            tjm = max(bornes)
+
+    m = RE_ANNUEL_K.search(t)
+    if m:
+        bornes = [int(x) for x in m.groups() if x]
+        if bornes:
+            annuel = max(bornes) * 1000
+
+    return tjm, annuel
+
+
+def remuneration_conforme(tjm, annuel):
+    """True (conforme), False (trop basse), None (non publiée)."""
+    if tjm is None and annuel is None:
+        return None
+    if tjm is not None and tjm >= TJM_MINI:
+        return True
+    if annuel is not None and annuel > SALAIRE_MINI:
+        return True
+    return False
+
+
+def scorer(texte: str, titre: str = "", toulouse: bool = False, remu=None) -> int:
+    """Note /5. `texte` porte le score de base ; `titre` peut déclencher un plancher.
+
+    `remu` (True/False/None) plafonne la note à 4 si la rémunération n'est pas
+    confirmée au niveau attendu — y compris pour les planchers manuels.
+    """
     t = (texte or "").lower()
     pts = sum(p for motif, p in MOTS_CLES if re.search(motif, t))
     note = min(5, round(pts / 3))
@@ -101,6 +168,10 @@ def scorer(texte: str, titre: str = "", toulouse: bool = False) -> int:
     for motif, toulouse_requis, plancher in REGLES_PLANCHER:
         if re.search(motif, tt) and (not toulouse_requis or toulouse):
             note = max(note, plancher)
+
+    if note >= 5:
+        if remu is False or (remu is None and EXIGER_REMUNERATION_CONNUE):
+            note = 4
     return note
 
 
@@ -121,21 +192,44 @@ RE_TOULOUSE = re.compile(r"toulouse|haute[- ]garonne|\b31\d{3}\b", re.I)
 
 SORTIE = os.path.join("docs", "data", "offres.json")
 MAX_OFFRES = 600           # on garde un historique glissant
-MAX_ENRICHISSEMENTS = 80   # garde-fou : plafond de fiches détail visitées par scan,
-                            # partagé entre Free-Work et Hellowork
+MAX_ENRICHISSEMENTS = 130  # garde-fou : plafond de fiches détail visitées par scan,
+                            # partagé entre Free-Work, Hellowork et LinkedIn.
+                            # Trop bas, les dernières sources de la liste sont
+                            # notées sur leur seul titre et sortent artificiellement
+                            # mal classées.
 DELAI_ENRICHISSEMENT = 0.4  # secondes entre deux fiches — politesse envers le site
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36"
 
 # ──────────────────────────── COLLECTE ────────────────────────────
 
 
-def telecharger(url: str, timeout: int = 25) -> str:
+def telecharger(url: str, timeout: int = 25, tentatives: int = 3) -> str:
+    """Télécharge une page, avec reprise sur les erreurs temporaires.
+
+    LinkedIn répond 503 ou 429 quand plusieurs requêtes s'enchaînent trop vite.
+    Une pause croissante (3s puis 6s) suffit à récupérer la plupart de ces
+    refus ; au-delà, l'erreur remonte et la source est marquée en incident.
+    """
     req = urllib.request.Request(url, headers={
         "User-Agent": UA,
         "Accept-Language": "fr-FR,fr;q=0.9",
     })
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return r.read().decode("utf-8", errors="ignore")
+    derniere = None
+    for essai in range(tentatives):
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return r.read().decode("utf-8", errors="ignore")
+        except urllib.error.HTTPError as e:
+            derniere = e
+            if e.code not in (429, 500, 502, 503, 504) or essai == tentatives - 1:
+                raise
+            time.sleep(3 * (essai + 1))
+        except (urllib.error.URLError, OSError) as e:
+            derniere = e
+            if essai == tentatives - 1:
+                raise
+            time.sleep(3 * (essai + 1))
+    raise derniere
 
 
 def nettoyer(s: str) -> str:
@@ -232,13 +326,17 @@ def lister_hellowork(url: str):
     return [{"lien": it.get("url")} for it in d.get("itemListElement", []) if it.get("url")]
 
 
-def enrichir_hellowork(lien: str):
-    """Visite la fiche détail et lit son JSON-LD JobPosting (schema.org) :
-    titre, description complète, lieu avec code postal, salaire estimé,
-    compétences — tout structuré, sans scraping HTML fragile.
+def enrichir_json_ld(lien: str):
+    """Visite la fiche détail et lit son JSON-LD JobPosting (schema.org).
+
+    Utilisé pour Hellowork ET LinkedIn : les deux publient ce format normalisé
+    pour l'indexation Google, ce qui évite un scraping HTML fragile propre à
+    chaque site. Diffèrent seulement à la marge — Hellowork fournit un code
+    postal et un salaire estimé, LinkedIn un salaire réel quand l'annonceur
+    l'a saisi.
 
     Renvoie None si le bloc JobPosting est absent (offre retirée, format
-    changé) — l'appelant l'ignore alors simplement.
+    changé) — l'appelant retombe alors sur les données du listing.
     """
     d = extraire_json_ld(telecharger(lien), "JobPosting")
     if not d:
@@ -253,9 +351,9 @@ def enrichir_hellowork(lien: str):
     if isinstance(lieu_obj, list):
         lieu_obj = lieu_obj[0] if lieu_obj else {}
     adresse = (lieu_obj or {}).get("address", {}) if isinstance(lieu_obj, dict) else {}
-    ville = adresse.get("addressLocality", "") if isinstance(adresse, dict) else ""
+    ville = (adresse.get("addressLocality") or "") if isinstance(adresse, dict) else ""
     cp = (adresse.get("postalCode") or "") if isinstance(adresse, dict) else ""
-    region = adresse.get("addressRegion", "") if isinstance(adresse, dict) else ""
+    region = (adresse.get("addressRegion") or "") if isinstance(adresse, dict) else ""
     lieu = ", ".join(x for x in [ville, region] if x)
 
     organisation = ""
@@ -264,16 +362,35 @@ def enrichir_hellowork(lien: str):
         organisation = hiring.get("name", "")
 
     salaire = ""
-    est = d.get("estimatedSalary")
-    if isinstance(est, dict) and est.get("median"):
-        salaire = f"~{int(est['median'] / 1000)}k€/an estimé"
-    elif isinstance(est, list) and est:
-        m = est[0].get("median") if isinstance(est[0], dict) else None
-        if m:
-            salaire = f"~{int(m / 1000)}k€/an estimé"
+    # baseSalary = montant réel annoncé (LinkedIn) ; estimatedSalary = estimation
+    # de la plateforme (Hellowork). Le réel prime sur l'estimation.
+    base = d.get("baseSalary")
+    if isinstance(base, dict):
+        valeur = base.get("value")
+        if isinstance(valeur, dict):
+            montant = valeur.get("maxValue") or valeur.get("value") or valeur.get("minValue")
+            unite = (valeur.get("unitText") or "").upper()
+            if montant:
+                try:
+                    montant = float(montant)
+                    if unite == "DAY":
+                        salaire = f"{int(montant)} €/j"
+                    elif unite in ("YEAR", "") and montant >= 1000:
+                        salaire = f"{int(montant / 1000)}k€/an"
+                except (TypeError, ValueError):
+                    pass
+    if not salaire:
+        est = d.get("estimatedSalary")
+        if isinstance(est, list) and est:
+            est = est[0]
+        if isinstance(est, dict) and est.get("median"):
+            try:
+                salaire = f"~{int(float(est['median']) / 1000)}k€/an estimé"
+            except (TypeError, ValueError):
+                pass
 
     competences = d.get("skills")
-    tags = ", ".join(competences) if isinstance(competences, list) else ""
+    tags = ", ".join(competences) if isinstance(competences, list) else str(competences or "")
 
     fiche = " · ".join(x for x in [lieu, salaire] if x)
     apercu = description[:180]
@@ -285,8 +402,54 @@ def enrichir_hellowork(lien: str):
         "entreprise": organisation,
         "extrait": extrait[:260],
         "contexte": contexte[:6000],
+        "remuneration": salaire,
         "toulouse": bool(RE_TOULOUSE.search(lieu) or cp.startswith("31")),
     }
+
+
+# Alias conservé : Hellowork et LinkedIn partagent exactement le même parseur.
+enrichir_hellowork = enrichir_json_ld
+
+
+RE_LINKEDIN_CARTE = re.compile(
+    r'<h3 class="base-search-card__title">\s*(.*?)\s*</h3>.*?'
+    r'<h4 class="base-search-card__subtitle">.*?>\s*(.*?)\s*</a>.*?'
+    r'job-search-card__location">\s*(.*?)\s*</span>', re.S)
+RE_LINKEDIN_LIEN = re.compile(r'href="(https://[a-z]{2,3}\.linkedin\.com/jobs/view/[^"?]+)')
+
+
+def lister_linkedin(url: str):
+    """Liste via l'API « invité » de LinkedIn, accessible sans authentification.
+
+    L'interface classique exige un compte, mais l'endpoint
+    /jobs-guest/jobs/api/seeMoreJobPostings renvoie des cartes HTML complètes
+    (titre, société, lieu, lien) par lots de 10. On y récupère déjà l'essentiel :
+    l'enrichissement JSON-LD n'ajoute que la description.
+
+    ATTENTION : LinkedIn bloque fréquemment les IP des serveurs d'intégration
+    continue. Si cette source tombe en 403 depuis GitHub Actions, l'incident
+    est enregistré dans offres.json et les autres sources continuent seules.
+    """
+    html_src = telecharger(url)
+    liens = RE_LINKEDIN_LIEN.findall(html_src)
+    cartes = RE_LINKEDIN_CARTE.findall(html_src)
+
+    out, vus = [], set()
+    for i, lien in enumerate(liens):
+        if lien in vus:
+            continue
+        vus.add(lien)
+        titre = entreprise = lieu = ""
+        if i < len(cartes):
+            titre, entreprise, lieu = (nettoyer(x) for x in cartes[i])
+        if not titre:
+            continue
+        out.append({
+            "titre": titre, "lien": lien, "entreprise": entreprise, "lieu": lieu,
+            "extrait": " · ".join(x for x in [entreprise, lieu] if x),
+            "contexte": " ".join([titre, entreprise, lieu]),
+        })
+    return out
 
 
 def lire_rss(url: str):
@@ -383,6 +546,8 @@ def main() -> int:
                 cartes = lire_rss(src["url"])
             elif src["type"] == "hellowork":
                 cartes = lister_hellowork(src["url"])
+            elif src["type"] == "linkedin":
+                cartes = lister_linkedin(src["url"])
             else:
                 cartes = lister_freework(src["url"])
         except (urllib.error.URLError, urllib.error.HTTPError, ElementTree.ParseError, OSError) as e:
@@ -426,11 +591,15 @@ def main() -> int:
                 index.add(lien)
 
                 detail = None
-                if src["type"] == "freework" and enrichissements_faits < MAX_ENRICHISSEMENTS:
+                if enrichissements_faits < MAX_ENRICHISSEMENTS:
                     try:
                         time.sleep(DELAI_ENRICHISSEMENT)
-                        detail = enrichir_freework(lien)
-                        enrichissements_faits += 1
+                        if src["type"] == "freework":
+                            detail = enrichir_freework(lien)
+                            enrichissements_faits += 1
+                        elif src["type"] == "linkedin":
+                            detail = enrichir_json_ld(lien)
+                            enrichissements_faits += 1
                     except (urllib.error.URLError, urllib.error.HTTPError, OSError) as e:
                         print(f"    (fiche détail indisponible pour {titre[:40]} — {e})", file=sys.stderr)
 
@@ -438,21 +607,29 @@ def main() -> int:
                     extrait = detail["extrait"]
                     contexte = titre + " " + detail["contexte"]
                     toulouse = detail["toulouse"]
-                    entreprise = detail.get("entreprise", "")
+                    entreprise = detail.get("entreprise", "") or o.get("entreprise", "")
                 else:
+                    # Le listing LinkedIn porte déjà titre, société et lieu :
+                    # une fiche inaccessible ne fait perdre que la description.
                     extrait = o.get("extrait", "")
-                    contexte = titre + " " + extrait
+                    contexte = titre + " " + o.get("contexte", extrait)
                     toulouse = bool(RE_TOULOUSE.search(contexte))
+                    entreprise = o.get("entreprise", "")
 
             # Second filtre, sur le texte complet cette fois : un poste "OT"
             # ou "qualité" pas repéré au titre l'est souvent dans le corps.
             if exclu(contexte):
                 continue
 
+            tjm, annuel = extraire_remuneration(
+                (detail.get("remuneration", "") if detail else "") + " " + extrait)
+            remu = remuneration_conforme(tjm, annuel)
+
             candidat = {
                 "date": aujourdhui, "source": src["nom"], "titre": titre, "lien": lien,
                 "entreprise": entreprise, "extrait": extrait, "toulouse": toulouse,
-                "score": scorer(contexte, titre, toulouse),
+                "remuneration": remu,   # True conforme / False trop basse / None non publiée
+                "score": scorer(contexte, titre, toulouse, remu),
             }
             if est_doublon(candidat, connues) or est_doublon(candidat, nouvelles):
                 doublons_ecartes += 1
