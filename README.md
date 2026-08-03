@@ -11,6 +11,55 @@ l'écran d'accueil du téléphone.
 
 ---
 
+## Architecture
+
+Trois briques qui ne se parlent qu'à travers un seul fichier JSON, sans serveur ni
+base de données :
+
+```
+GitHub Actions (collecte)  →  docs/data/offres.json  →  GitHub Pages (app)
+```
+
+**Le collecteur** (`scripts/veille.py`) — Python pur, bibliothèque standard
+uniquement. À chaque scan :
+1. **Lit chaque source.** Free-Work est rendu côté serveur : une regex extrait les
+   liens du listing, puis chaque offre *nouvelle* est enrichie via sa fiche détail
+   (lieu, TJM, durée, description complète). Hellowork rend son contenu en
+   JavaScript — invisible pour un simple téléchargement — mais republie un bloc
+   **JSON-LD** (`schema.org/JobPosting`, celui que Google lit pour l'indexation) :
+   c'est cette structure qu'on lit directement, sans avoir besoin d'exécuter de JS.
+2. **Note chaque offre** : mots-clés pondérés cherchés dans le texte complet
+   (`MOTS_CLES`), total divisé par 3 et plafonné à 5. Des **planchers** forcent une
+   note minimale sur certains intitulés précis (`REGLES_PLANCHER`) — un titre de
+   trois mots ne peut pas cumuler assez de catégories pour y arriver seul.
+3. **Exclut le bruit** (`EXCLUSIONS`, en regex avec `\b` pour les motifs courts —
+   "ot" ne doit jamais matcher dans "photo"), vérifié sur le titre *et* sur le texte
+   complet après enrichissement.
+4. **Dédoublonne** par similarité de titre + entreprise + statut Toulouse
+   (`difflib`), même entre deux plateformes différentes.
+
+**Le stockage** (`docs/data/offres.json`) — un tableau JSON relu et réécrit à
+chaque scan, dédoublonné sur l'URL, plafonné à 600 entrées.
+
+**L'automatisation** — `.github/workflows/veille.yml` déclenche le script tous les
+jours à 5h UTC (`schedule`) ou à la demande (`workflow_dispatch`), puis commit et
+pousse le JSON modifié.
+
+**L'hébergement** — le dossier `docs/` est publié tel quel comme site statique,
+sans build ni compilation.
+
+**L'application** (`docs/index.html`) — HTML/CSS/JS vanilla, sans framework. Elle
+charge `data/offres.json` au démarrage ; le suivi personnel (statuts, relances) vit
+dans le `localStorage` du téléphone, pas dans le dépôt. Un service worker
+(`sw.js`) met en cache la dernière version pour l'ouverture hors-ligne, et un
+`manifest.webmanifest` la rend installable sur l'écran d'accueil.
+
+Chaque brique ne connaît que le format du JSON, rien d'autre — la source de
+collecte, le scoring ou l'interface peuvent évoluer indépendamment sans rien
+casser ailleurs.
+
+---
+
 ## Installation
 
 ### 1. Créer le dépôt
