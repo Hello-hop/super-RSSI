@@ -1,7 +1,29 @@
 {
- "scan": "2026-08-04T07:42:47+00:00",
+ "scan": "2026-08-04T14:41:05+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-08-04",
+   "source": "HW RSSI national",
+   "titre": "Product Security Officer H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/82029419.html",
+   "entreprise": "Colas France",
+   "extrait": "Colas France — Vélizy-Villacoublay, Île-de-France · ~63k€/an estimé — Les missions du poste Colas, filiale du groupe Bouygues a pour mission d'imaginer, de construire et d'entretenir des infrastructures de transport de façon responsable. Acteur mondi",
+   "toulouse": false,
+   "remuneration": true,
+   "score": 3
+  },
+  {
+   "date": "2026-08-04",
+   "source": "LI RSSI Toulouse",
+   "titre": "E-Government Suisse Article",
+   "lien": "https://fr.linkedin.com/jobs/view/e-government-suisse-article-at-quicksite-s%C3%A0rl-4448634339",
+   "entreprise": "eAdmin Solutions SA",
+   "extrait": "eAdmin Solutions SA — Issel — Synchronisation avec des acteurs tiers<br><br>Connecteurs<br><br>Un guichet virtuel à proprement parler offre des services en ligne, et ils sont nombreux sur le marché. Il peut éga",
+   "toulouse": false,
+   "remuneration": null,
+   "score": 0
+  },
   {
    "date": "2026-08-04",
    "source": "FW Cyber Toulouse",
