@@ -30,6 +30,9 @@
   #resume b{color:var(--cotation);font-weight:600}
 
   nav{display:flex;gap:5px}
+  /* Empêche le navigateur d'interpréter le glissement horizontal comme un
+     « page précédente », ce qui sortirait de l'application. */
+  body{overscroll-behavior-x:contain;touch-action:pan-y}
   nav button{flex:1;background:transparent;border:1px solid var(--trait);color:var(--sourdine);
     padding:9px 2px;border-radius:var(--rayon);font-size:11.5px;font-weight:600;cursor:pointer}
   nav button[aria-selected="true"]{background:var(--panneau);color:var(--texte);border-color:var(--sourdine)}
@@ -311,14 +314,48 @@ document.getElementById('liste').addEventListener('click', function(ev){
   ecrireSuivi(); rendre();
 });
 
-document.getElementById('onglets').addEventListener('click', function(ev){
-  var b = ev.target.closest('button'); if (!b) return;
-  VUE = b.getAttribute('data-vue');
-  [].forEach.call(this.querySelectorAll('button'), function(x){
-    x.setAttribute('aria-selected', x === b ? 'true' : 'false');
+var VUES = ['qualifier', 'cours', 'relances', 'ecarte'];
+
+function choisirVue(v){
+  if (VUES.indexOf(v) === -1 || v === VUE) return;
+  VUE = v;
+  [].forEach.call(document.querySelectorAll('#onglets button'), function(x){
+    x.setAttribute('aria-selected', x.getAttribute('data-vue') === v ? 'true' : 'false');
   });
   rendre();
+  window.scrollTo(0, 0);
+}
+
+document.getElementById('onglets').addEventListener('click', function(ev){
+  var b = ev.target.closest('button'); if (!b) return;
+  choisirVue(b.getAttribute('data-vue'));
 });
+
+// ── Navigation par balayage ───────────────────────────────────────
+// Un glissement horizontal fait défiler les onglets. Deux garde-fous :
+// le geste doit être nettement plus horizontal que vertical (sinon on
+// volerait le défilement de la liste), et assez ample pour ne pas se
+// déclencher sur un simple appui tremblant.
+var SEUIL = 60, tx = 0, ty = 0, tms = 0;
+
+document.addEventListener('touchstart', function(ev){
+  if (ev.touches.length !== 1) { tms = 0; return; }
+  tx = ev.touches[0].clientX;
+  ty = ev.touches[0].clientY;
+  tms = Date.now();
+}, {passive: true});
+
+document.addEventListener('touchend', function(ev){
+  if (!tms || !ev.changedTouches.length) return;
+  var dx = ev.changedTouches[0].clientX - tx;
+  var dy = ev.changedTouches[0].clientY - ty;
+  tms = 0;
+  if (Math.abs(dx) < SEUIL) return;
+  if (Math.abs(dx) < Math.abs(dy) * 1.8) return;   // geste trop vertical
+  var i = VUES.indexOf(VUE) + (dx < 0 ? 1 : -1);   // vers la gauche = onglet suivant
+  if (i < 0 || i >= VUES.length) return;           // pas de rebouclage : on sent la butée
+  choisirVue(VUES[i]);
+}, {passive: true});
 
 document.getElementById('filtre-lieu').addEventListener('click', function(){
   FILTRE_TOULOUSE = !FILTRE_TOULOUSE;
