@@ -69,6 +69,7 @@
     display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
   .meta{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:var(--sourdine);margin-bottom:11px}
   .meta .drapeau{color:var(--echu)} .meta .statut{color:var(--traite)}
+  .meta .rappel{color:var(--cotation)}
 
   .actions{display:flex;gap:6px}
   .act{flex:1;background:#1d2937;border:1px solid var(--trait);color:var(--texte);
@@ -196,29 +197,47 @@ function estEchue(o){
   return new Date(e.relance) <= fin;
 }
 
+// Une relance programmée, échue ou non : c'est ce qui peuple l'onglet Relances.
+function aRelance(o){
+  var e = etat(o);
+  return !!e.relance && ['Perdu','Écarté','Gagné'].indexOf(e.statut) === -1;
+}
+
 function filtrer(){
-  return OFFRES.filter(function(o){
-    var s = etat(o).statut;
+  var lot = OFFRES.filter(function(o){
+    var e = etat(o), s = e.statut;
     if (FILTRE_TOULOUSE && !estToulouse(o)) return false;
-    if (VUE === 'qualifier') return !s;
+    // Programmer une relance sort l'offre de « À qualifier » : elle est rangée,
+    // pas oubliée — on la retrouve dans l'onglet Relances.
+    if (VUE === 'qualifier') return !s && !e.relance;
     if (VUE === 'cours') return ['Postulé','Entretien','Négociation'].indexOf(s) > -1;
     if (VUE === 'ecarte') return s === 'Écarté';
-    return estEchue(o);
-  }).sort(function(a,b){ return b.score - a.score; });
+    return aRelance(o);
+  });
+  if (VUE === 'relances') {   // la plus urgente en tête
+    return lot.sort(function(a, b){
+      return new Date(etat(a).relance) - new Date(etat(b).relance);
+    });
+  }
+  return lot.sort(function(a, b){ return b.score - a.score; });
 }
 
 function rendre(){
   var base = FILTRE_TOULOUSE ? OFFRES.filter(estToulouse) : OFFRES;
-  var aQualifier = base.filter(function(o){ return !etat(o).statut; }).length;
+  var aQualifier = base.filter(function(o){
+    var e = etat(o); return !e.statut && !e.relance;
+  }).length;
   var dues = base.filter(estEchue).length;
+  var programmees = base.filter(aRelance).length;
   document.getElementById('resume').innerHTML =
-    '<b>' + aQualifier + '</b> à qualifier &nbsp;·&nbsp; <b>' + dues + '</b> relance' +
-    (dues > 1 ? 's' : '') + ' due' + (dues > 1 ? 's' : '');
+    '<b>' + aQualifier + '</b> à qualifier &nbsp;·&nbsp; <b>' + programmees + '</b> relance' +
+    (programmees > 1 ? 's' : '') + (dues ? ' <span style="color:#d1665b">(' + dues + ' due' +
+    (dues > 1 ? 's' : '') + ')</span>' : '');
 
   var lot = filtrer(), html = '';
   if (!lot.length){
     html = '<div class="vide">' + (
-      VUE === 'relances' ? 'Aucune relance en retard. Le pipeline est à jour.' :
+      VUE === 'relances' ? 'Aucune relance programmée. Le bouton « Relancer dans 7 j » range une offre ici.' :
       VUE === 'cours' ? 'Rien en cours. Qualifie une offre pour ouvrir un dossier.' :
       VUE === 'ecarte' ? 'Aucune mission écartée pour l\'instant.' :
       'Tout est trié. Le prochain scan tourne demain matin.') + '</div>';
@@ -236,16 +255,23 @@ function rendre(){
         (o.extrait ? '<p class="extrait">' + esc(o.extrait) + '</p>' : '') +
         '<div class="meta">' + esc(o.source) + ' · ' + esc(o.date) +
           (e.statut ? ' · <span class="statut">' + esc(e.statut) + '</span>' : '') +
-          (echue ? ' · <span class="drapeau">relance due</span>' : '') + '</div>' +
+          (echue ? ' · <span class="drapeau">relance due</span>'
+                 : (e.relance ? ' · <span class="rappel">relance le ' + jjmm(e.relance) + '</span>' : '')) +
+        '</div>' +
         '<div class="actions">' + (ecarte
           ? bouton(o.lien, 'statut:', 'Remettre à qualifier', '')
           : bouton(o.lien, 'statut:Postulé', 'Postulé', 'oui') +
-            bouton(o.lien, 'relance:7', 'Relancer dans 7 j', '') +
+            bouton(o.lien, 'relance:7', e.relance ? 'Repousser de 7 j' : 'Relancer dans 7 j', '') +
             bouton(o.lien, 'statut:Écarté', 'Écarter', 'non')) +
         '</div></article>';
     });
   }
   document.getElementById('liste').innerHTML = html;
+}
+
+function jjmm(iso){
+  var d = new Date(iso);
+  return ('0' + d.getDate()).slice(-2) + '/' + ('0' + (d.getMonth() + 1)).slice(-2);
 }
 
 function bouton(lien, action, texte, classe){
