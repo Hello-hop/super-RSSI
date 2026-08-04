@@ -242,8 +242,11 @@ RE_FREEWORK_CARTE = re.compile(
     r'href="(/fr/tech-it/job-mission/[^"]+)"[^>]*>\s*<span[^>]*>(.*?)</span>', re.S)
 RE_FREEWORK_LIEU = re.compile(r"<h1>.*?</h1><h2>([^<]+)</h2>", re.S)
 RE_FREEWORK_FICHE = re.compile(r'class="w-full text-sm line-clamp-2">([^<]+)</span>')
+# [^<]{0,120} borne la capture au CONTENU de la balise <title> : avec un
+# .*? non borné, une page dont le titre ne suit aucun des deux formats
+# faisait avaler toute la page (scripts compris) dans le champ entreprise.
 RE_FREEWORK_ENTREPRISE = re.compile(
-    r"<title>(.*?)\s*—\s*(?:Offre d.?emploi|Mission freelance)", re.S)
+    r"<title>([^<]{0,120}?)\s*—\s*(?:Offre d.?emploi|Mission freelance)")
 
 
 def lister_freework(url: str):
@@ -271,7 +274,10 @@ def enrichir_freework(lien: str):
     lieu = nettoyer(m_lieu.group(1)) if m_lieu else ""
 
     m_ent = RE_FREEWORK_ENTREPRISE.search(html_src)
-    entreprise = nettoyer(m_ent.group(1)) if m_ent else ""
+    # Garde-fou : un nom d'entreprise plausible tient en quelques mots. Au-delà,
+    # c'est que l'extraction a dérapé — mieux vaut un champ vide qu'un champ qui
+    # alourdit le fichier lu par le téléphone à chaque ouverture.
+    entreprise = nettoyer(m_ent.group(1))[:120] if m_ent else ""
 
     i1_marqueur = html_src.find("html-renderer prose-content")
     i1 = html_src.find(">", i1_marqueur) + 1 if i1_marqueur != -1 else -1
