@@ -242,7 +242,8 @@ RE_FREEWORK_CARTE = re.compile(
     r'href="(/fr/tech-it/job-mission/[^"]+)"[^>]*>\s*<span[^>]*>(.*?)</span>', re.S)
 RE_FREEWORK_LIEU = re.compile(r"<h1>.*?</h1><h2>([^<]+)</h2>", re.S)
 RE_FREEWORK_FICHE = re.compile(r'class="w-full text-sm line-clamp-2">([^<]+)</span>')
-RE_FREEWORK_ENTREPRISE = re.compile(r"<title>(.*?)\s*—\s*Offre d.?emploi", re.S)
+RE_FREEWORK_ENTREPRISE = re.compile(
+    r"<title>(.*?)\s*—\s*(?:Offre d.?emploi|Mission freelance)", re.S)
 
 
 def lister_freework(url: str):
@@ -505,8 +506,6 @@ def est_doublon(candidat: dict, pool: list) -> bool:
     for autre in pool:
         if autre.get("lien") == candidat["lien"]:
             continue
-        if bool(autre.get("toulouse")) != bool(candidat.get("toulouse")):
-            continue
         t_autre = normaliser(autre.get("titre", ""))
         if difflib.SequenceMatcher(None, t_cand, t_autre).ratio() < 0.82:
             continue
@@ -519,6 +518,15 @@ def est_doublon(candidat: dict, pool: list) -> bool:
                       difflib.SequenceMatcher(None, e_cand, e_autre).ratio() >= 0.6)
             if not proche:
                 continue
+            # Même entreprise + même intitulé : c'est la même mission, même si
+            # le lieu a été interprété différemment d'une source à l'autre.
+            # (LinkedIn republie sous un nouvel identifiant, et le flux
+            # d'origine change parfois la localisation détectée.)
+            return True
+        # Entreprise inconnue d'un côté : on retombe sur le lieu comme
+        # discriminant, faute de mieux.
+        if bool(autre.get("toulouse")) != bool(candidat.get("toulouse")):
+            continue
         return True
     return False
 

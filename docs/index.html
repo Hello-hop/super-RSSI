@@ -29,11 +29,14 @@
   #resume{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--sourdine);margin-bottom:12px}
   #resume b{color:var(--cotation);font-weight:600}
 
-  nav{display:flex;gap:6px}
+  nav{display:flex;gap:5px}
   nav button{flex:1;background:transparent;border:1px solid var(--trait);color:var(--sourdine);
-    padding:9px 4px;border-radius:var(--rayon);font-size:12.5px;font-weight:600;cursor:pointer}
+    padding:9px 2px;border-radius:var(--rayon);font-size:11.5px;font-weight:600;cursor:pointer}
   nav button[aria-selected="true"]{background:var(--panneau);color:var(--texte);border-color:var(--sourdine)}
   :focus-visible{outline:2px solid var(--cotation);outline-offset:2px}
+  /* Missions écartées : présentes pour vérification, mais visuellement en retrait */
+  .card.ecarte{opacity:.62}
+  .card.ecarte h2 a{color:var(--sourdine)}
 
   #filtre-lieu{display:block;width:100%;margin-top:8px;background:transparent;
     border:1px solid var(--trait);color:var(--sourdine);padding:8px 4px;border-radius:var(--rayon);
@@ -97,6 +100,7 @@
     <button data-vue="qualifier" aria-selected="true">À qualifier</button>
     <button data-vue="cours" aria-selected="false">En cours</button>
     <button data-vue="relances" aria-selected="false">Relances</button>
+    <button data-vue="ecarte" aria-selected="false">Écarté</button>
   </nav>
   <button id="filtre-lieu" aria-pressed="false">📍 Toulouse uniquement</button>
 </header>
@@ -133,13 +137,50 @@ function lireSuivi(){
 function ecrireSuivi(){
   try { localStorage.setItem(CLE, JSON.stringify(SUIVI)); } catch(e){}
 }
-function etat(lien){ return SUIVI[lien] || {}; }
+
+// Une même mission est republiée sous une nouvelle URL (LinkedIn change son
+// identifiant, Free-Work repost l'annonce). Le suivi est donc indexé sur une
+// SIGNATURE de mission — titre + entreprise normalisés — et non sur le lien :
+// une republication hérite automatiquement du statut déjà donné.
+var RE_BRUIT = /\b(h\s?\/?\s?f|f\s?\/?\s?h|hf|fh|cdi|cdd|freelance|junior|senior|confirmee?|confirmé|confirmée)\b/g;
+
+function normaliser(s){
+  return String(s || '')
+    .toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(RE_BRUIT, ' ')
+    .replace(/[^a-z0-9 ]/g, ' ')
+    .replace(/\s+/g, ' ').trim();
+}
+
+function signature(o){
+  var ent = normaliser(o.entreprise);
+  // Sans entreprise connue, deux clients distincts peuvent porter le même
+  // intitulé générique ("Consultant GRC H/F") : on retombe alors sur le lien,
+  // quitte à ne pas regrouper, plutôt que de masquer une offre à tort.
+  return ent ? normaliser(o.titre) + '|' + ent : 'lien|' + o.lien;
+}
+
+function etat(o){ return SUIVI[signature(o)] || {}; }
+
+// Les suivis d'avant cette version étaient indexés par URL : on les reporte
+// une fois sur la nouvelle clé, pour ne perdre aucun statut déjà saisi.
+function migrerSuivi(){
+  var change = false;
+  OFFRES.forEach(function(o){
+    var ancien = SUIVI[o.lien];
+    if (!ancien) return;
+    var sig = signature(o);
+    if (sig !== o.lien && !SUIVI[sig]) { SUIVI[sig] = ancien; change = true; }
+  });
+  if (change) ecrireSuivi();
+}
 
 function charger(){
   SUIVI = lireSuivi();
   fetch('data/offres.json', {cache:'no-cache'})
     .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
-    .then(function(d){ OFFRES = d.offres || []; rendre(); })
+    .then(function(d){ OFFRES = d.offres || []; migrerSuivi(); rendre(); })
     .catch(function(){
       document.getElementById('liste').innerHTML =
         '<div class="vide">Les offres n\'ont pas pu être chargées.<br>' +
@@ -148,7 +189,7 @@ function charger(){
 }
 
 function estEchue(o){
-  var e = etat(o.lien);
+  var e = etat(o);
   if (!e.relance) return false;
   if (['Perdu','Écarté','Gagné'].indexOf(e.statut) > -1) return false;
   var fin = new Date(); fin.setHours(23,59,59,999);
@@ -157,17 +198,18 @@ function estEchue(o){
 
 function filtrer(){
   return OFFRES.filter(function(o){
-    var s = etat(o.lien).statut;
+    var s = etat(o).statut;
     if (FILTRE_TOULOUSE && !estToulouse(o)) return false;
     if (VUE === 'qualifier') return !s;
     if (VUE === 'cours') return ['Postulé','Entretien','Négociation'].indexOf(s) > -1;
+    if (VUE === 'ecarte') return s === 'Écarté';
     return estEchue(o);
   }).sort(function(a,b){ return b.score - a.score; });
 }
 
 function rendre(){
   var base = FILTRE_TOULOUSE ? OFFRES.filter(estToulouse) : OFFRES;
-  var aQualifier = base.filter(function(o){ return !etat(o.lien).statut; }).length;
+  var aQualifier = base.filter(function(o){ return !etat(o).statut; }).length;
   var dues = base.filter(estEchue).length;
   document.getElementById('resume').innerHTML =
     '<b>' + aQualifier + '</b> à qualifier &nbsp;·&nbsp; <b>' + dues + '</b> relance' +
@@ -178,13 +220,15 @@ function rendre(){
     html = '<div class="vide">' + (
       VUE === 'relances' ? 'Aucune relance en retard. Le pipeline est à jour.' :
       VUE === 'cours' ? 'Rien en cours. Qualifie une offre pour ouvrir un dossier.' :
+      VUE === 'ecarte' ? 'Aucune mission écartée pour l\'instant.' :
       'Tout est trié. Le prochain scan tourne demain matin.') + '</div>';
   } else {
     lot.forEach(function(o){
-      var e = etat(o.lien), echue = estEchue(o), toulouse = estToulouse(o), segs = '';
+      var e = etat(o), echue = estEchue(o), toulouse = estToulouse(o), segs = '';
+      var ecarte = e.statut === 'Écarté';
       for (var i = 1; i <= 5; i++) segs += '<i class="' + (i <= o.score ? 'on' : '') + '"></i>';
       html += '<article class="card ' + (echue ? 'echu' : (o.score >= 4 ? 'fort' : '')) +
-        (toulouse ? ' toulouse' : '') + '">' +
+        (toulouse ? ' toulouse' : '') + (ecarte ? ' ecarte' : '') + '">' +
         '<div class="crit" role="img" aria-label="Cotation ' + o.score + ' sur 5">' + segs +
           '<span>cotation ' + o.score + '/5</span></div>' +
         (toulouse ? '<span class="puce-lieu">📍 Toulouse</span><br>' : '') +
@@ -193,10 +237,11 @@ function rendre(){
         '<div class="meta">' + esc(o.source) + ' · ' + esc(o.date) +
           (e.statut ? ' · <span class="statut">' + esc(e.statut) + '</span>' : '') +
           (echue ? ' · <span class="drapeau">relance due</span>' : '') + '</div>' +
-        '<div class="actions">' +
-          bouton(o.lien, 'statut:Postulé', 'Postulé', 'oui') +
-          bouton(o.lien, 'relance:7', 'Relancer dans 7 j', '') +
-          bouton(o.lien, 'statut:Écarté', 'Écarter', 'non') +
+        '<div class="actions">' + (ecarte
+          ? bouton(o.lien, 'statut:', 'Remettre à qualifier', '')
+          : bouton(o.lien, 'statut:Postulé', 'Postulé', 'oui') +
+            bouton(o.lien, 'relance:7', 'Relancer dans 7 j', '') +
+            bouton(o.lien, 'statut:Écarté', 'Écarter', 'non')) +
         '</div></article>';
     });
   }
@@ -220,12 +265,20 @@ function dans(jours){
 document.getElementById('liste').addEventListener('click', function(ev){
   var b = ev.target.closest('.act'); if (!b) return;
   var lien = b.getAttribute('data-lien');
+  var offre = OFFRES.filter(function(x){ return x.lien === lien; })[0];
+  if (!offre) return;
+  var sig = signature(offre);
   var p = b.getAttribute('data-action').split(':');
-  var e = SUIVI[lien] || (SUIVI[lien] = {});
+  var e = SUIVI[sig] || (SUIVI[sig] = {});
   if (p[0] === 'statut'){
-    e.statut = p[1];
-    if (p[1] === 'Postulé') e.relance = dans(7);   // la relance se pose toute seule
-    if (p[1] === 'Écarté') delete e.relance;
+    if (!p[1]) {                                   // « Remettre à qualifier »
+      delete SUIVI[sig];
+      delete SUIVI[lien];                          // purge aussi l'ancienne clé par URL
+    } else {
+      e.statut = p[1];
+      if (p[1] === 'Postulé') e.relance = dans(7); // la relance se pose toute seule
+      if (p[1] === 'Écarté') delete e.relance;
+    }
   } else {
     e.relance = dans(parseInt(p[1], 10));
   }
