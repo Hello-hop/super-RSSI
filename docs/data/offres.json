@@ -1,7 +1,40 @@
 {
- "scan": "2026-08-05T07:41:57+00:00",
+ "scan": "2026-08-05T07:50:13+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-08-05",
+   "source": "LI RSSI Toulouse",
+   "titre": "EN",
+   "lien": "https://fr.linkedin.com/jobs/view/en-at-airinternet%C2%AE-4448576659",
+   "entreprise": "AirInternet®",
+   "extrait": "AirInternet® — Labrihe — <ul><li>Contact</li><li>News</li><li>Partner Portal</li><li>Newsletter</li><li>Working at AirInternet</li><li>NL</li><li>DE</li><li>GB</li><li>FR</li></ul>",
+   "toulouse": false,
+   "remuneration": null,
+   "score": 0
+  },
+  {
+   "date": "2026-08-05",
+   "source": "LI RSSI Toulouse",
+   "titre": "The €250 Billion Question Hanging Over the AI Industry",
+   "lien": "https://fr.linkedin.com/jobs/view/the-%E2%82%AC250-billion-question-hanging-over-the-ai-industry-at-hive-signal-4447325930",
+   "entreprise": "Hive Signal",
+   "extrait": "Hive Signal — Pratviel — For the past two years, the technology industry has celebrated an unprecedented wave of investment in artificial intelligence. Companies have announced enormous data centres, custo",
+   "toulouse": false,
+   "remuneration": null,
+   "score": 0
+  },
+  {
+   "date": "2026-08-05",
+   "source": "LI ISO 27001 France",
+   "titre": "Governance, Risk & Compliance (GRC) Analyst",
+   "lien": "https://fr.linkedin.com/jobs/view/governance-risk-compliance-grc-analyst-at-alignerr-4449415937",
+   "entreprise": "Alignerr",
+   "extrait": "Alignerr · France",
+   "toulouse": false,
+   "remuneration": null,
+   "score": 1
+  },
   {
    "date": "2026-08-04",
    "source": "HW RSSI national",
