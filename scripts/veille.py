@@ -68,7 +68,16 @@ SOURCES = [
     {"nom": "LI GRC Toulouse", "type": "linkedin",
      "url": "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=GRC%20cybers%C3%A9curit%C3%A9&location=Toulouse"},
     {"nom": "LI ISO 27001 France", "type": "linkedin",
-     "url": "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=ISO%2027001&location=France&f_WT=2"},
+     "url": "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=ISO%2027001&location=France&f_WT=2",
+     "remote": True},
+    # f_WT=2 = filtre « à distance » de LinkedIn : toute offre qui vient de ces
+    # flux EST en télétravail total, sans avoir à le deviner dans le texte.
+    {"nom": "LI Security Analyst remote", "type": "linkedin",
+     "url": "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=security%20analyst&location=France&f_WT=2",
+     "remote": True},
+    {"nom": "LI GRC remote", "type": "linkedin",
+     "url": "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=GRC%20cybers%C3%A9curit%C3%A9&location=France&f_WT=2",
+     "remote": True},
 
     # Malt : ni scraping (Cloudflare bloque tout, y compris un navigateur
     # simulé) ni Google Alert (Google n'indexe que les profils freelances de
@@ -100,11 +109,27 @@ MOTS_CLES = [
 # Planchers manuels : certains intitulés doivent atteindre une note minimale
 # même si le comptage par mots-clés n'y suffit pas — un titre de 3 mots ne
 # peut pas cumuler assez de catégories pour franchir /3 tout seul.
-# Format : (motif sur le TITRE, Toulouse requis ?, note plancher).
+#   lieu : None, "toulouse", "remote" ou "toulouse_ou_remote" — condition à remplir
+#   hors_remuneration : True = ce plancher ignore le plafond lié au salaire,
+#     parce qu'il traduit une décision explicite ("ce métier m'intéresse quel
+#     que soit le montant") qui prime sur la règle générique.
 REGLES_PLANCHER = [
-    (r"adjoint.{0,25}rssi|rssi.{0,25}adjoint", True, 5),   # Adjoint RSSI confirmé, à Toulouse
-    (r"chef de projet cybers[ée]curit[ée]",   False, 4),   # quel que soit le lieu
+    {"motif": r"adjoint.{0,25}rssi|rssi.{0,25}adjoint", "lieu": "toulouse",
+     "note": 5, "hors_remuneration": False},
+    {"motif": r"chef de projet cybers[ée]curit[ée]", "lieu": None,
+     "note": 4, "hors_remuneration": False},
+    # Cœur de métier : en full remote ou à Toulouse, l'intérêt ne dépend pas
+    # du montant affiché.
+    {"motif": r"(information |cyber ?)?security analyst|analyste s[ée]curit[ée]",
+     "lieu": "toulouse_ou_remote", "note": 5, "hors_remuneration": True},
 ]
+
+# Télétravail total. Deux sources : le flux LinkedIn filtré f_WT=2 (qui ne
+# renvoie que du full remote, donc certitude), et ces formulations dans le
+# texte. « Télétravail partiel » ou « hybride » ne doivent PAS matcher.
+RE_REMOTE = re.compile(
+    r"100\s?%\s?(?:de\s)?t[ée]l[ée]travail|t[ée]l[ée]travail\s(?:total|complet|int[ée]gral)"
+    r"|full[\s-]?remote|fully[\s-]remote|remote[\s-]first|100\s?%\s?remote", re.I)
 
 # ── Seuils de rémunération ──
 # Le 5/5 est réservé aux offres dont la rémunération est CONFIRMÉE au niveau
@@ -158,24 +183,39 @@ def remuneration_conforme(tjm, annuel):
     return False
 
 
-def scorer(texte: str, titre: str = "", toulouse: bool = False, remu=None) -> int:
+def scorer(texte: str, titre: str = "", toulouse: bool = False, remu=None,
+           remote: bool = False) -> int:
     """Note /5. `texte` porte le score de base ; `titre` peut déclencher un plancher.
 
-    `remu` (True/False/None) plafonne la note à 4 si la rémunération n'est pas
-    confirmée au niveau attendu — y compris pour les planchers manuels.
+    Le plafond lié à la rémunération s'applique à tout, SAUF aux planchers
+    marqués hors_remuneration : ceux-là traduisent un choix explicite
+    ("ce métier m'intéresse quel que soit le montant") qui prime sur la
+    règle générique.
     """
     t = (texte or "").lower()
     pts = sum(p for motif, p in MOTS_CLES if re.search(motif, t))
     note = min(5, round(pts / 3))
     tt = (titre or "").lower()
-    for motif, toulouse_requis, plancher in REGLES_PLANCHER:
-        if re.search(motif, tt) and (not toulouse_requis or toulouse):
-            note = max(note, plancher)
+
+    plancher_prioritaire = 0
+    for r in REGLES_PLANCHER:
+        if not re.search(r["motif"], tt):
+            continue
+        lieu = r["lieu"]
+        if lieu == "toulouse" and not toulouse:
+            continue
+        if lieu == "remote" and not remote:
+            continue
+        if lieu == "toulouse_ou_remote" and not (toulouse or remote):
+            continue
+        note = max(note, r["note"])
+        if r["hors_remuneration"]:
+            plancher_prioritaire = max(plancher_prioritaire, r["note"])
 
     if note >= 5:
         if remu is False or (remu is None and EXIGER_REMUNERATION_CONNUE):
             note = 4
-    return note
+    return max(note, plancher_prioritaire)
 
 
 # Bruit à écarter — titre ET texte complet de l'annonce sont vérifiés (un
@@ -340,6 +380,11 @@ def lister_hellowork(url: str):
     return [{"lien": it.get("url")} for it in d.get("itemListElement", []) if it.get("url")]
 
 
+RE_PAY_RANGE = re.compile(
+    r"[Bb]ase pay range\s*€\s*(\d[\d,\s]*)(?:\.\d{2})?\s*/?\s*(?:yr|an)?\s*[-–]\s*"
+    r"€\s*(\d[\d,\s]*)(?:\.\d{2})?\s*/?\s*(?:yr|an)?", re.I)
+
+
 def enrichir_json_ld(lien: str):
     """Visite la fiche détail et lit son JSON-LD JobPosting (schema.org).
 
@@ -352,9 +397,14 @@ def enrichir_json_ld(lien: str):
     Renvoie None si le bloc JobPosting est absent (offre retirée, format
     changé) — l'appelant retombe alors sur les données du listing.
     """
-    d = extraire_json_ld(telecharger(lien), "JobPosting")
+    html_src = telecharger(lien)
+    d = extraire_json_ld(html_src, "JobPosting")
     if not d:
         return None
+    # Version sans balises : les mentions « Base pay range » ou « 100 % remote »
+    # sont découpées par le balisage dans le HTML brut et deviennent
+    # introuvables si on cherche dessus directement.
+    texte_page = nettoyer(html_src[:400000])
 
     titre = nettoyer(d.get("title", ""))
     if not titre:
@@ -402,6 +452,19 @@ def enrichir_json_ld(lien: str):
                 salaire = f"~{int(float(est['median']) / 1000)}k€/an estimé"
             except (TypeError, ValueError):
                 pass
+    if not salaire:
+        # LinkedIn affiche souvent « Base pay range €48,000.00/yr - €60,000.00/yr »
+        # dans la page sans le reporter dans le JSON-LD : sans ce repli, l'offre
+        # passait pour « rémunération non publiée ».
+        m = RE_PAY_RANGE.search(texte_page)
+        if m:
+            try:
+                bas = int(re.sub(r"[^\d]", "", m.group(1))) // 1000
+                haut = int(re.sub(r"[^\d]", "", m.group(2))) // 1000
+                if 5 <= bas <= 500 and 5 <= haut <= 500:
+                    salaire = f"{bas}k-{haut}k€/an"
+            except ValueError:
+                pass
 
     competences = d.get("skills")
     tags = ", ".join(competences) if isinstance(competences, list) else str(competences or "")
@@ -417,6 +480,7 @@ def enrichir_json_ld(lien: str):
         "extrait": extrait[:260],
         "contexte": contexte[:6000],
         "remuneration": salaire,
+        "remote": bool(RE_REMOTE.search(texte_page)),
         "toulouse": bool(RE_TOULOUSE.search(lieu) or cp.startswith("31")),
     }
 
@@ -645,12 +709,17 @@ def main() -> int:
             tjm, annuel = extraire_remuneration(
                 (detail.get("remuneration", "") if detail else "") + " " + extrait)
             remu = remuneration_conforme(tjm, annuel)
+            # Certitude si le flux est filtré « à distance » par LinkedIn,
+            # sinon déduction depuis le texte de l'annonce.
+            remote = bool(src.get("remote")) or (
+                bool(detail.get("remote")) if detail else bool(RE_REMOTE.search(contexte)))
 
             candidat = {
                 "date": aujourdhui, "source": src["nom"], "titre": titre, "lien": lien,
                 "entreprise": entreprise, "extrait": extrait, "toulouse": toulouse,
+                "remote": remote,
                 "remuneration": remu,   # True conforme / False trop basse / None non publiée
-                "score": scorer(contexte, titre, toulouse, remu),
+                "score": scorer(contexte, titre, toulouse, remu, remote),
             }
             if est_doublon(candidat, connues) or est_doublon(candidat, nouvelles):
                 doublons_ecartes += 1
