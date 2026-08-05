@@ -1,7 +1,18 @@
 {
- "scan": "2026-08-05T07:50:13+00:00",
+ "scan": "2026-08-05T11:33:41+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-08-05",
+   "source": "FW Cyber Toulouse",
+   "titre": "Chef de Projet Cybersécurité",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant-cyber-securite/chef-de-projet-cybersecurite-185",
+   "entreprise": "Hexagone Digitale",
+   "extrait": "Hexagone Digitale — Dès que possible · 4 mois · 400-530 €⁄j · 5 à 10 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — CONTEXTE DE LA MISSION Le Centre Expertise Sécurité Métier (CESM) d'une grande institution financière pilote une dizaine de proj",
+   "toulouse": true,
+   "remuneration": false,
+   "score": 4
+  },
   {
    "date": "2026-08-05",
    "source": "LI RSSI Toulouse",
