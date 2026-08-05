@@ -83,15 +83,18 @@ SOURCES = [
 # SSI, ISO 27005/EBIOS, collectivité) : 4/5 hors Toulouse, 5/5 à Toulouse —
 # c'est l'écart que "toulouse" doit produire à lui seul.
 MOTS_CLES = [
-    (r"iso ?2700[15]|27005|ebios|smsi",                4),
-    (r"grc|gouvernance|conformit[ée]",                 2),
-    (r"rssi|ciso",                                     3),
-    (r"analyse de risque|pssi|audit",                  3),
-    (r"nis ?2|dora|rgpd|hds",                          1),
+    (r"iso ?2700[15]|27005|ebios|smsi|isms",           4),
+    (r"grc|gouvernance|conformit[ée]|governance|compliance", 2),
+    (r"rssi|ciso|security officer",                    3),
+    (r"analyse de risque|pssi|audit|risk assessment|risk management|risk analyst", 3),
+    (r"nis ?2|dora|rgpd|hds|gdpr|soc ?2",              1),
     (r"toulouse|occitanie",                            3),
     (r"t[ée]l[ée]travail|remote",                      1),
-    (r"sant[ée]|h[ôo]pital|chu|laboratoire|collectivit[ée]|territorial", 2),
+    (r"sant[ée]|h[ôo]pital|chu|laboratoire|collectivit[ée]|territorial|healthcare", 2),
     (r"senior|lead|expert|confirm[ée]",                1),
+    # Intitulés anglophones du même métier : sans eux, toute annonce rédigée
+    # en anglais était sous-notée quel que soit son contenu réel.
+    (r"information security|security analyst|cybersecurity analyst", 2),
 ]
 
 # Planchers manuels : certains intitulés doivent atteindre une note minimale
@@ -181,7 +184,11 @@ def scorer(texte: str, titre: str = "", toulouse: bool = False, remu=None) -> in
 # exclus par erreur, puisque la recherche est une simple sous-chaîne sinon.
 EXCLUSIONS = [
     r"alternance", r"\bstage\b", r"stagiaire", r"apprenti",
-    r"\bpentest", r"soc analyst", r"d[ée]veloppeur", r"\bcommercial\b",
+    r"\bpentest", r"d[ée]veloppeur", r"\bcommercial\b",
+    # Postes de supervision SOC, quel que soit l'ordre des mots. Le [\s-]* sans
+    # chiffre évite d'attraper « SOC 2 », qui est une norme de conformité et
+    # non un centre de supervision.
+    r"\bsoc[\s-]*analyst", r"analyste?[\s-]*\bsoc\b",
     r"business developer", r"\brecruteur\b",
     r"\bqualit[ée]\b", r"\bquality\b", r"\bconformance\b",
     r"\bot\b",  # réseaux industriels / operational technology — hors périmètre voulu
