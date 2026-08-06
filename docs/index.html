@@ -30,6 +30,15 @@
   #resume b{color:var(--cotation);font-weight:600}
 
   nav{display:flex;gap:5px}
+  #recherche{width:100%;margin:0 0 9px;padding:10px 12px;border-radius:var(--rayon);
+    border:1px solid var(--trait);background:var(--panneau);color:var(--texte);
+    font-size:15px;font-family:inherit;-webkit-appearance:none}
+  /* 15px minimum : en dessous, iOS zoome automatiquement à la mise au point. */
+  #recherche::placeholder{color:var(--sourdine)}
+  #recherche:focus{border-color:var(--cotation);outline:none}
+  /* Pendant une recherche, les onglets ne pilotent plus l'affichage : on le
+     montre plutôt que de laisser croire à un onglet actif. */
+  nav.inactif{opacity:.4}
   /* Empêche le navigateur d'interpréter le glissement horizontal comme un
      « page précédente », ce qui sortirait de l'application. */
   body{overscroll-behavior-x:contain;touch-action:pan-y}
@@ -100,6 +109,9 @@
     <button id="menu" aria-label="Sauvegarde et options">⋯</button>
   </div>
   <div id="resume">chargement…</div>
+  <input id="recherche" type="search" inputmode="search" autocomplete="off"
+         placeholder="Rechercher dans toutes les catégories…"
+         aria-label="Rechercher une mission par mots-clés">
   <nav id="onglets">
     <button data-vue="qualifier" aria-selected="true">À qualifier</button>
     <button data-vue="cours" aria-selected="false">En cours</button>
@@ -206,18 +218,39 @@ function aRelance(o){
   return !!e.relance && ['Perdu','Écarté','Gagné'].indexOf(e.statut) === -1;
 }
 
+// Recherche : normalisation légère (minuscules + accents retirés), distincte
+// de normaliser() qui sert aux signatures et supprime « cdi », « h/f »… —
+// termes qu'on doit justement pouvoir rechercher.
+var REQUETE = '';
+
+function aplatir(s){
+  return String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+function correspond(o){
+  var mots = aplatir(REQUETE).split(/\s+/).filter(Boolean);
+  if (!mots.length) return true;
+  var champs = aplatir([o.titre, o.entreprise, o.extrait, o.source,
+                        etat(o).statut, o.toulouse ? 'toulouse' : '',
+                        o.remote ? 'remote teletravail' : ''].join(' '));
+  // Tous les mots doivent être présents : taper « grc remote » restreint,
+  // au lieu de renvoyer tout ce qui contient l'un ou l'autre.
+  return mots.every(function(m){ return champs.indexOf(m) > -1; });
+}
+
 function filtrer(){
   var lot = OFFRES.filter(function(o){
     var e = etat(o), s = e.statut;
     if (FILTRE_TOULOUSE && !estToulouse(o)) return false;
-    // Programmer une relance sort l'offre de « À qualifier » : elle est rangée,
-    // pas oubliée — on la retrouve dans l'onglet Relances.
+    // Une recherche traverse toutes les catégories : l'onglet actif est
+    // ignoré tant que le champ n'est pas vide.
+    if (REQUETE) return correspond(o);
     if (VUE === 'qualifier') return !s && !e.relance;
     if (VUE === 'cours') return ['Postulé','Entretien','Négociation'].indexOf(s) > -1;
     if (VUE === 'ecarte') return s === 'Écarté';
     return aRelance(o);
   });
-  if (VUE === 'relances') {   // la plus urgente en tête
+  if (VUE === 'relances' && !REQUETE) {   // la plus urgente en tête
     return lot.sort(function(a, b){
       return new Date(etat(a).relance) - new Date(etat(b).relance);
     });
@@ -232,14 +265,22 @@ function rendre(){
   }).length;
   var dues = base.filter(estEchue).length;
   var programmees = base.filter(aRelance).length;
-  document.getElementById('resume').innerHTML =
-    '<b>' + aQualifier + '</b> à qualifier &nbsp;·&nbsp; <b>' + programmees + '</b> relance' +
-    (programmees > 1 ? 's' : '') + (dues ? ' <span style="color:#d1665b">(' + dues + ' due' +
-    (dues > 1 ? 's' : '') + ')</span>' : '');
-
   var lot = filtrer(), html = '';
+
+  if (REQUETE){
+    document.getElementById('resume').innerHTML =
+      '<b>' + lot.length + '</b> résultat' + (lot.length > 1 ? 's' : '') +
+      ' pour « ' + esc(REQUETE) + ' » <span style="color:var(--sourdine)">· toutes catégories</span>';
+  } else {
+    document.getElementById('resume').innerHTML =
+      '<b>' + aQualifier + '</b> à qualifier &nbsp;·&nbsp; <b>' + programmees + '</b> relance' +
+      (programmees > 1 ? 's' : '') + (dues ? ' <span style="color:#d1665b">(' + dues + ' due' +
+      (dues > 1 ? 's' : '') + ')</span>' : '');
+  }
+
   if (!lot.length){
     html = '<div class="vide">' + (
+      REQUETE ? 'Aucune mission ne correspond à « ' + esc(REQUETE) + ' ».' :
       VUE === 'relances' ? 'Aucune relance programmée. Le bouton « Relancer dans 7 j » range une offre ici.' :
       VUE === 'cours' ? 'Rien en cours. Qualifie une offre pour ouvrir un dossier.' :
       VUE === 'ecarte' ? 'Aucune mission écartée pour l\'instant.' :
@@ -326,9 +367,28 @@ function choisirVue(v){
   window.scrollTo(0, 0);
 }
 
+var champ = document.getElementById('recherche');
+champ.addEventListener('input', function(){
+  REQUETE = this.value.trim();
+  document.getElementById('onglets').classList.toggle('inactif', !!REQUETE);
+  rendre();
+});
+// Vider le champ rend la main aux onglets.
+champ.addEventListener('search', function(){
+  if (!this.value) { REQUETE = ''; document.getElementById('onglets').classList.remove('inactif'); rendre(); }
+});
+
 document.getElementById('onglets').addEventListener('click', function(ev){
   var b = ev.target.closest('button'); if (!b) return;
-  choisirVue(b.getAttribute('data-vue'));
+  var sortieDeRecherche = !!REQUETE;
+  if (sortieDeRecherche) {   // cliquer un onglet sort de la recherche
+    REQUETE = ''; champ.value = ''; this.classList.remove('inactif');
+  }
+  var v = b.getAttribute('data-vue');
+  choisirVue(v);
+  // choisirVue ne fait rien si l'onglet était déjà actif : il faut alors
+  // redessiner soi-même pour afficher la sortie de recherche.
+  if (sortieDeRecherche && v === VUE) rendre();
 });
 
 // ── Navigation par balayage ───────────────────────────────────────
@@ -347,6 +407,7 @@ document.addEventListener('touchstart', function(ev){
 
 document.addEventListener('touchend', function(ev){
   if (!tms || !ev.changedTouches.length) return;
+  if (REQUETE) { tms = 0; return; }   // en recherche, les onglets ne pilotent rien
   var dx = ev.changedTouches[0].clientX - tx;
   var dy = ev.changedTouches[0].clientY - ty;
   tms = 0;
