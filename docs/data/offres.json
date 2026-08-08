@@ -1,7 +1,91 @@
 {
- "scan": "2026-08-07T06:11:40+00:00",
+ "scan": "2026-08-08T05:45:20+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-08-08",
+   "source": "FW Cyber Toulouse",
+   "titre": "Consultant– Expert campagnes de phishing",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/expert-seo-consultant-referencement/consultant-expert-campagnes-de-phishing",
+   "entreprise": "",
+   "extrait": "Dès que possible · 18 mois · 20k-60k €⁄an, 350-500 €⁄j · 5 à 10 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — Contexte Dans le cadre du renforcement de la posture cybersécurité et de la sensibilisation des utilisateurs, la mission consiste à p",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 3
+  },
+  {
+   "date": "2026-08-08",
+   "source": "HW RSSI national",
+   "titre": "Chef de Projet Cybersécurité H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/77669076.html",
+   "entreprise": "MCA Groupe",
+   "extrait": "MCA Groupe — Lyon, Auvergne-Rhône-Alpes · ~53k€/an estimé — Les missions du poste SEC-IT, filiale du Groupe MCA, est un cabinet de conseil spécialisé en cybersécurité présent à Paris, Rennes, Lyon et Aix en Provence. Nos domaines d'activité",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 4
+  },
+  {
+   "date": "2026-08-08",
+   "source": "LI RSSI Toulouse",
+   "titre": "Spontaneous Application (Full time contracts)",
+   "lien": "https://fr.linkedin.com/jobs/view/spontaneous-application-full-time-contracts-at-scaleway-4178288359",
+   "entreprise": "Scaleway",
+   "extrait": "Scaleway — Toulouse — <strong>OUR STORY:<br></strong>🇪🇺 Join Scaleway and shape the sovereign cloud of tomorrow !<br><br>Since 1999, we have been designing secure, sustainable infrastructures aimed at s",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 1
+  },
+  {
+   "date": "2026-08-08",
+   "source": "LI RSSI Toulouse",
+   "titre": "Spontaneous Applications",
+   "lien": "https://fr.linkedin.com/jobs/view/spontaneous-applications-at-pangea-propulsion-4444443025",
+   "entreprise": "Pangea Propulsion",
+   "extrait": "Pangea Propulsion — Toulouse — Chez Pangea Propulsion, nous sommes convaincus que la passion et le talent ne devraient jamais passer inaperçus. Même si vous ne trouvez pas aujourd’hui de poste correspondant à vo",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 1
+  },
+  {
+   "date": "2026-08-08",
+   "source": "LI RSSI Toulouse",
+   "titre": "Candidature Spontanée / Spontaneous Application – NXP Semiconductors France",
+   "lien": "https://fr.linkedin.com/jobs/view/candidature-spontan%C3%A9e-spontaneous-application-%E2%80%93-nxp-semiconductors-france-at-nxp-semiconductors-4338839180",
+   "entreprise": "NXP Semiconductors",
+   "extrait": "NXP Semiconductors — Toulouse — <strong>Candidature Spontanée – Rejoignez NXP Semiconductors en France<br><br></strong><strong>Vous êtes prêt(e) à relever un nouveau défi dans l’industrie des semi-conducteurs ?<b",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
+  {
+   "date": "2026-08-08",
+   "source": "LI RSSI Toulouse",
+   "titre": "Communication System Engineer IRIS2",
+   "lien": "https://fr.linkedin.com/jobs/view/communication-system-engineer-iris2-at-eutelsat-4410178696",
+   "entreprise": "Eutelsat",
+   "extrait": "Eutelsat — Toulouse — <p><strong>Connect with Eutelsat</strong></p><p>Be part of a new era in communications, transforming connectivity with Eutelsat – the world’s first GEO-LEO integrated global satell",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
+  {
+   "date": "2026-08-08",
+   "source": "LI ISO 27001 France",
+   "titre": "Security Officer",
+   "lien": "https://fr.linkedin.com/jobs/view/security-officer-at-response-informatics-4450308839",
+   "entreprise": "Response Informatics",
+   "extrait": "Response Informatics — Strasbourg — <p>Requirements</p><ul><li>University degree in IT or relevant discipline, combined with minimum 8 years of relevant working experience;</li><li>At least 7 years of experience in a",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 3
+  },
   {
    "date": "2026-08-07",
    "source": "FW ISO 27001",
