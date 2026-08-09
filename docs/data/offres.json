@@ -1,7 +1,43 @@
 {
- "scan": "2026-08-08T05:45:20+00:00",
+ "scan": "2026-08-09T05:49:51+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-08-09",
+   "source": "LI RSSI Toulouse",
+   "titre": "[UPDATE] [hoch] Apple macOS (Tahoe, Sonoma und Sequoia): Mehrere Schwachstellen",
+   "lien": "https://fr.linkedin.com/jobs/view/update-hoch-apple-macos-tahoe-sonoma-und-sequoia-mehrere-schwachstellen-at-skopion-intelligence-4450342787",
+   "entreprise": "SKOPION Intelligence",
+   "extrait": "SKOPION Intelligence — La Bastide-de-Sérou — Ein ruhiger, defensiver Überblick über aktuelle Sicherheitshinweise aus öffentlichen offiziellen Quellen — mit einer kurzen SKOPION-Einordnung für kleine und mittlere Unternehmen. ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 0
+  },
+  {
+   "date": "2026-08-09",
+   "source": "LI RSSI Toulouse",
+   "titre": "[NEU] [hoch] Wazuh: Mehrere Schwachstellen",
+   "lien": "https://fr.linkedin.com/jobs/view/neu-hoch-wazuh-mehrere-schwachstellen-at-skopion-intelligence-4450347744",
+   "entreprise": "SKOPION Intelligence",
+   "extrait": "SKOPION Intelligence — La Bastide-de-Sérou — Ein ruhiger, defensiver Überblick über aktuelle Sicherheitshinweise aus öffentlichen offiziellen Quellen — mit einer kurzen SKOPION-Einordnung für kleine und mittlere Unternehmen. ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 0
+  },
+  {
+   "date": "2026-08-09",
+   "source": "LI Security Analyst remote",
+   "titre": "Security Analyst",
+   "lien": "https://fr.linkedin.com/jobs/view/security-analyst-at-vestiaire-collective-4426609338",
+   "entreprise": "Vestiaire Collective",
+   "extrait": "Vestiaire Collective — Paris — Vestiaire Collective is the leading global platform for desirable pre-loved fashion and a pioneer in transforming how people consume fashion.<br><br>Our mission is simple: make cir",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 5
+  },
   {
    "date": "2026-08-08",
    "source": "FW Cyber Toulouse",
