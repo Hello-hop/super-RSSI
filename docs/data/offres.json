@@ -1,7 +1,55 @@
 {
- "scan": "2026-08-09T05:49:51+00:00",
+ "scan": "2026-08-10T06:12:44+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-08-10",
+   "source": "HW RSSI national",
+   "titre": "Chef de Projet Sécurité des Systèmes d'Information H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81181412.html",
+   "entreprise": "iQera",
+   "extrait": "iQera — Paris, Île-de-France · ~63k€/an estimé — Les missions du poste Ton rôle au sein de la Tribu Au sein de l'activité bancaire, tu rejoins une équipe de Négociateur qui assure le suivi et le recouvrement des créances liés aux",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 3
+  },
+  {
+   "date": "2026-08-10",
+   "source": "HW RSSI national",
+   "titre": "Responsable Adjoint Cybersécurité H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81206860.html",
+   "entreprise": "TOHTEM",
+   "extrait": "TOHTEM — Courbevoie, Île-de-France · 70k€/an — Les missions du poste Le groupe TOHTEM est la convergence des métiers du design, de l'ingénierie mécanique et informatique. Depuis 20 ans, le groupe met au coeur de sa politique l'",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 2
+  },
+  {
+   "date": "2026-08-10",
+   "source": "HW RSSI national",
+   "titre": "Deputy Chief Product Security Officer H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81170826.html",
+   "entreprise": "Thales",
+   "extrait": "Thales — Gémenos, Provence-Alpes-Côte d'Azur · ~56k€/an estimé — Les missions du poste Lieu : Gémenos, France Construisons ensemble un avenir de confiance Thales est un leader mondial des hautes technologies spécialisé dans trois secteurs d'acti",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 3
+  },
+  {
+   "date": "2026-08-10",
+   "source": "LI GRC remote",
+   "titre": "Responsable Sécurité des Systèmes d'information",
+   "lien": "https://fr.linkedin.com/jobs/view/responsable-s%C3%A9curit%C3%A9-des-syst%C3%A8mes-d-information-at-arm%C3%A9e-de-l%E2%80%99air-et-de-l%E2%80%99espace-4429828681",
+   "entreprise": "Armée de l’air et de l’espace",
+   "extrait": "Armée de l’air et de l’espace — Lyon et périphérie — <p><strong>Être militaire,</strong> c’est servir l’État, au sein des Armées, en portant l’uniforme. Cela implique discipline, disponibilité et loyauté. Le sens de l’adaptation et l",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 2
+  },
   {
    "date": "2026-08-09",
    "source": "LI RSSI Toulouse",
