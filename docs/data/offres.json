@@ -1,7 +1,79 @@
 {
- "scan": "2026-08-10T06:12:44+00:00",
+ "scan": "2026-08-11T05:55:59+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-08-11",
+   "source": "HW RSSI Occitanie",
+   "titre": "Cyber Security Manager Galileo H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/77777003.html",
+   "entreprise": "Thales",
+   "extrait": "Thales — Toulouse, Occitanie · ~48k€/an estimé — Les missions du poste Lieu : Toulouse, France Construisons ensemble un avenir de confiance Thales est un leader mondial des hautes technologies spécialisé dans trois secteurs d'act",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 1
+  },
+  {
+   "date": "2026-08-11",
+   "source": "HW RSSI national",
+   "titre": "Référent Sécurité des Systèmes d'Information - RSSI H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/76638848.html",
+   "entreprise": "EPOQUE",
+   "extrait": "EPOQUE — Grenoble, Auvergne-Rhône-Alpes · 60k€/an — Les missions du poste Époque est un cabinet de recrutement et de conseil en ressources humaines pour les entreprises à impact positif, spécialisé dans l'accompagnement des entrepri",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 4
+  },
+  {
+   "date": "2026-08-11",
+   "source": "HW RSSI national",
+   "titre": "Chef de Projet Cybersécurité H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/74372795.html",
+   "entreprise": "HELPLINE",
+   "extrait": "HELPLINE — Lyon, Auvergne-Rhône-Alpes · ~53k€/an estimé — Les missions du poste Entreprise française des Services du Numérique (ESN), HELPLINE accompagne depuis 1994 les directions informatiques et métiers dans leurs projets de transforma",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 4
+  },
+  {
+   "date": "2026-08-11",
+   "source": "HW RSSI national",
+   "titre": "Consultant Grc Confirmé H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/77778386.html",
+   "entreprise": "Airbus Defense and Space",
+   "extrait": "Airbus Defense and Space — Marseille, Provence-Alpes-Côte d'Azur · ~56k€/an estimé — Détail du poste Description de l'emploi: Votre futur job, si vous l'acceptez... Dans le cadre de sa stratégie de développement, Airbus Protect recherche un Consultant Confirmé",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 4
+  },
+  {
+   "date": "2026-08-11",
+   "source": "LI RSSI Toulouse",
+   "titre": "[NEU] [niedrig] cpio: Mehrere Schwachstellen",
+   "lien": "https://fr.linkedin.com/jobs/view/neu-niedrig-cpio-mehrere-schwachstellen-at-skopion-intelligence-4451412403",
+   "entreprise": "SKOPION Intelligence",
+   "extrait": "SKOPION Intelligence — La Bastide-de-Sérou — Ein ruhiger, defensiver Überblick über aktuelle Sicherheitshinweise aus öffentlichen offiziellen Quellen — mit einer kurzen SKOPION-Einordnung für kleine und mittlere Unternehmen. ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 0
+  },
+  {
+   "date": "2026-08-11",
+   "source": "LI RSSI Toulouse",
+   "titre": "Google’s $200 Billion Bet on the Future of Computing",
+   "lien": "https://fr.linkedin.com/jobs/view/google%E2%80%99s-%24200-billion-bet-on-the-future-of-computing-at-hive-signal-4450331833",
+   "entreprise": "Hive Signal",
+   "extrait": "Hive Signal — Pratviel — For years, the technology industry has focused on software. Every major announcement has centred around what new systems can do, how quickly they can respond, or what new capabilit",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 0
+  },
   {
    "date": "2026-08-10",
    "source": "HW RSSI national",
