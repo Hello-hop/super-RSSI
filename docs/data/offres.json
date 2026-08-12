@@ -1,7 +1,19 @@
 {
- "scan": "2026-08-11T05:55:59+00:00",
+ "scan": "2026-08-12T06:17:52+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-08-12",
+   "source": "LI RSSI Toulouse",
+   "titre": "[UPDATE] [mittel] Prometheus: Mehrere Schwachstellen",
+   "lien": "https://fr.linkedin.com/jobs/view/update-mittel-prometheus-mehrere-schwachstellen-at-skopion-intelligence-4453065181",
+   "entreprise": "SKOPION Intelligence",
+   "extrait": "SKOPION Intelligence — La Bastide-de-Sérou — Ein ruhiger, defensiver Überblick über aktuelle Sicherheitshinweise aus öffentlichen offiziellen Quellen — mit einer kurzen SKOPION-Einordnung für kleine und mittlere Unternehmen. ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 0
+  },
   {
    "date": "2026-08-11",
    "source": "HW RSSI Occitanie",
