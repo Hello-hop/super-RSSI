@@ -1,7 +1,67 @@
 {
- "scan": "2026-08-12T06:17:52+00:00",
+ "scan": "2026-08-13T06:19:43+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-08-13",
+   "source": "FW ISO 27001",
+   "titre": "RSSI de transition",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/autre/rssi-de-transition-10",
+   "entreprise": "",
+   "extrait": "Dès que possible · 6 mois renouvelable · 5 à 10 ans d’expérience · Télétravail partiel · Ivry-sur-Seine, Île-de-France — Contexte de la mission Enjeux : Maintien de la Certification 27001 de la BU Archivage et de la facture électronique et amélioration du nive",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-08-13",
+   "source": "HW RSSI Occitanie",
+   "titre": "Chef de Domaine SSI - RSSI H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/82252284.html",
+   "entreprise": "Service Public",
+   "extrait": "Service Public — Toulouse, Occitanie — Les missions du poste Sous l'autorité fonctionnelle de la direction du numérique, les départements informatique et télécommunications (DIT), intégrés à des délégations interrégiona",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 3
+  },
+  {
+   "date": "2026-08-13",
+   "source": "HW RSSI national",
+   "titre": "Consultant Grc & Pilotage SSI H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81278592.html",
+   "entreprise": "CGI",
+   "extrait": "CGI — Lille, Hauts-de-France · ~52k€/an estimé — Détail du poste Consultant(e) GRC & Pilotage SSI F/H Description de poste Dans un contexte de renforcement des exigences réglementaires et de sécurisation des systèmes d'informatio",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 4
+  },
+  {
+   "date": "2026-08-13",
+   "source": "HW RSSI national",
+   "titre": "Chef de Domaine SSI - RSSI - Dir-Sg Grand Centre H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81269575.html",
+   "entreprise": "Service Public",
+   "extrait": "Service Public — Dijon, Bourgogne-Franche-Comté — Les missions du poste Composition et effectifs du service Délégation interrégionale Grand Centre : 52 agents de catégorie A / 18 agents de catégorie B / 13 agents de catégorie C Dé",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
+  {
+   "date": "2026-08-13",
+   "source": "HW RSSI national",
+   "titre": "Product Security Officer Cortaix Factory H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/80133290.html",
+   "entreprise": "Thales",
+   "extrait": "Thales — Issy-les-Moulineaux, Île-de-France · ~63k€/an estimé — Les missions du poste Lieu : Issy-les-Moulineaux, France Construisons ensemble un avenir de confiance Thales est un leader mondial des hautes technologies spécialisé dans trois sec",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 3
+  },
   {
    "date": "2026-08-12",
    "source": "LI RSSI Toulouse",
