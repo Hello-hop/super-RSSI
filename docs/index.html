@@ -89,6 +89,15 @@
     border:1px solid var(--trait);background:#0f1a24;color:var(--texte);
     font-family:inherit;font-size:15px;line-height:1.45;resize:vertical}
   textarea.note::placeholder{color:var(--sourdine)}
+  .meta .t-manuelle{color:var(--cotation)}
+  label.ch{display:block;margin:10px 0 0;font-size:12px;color:var(--sourdine)}
+  label.ch input, label.ch select, label.ch textarea{
+    width:100%;margin-top:4px;padding:9px 10px;border-radius:var(--rayon);
+    border:1px solid var(--trait);background:#0f1a24;color:var(--texte);
+    font-family:inherit;font-size:15px;-webkit-appearance:none}
+  label.ch input:focus, label.ch select:focus, label.ch textarea:focus{
+    border-color:var(--cotation);outline:none}
+  #boite-ajout{max-height:86vh}
   textarea.note:focus{border-color:var(--cotation);outline:none}
 
   .actions{display:flex;gap:6px}
@@ -137,10 +146,46 @@
     Tes statuts et commentaires restent sur cet appareil. Exporte-les avant de changer de téléphone
     ou de vider le cache du navigateur.
   </p>
+  <button id="ajouter">Ajouter une mission</button>
   <button id="exporter">Exporter le suivi</button>
   <button id="importer">Importer un suivi</button>
   <button id="fermer">Fermer</button>
   <input type="file" id="fichier" accept="application/json" hidden>
+</dialog>
+
+<dialog id="boite-ajout">
+  <div class="eyebrow">mission manuelle</div>
+  <p style="font-size:13px;line-height:1.5;color:#7d8fa1">
+    Pour une annonce reçue hors plateforme (cooptation, contact direct, cabinet).
+    Elle se suit comme les autres et résiste aux scans quotidiens.
+  </p>
+  <label class="ch">Intitulé du poste *
+    <input id="m-titre" type="text" placeholder="Consultant GRC senior"></label>
+  <label class="ch">Entreprise / client
+    <input id="m-entreprise" type="text" placeholder="Nom du cabinet ou du client"></label>
+  <label class="ch">Lieu
+    <input id="m-lieu" type="text" placeholder="Toulouse, remote, Paris…"></label>
+  <label class="ch">Rémunération annoncée
+    <input id="m-remu" type="text" placeholder="600 €/j ou 65k€/an"></label>
+  <label class="ch">Cotation
+    <select id="m-score">
+      <option value="5">5/5 — priorité</option>
+      <option value="4" selected>4/5 — intéressante</option>
+      <option value="3">3/5 — à voir</option>
+      <option value="2">2/5</option>
+      <option value="1">1/5</option>
+    </select></label>
+  <label class="ch">Lien (facultatif)
+    <input id="m-lien" type="url" inputmode="url" placeholder="https://…"></label>
+  <label class="ch">Notes
+    <textarea id="m-notes" rows="2" placeholder="Contact, contexte, date de candidature…"></textarea></label>
+  <label class="ch">Statut de départ
+    <select id="m-statut">
+      <option value="">À qualifier</option>
+      <option value="Postulé" selected>Postulé (déjà candidaté)</option>
+    </select></label>
+  <button id="m-valider">Enregistrer</button>
+  <button id="m-annuler">Annuler</button>
 </dialog>
 
 <script>
@@ -200,13 +245,30 @@ function migrerSuivi(){
   if (change) ecrireSuivi();
 }
 
+// Les missions saisies à la main vivent sur le téléphone, PAS dans
+// offres.json : ce fichier est réécrit intégralement à chaque scan du robot,
+// une entrée manuelle y serait effacée dès le lendemain.
+var CLE_MANUELLES = 'veille.manuelles.v1';
+
+function lireManuelles(){
+  try { return JSON.parse(localStorage.getItem(CLE_MANUELLES)) || []; } catch(e){ return []; }
+}
+function ecrireManuelles(liste){
+  try { localStorage.setItem(CLE_MANUELLES, JSON.stringify(liste)); } catch(e){}
+}
+
 function charger(){
   SUIVI = lireSuivi();
+  var manuelles = lireManuelles();
   fetch('data/offres.json', {cache:'no-cache'})
     .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
-    .then(function(d){ OFFRES = d.offres || []; migrerSuivi(); rendre(); })
+    .then(function(d){ OFFRES = manuelles.concat(d.offres || []); migrerSuivi(); rendre(); })
     .catch(function(){
-      document.getElementById('liste').innerHTML =
+      // Même hors-ligne ou en cas d'échec réseau, les missions manuelles
+      // doivent rester consultables : elles ne dépendent pas du fichier.
+      OFFRES = manuelles;
+      if (manuelles.length) { migrerSuivi(); rendre(); }
+      else document.getElementById('liste').innerHTML =
         '<div class="vide">Les offres n\'ont pas pu être chargées.<br>' +
         'Reconnecte-toi au réseau, puis rouvre l\'application.</div>';
     });
@@ -304,6 +366,9 @@ function rendre(){
         actions = bouton(o.lien, 'statut:Postulé', 'Postulé', 'oui') +
                   bouton(o.lien, 'statut:Écarté', 'Écarter', 'non');
       }
+      // Une mission manuelle ne sort jamais du lot toute seule (aucun scan ne
+      // la remplace) : il faut pouvoir la retirer explicitement.
+      if (o.manuelle) actions += bouton(o.lien, 'supprimer:', 'Supprimer', '');
 
       html += '<article class="card ' + (o.score >= 4 ? 'fort' : '') +
         (toulouse ? ' toulouse' : '') + (ecarte ? ' ecarte' : '') +
@@ -311,9 +376,11 @@ function rendre(){
         '<div class="crit" role="img" aria-label="Cotation ' + o.score + ' sur 5">' + segs +
           '<span>cotation ' + o.score + '/5</span></div>' +
         (toulouse ? '<span class="puce-lieu">📍 Toulouse</span><br>' : '') +
-        '<h2><a href="' + esc(o.lien) + '" target="_blank" rel="noopener">' + esc(o.titre) + '</a></h2>' +
+        '<h2>' + (o.lien.indexOf('manuelle:') === 0 ? esc(o.titre)
+          : '<a href="' + esc(o.lien) + '" target="_blank" rel="noopener">' + esc(o.titre) + '</a>') + '</h2>' +
         (o.extrait ? '<p class="extrait">' + esc(o.extrait) + '</p>' : '') +
-        '<div class="meta">' + esc(o.source) + ' · ' + esc(o.date) +
+        '<div class="meta">' + (o.manuelle ? '<span class="t-manuelle">✎ saisie manuelle</span> · ' : '') +
+          esc(o.source) + ' · ' + esc(o.date) +
           (e.statut ? ' · <span class="statut' + (conclu ? (succes ? ' t-succes' : ' t-echec') : '') +
             '">' + esc(e.statut) + '</span>' : '') +
         '</div>' +
@@ -344,6 +411,13 @@ document.getElementById('liste').addEventListener('click', function(ev){
   if (!offre) return;
   var sig = signature(offre);
   var p = b.getAttribute('data-action').split(':');
+  if (p[0] === 'supprimer'){
+    if (!confirm('Supprimer définitivement cette mission saisie à la main ?')) return;
+    ecrireManuelles(lireManuelles().filter(function(m){ return m.lien !== lien; }));
+    delete SUIVI[sig];
+    OFFRES = OFFRES.filter(function(x){ return x.lien !== lien; });
+    ecrireSuivi(); rendre(); return;
+  }
   if (p[0] !== 'statut') return;
   if (!p[1]) {                        // « Remettre à qualifier »
     delete SUIVI[sig];
@@ -446,9 +520,70 @@ document.getElementById('filtre-lieu').addEventListener('click', function(){
 var boite = document.getElementById('boite');
 document.getElementById('menu').onclick = function(){ boite.showModal(); };
 document.getElementById('fermer').onclick = function(){ boite.close(); };
+// ── Mission manuelle ──────────────────────────────────────────────
+var boiteAjout = document.getElementById('boite-ajout');
+
+document.getElementById('ajouter').onclick = function(){
+  boite.close();
+  ['m-titre','m-entreprise','m-lieu','m-remu','m-lien','m-notes'].forEach(function(id){
+    document.getElementById(id).value = '';
+  });
+  document.getElementById('m-score').value = '4';
+  document.getElementById('m-statut').value = 'Postulé';
+  boiteAjout.showModal();
+  document.getElementById('m-titre').focus();
+};
+document.getElementById('m-annuler').onclick = function(){ boiteAjout.close(); };
+
+document.getElementById('m-valider').onclick = function(){
+  var val = function(id){ return document.getElementById(id).value.trim(); };
+  var titre = val('m-titre');
+  if (!titre) { document.getElementById('m-titre').focus(); return; }
+
+  var lieu = val('m-lieu'), entreprise = val('m-entreprise'), remu = val('m-remu');
+  var notes = val('m-notes'), lien = val('m-lien');
+  var extrait = [entreprise, lieu, remu, notes].filter(Boolean).join(' · ');
+
+  var offre = {
+    // Identifiant local unique : sans lien réel, il faut quand même une clé
+    // stable pour rattacher le suivi et distinguer deux saisies proches.
+    lien: lien || 'manuelle:' + Date.now(),
+    titre: titre,
+    entreprise: entreprise,
+    extrait: extrait.slice(0, 260),
+    source: 'Saisie manuelle',
+    date: new Date().toISOString().slice(0, 10),
+    score: parseInt(document.getElementById('m-score').value, 10),
+    toulouse: RE_TOULOUSE.test(lieu + ' ' + notes),
+    remote: /remote|t[ée]l[ée]travail|distance/i.test(lieu + ' ' + notes),
+    manuelle: true
+  };
+
+  var liste = lireManuelles();
+  liste.unshift(offre);
+  ecrireManuelles(liste);
+
+  var statut = document.getElementById('m-statut').value;
+  if (statut) {
+    var e = SUIVI[signature(offre)] || (SUIVI[signature(offre)] = {});
+    e.statut = statut;
+    ecrireSuivi();
+  }
+
+  OFFRES = liste.concat(OFFRES.filter(function(o){ return !o.manuelle; }));
+  boiteAjout.close();
+  // On bascule sur l'onglet où la mission vient d'atterrir, sinon elle
+  // semble n'avoir nulle part disparu.
+  choisirVue(statut === 'Postulé' ? 'cours' : 'qualifier');
+  rendre();
+};
+
 document.getElementById('exporter').onclick = function(){
+  // Les missions manuelles partent avec le suivi : elles n'existent nulle
+  // part ailleurs, les oublier ici rendrait la sauvegarde trompeuse.
+  var paquet = {version: 2, suivi: SUIVI, manuelles: lireManuelles()};
   var a = document.createElement('a');
-  a.href = URL.createObjectURL(new Blob([JSON.stringify(SUIVI)], {type:'application/json'}));
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(paquet)], {type:'application/json'}));
   a.download = 'suivi-missions-' + new Date().toISOString().slice(0,10) + '.json';
   a.click(); URL.revokeObjectURL(a.href);
 };
@@ -459,8 +594,18 @@ document.getElementById('fichier').onchange = function(ev){
   lecteur.onload = function(){
     try {
       var recu = JSON.parse(lecteur.result);
-      Object.keys(recu).forEach(function(k){ SUIVI[k] = recu[k]; });
-      ecrireSuivi(); rendre(); boite.close();
+      // Les sauvegardes d'avant cette version sont un objet de suivi à plat.
+      var suivi = recu.suivi || recu;
+      var manuelles = recu.manuelles || [];
+      Object.keys(suivi).forEach(function(k){ SUIVI[k] = suivi[k]; });
+      if (manuelles.length) {
+        var connus = {};
+        lireManuelles().forEach(function(m){ connus[m.lien] = true; });
+        var fusion = lireManuelles();
+        manuelles.forEach(function(m){ if (!connus[m.lien]) fusion.push(m); });
+        ecrireManuelles(fusion);
+      }
+      ecrireSuivi(); boite.close(); charger();
     } catch(e){ alert('Fichier illisible : ' + e.message); }
   };
   lecteur.readAsText(f);
