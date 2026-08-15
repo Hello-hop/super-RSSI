@@ -1,7 +1,67 @@
 {
- "scan": "2026-08-14T06:16:55+00:00",
+ "scan": "2026-08-15T05:27:45+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-08-15",
+   "source": "FW ISO 27001",
+   "titre": "RSSI - Cybersécurité & gouvernance",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant-cyber-securite/rssi-cybersecurite-gouvernance",
+   "entreprise": "Les Filles et les Garçons de la Tech",
+   "extrait": "Les Filles et les Garçons de la Tech — Dès que possible · 6 mois · 120-610 €⁄j · > 10 ans d’expérience · Télétravail partiel · Île-de-France, France — Dans le cadre d’un renforcement temporaire de la gouvernance cybersécurité, nous recherchons un(e) RSSI de tr",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 5
+  },
+  {
+   "date": "2026-08-15",
+   "source": "HW RSSI national",
+   "titre": "RSSI H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/82310019.html",
+   "entreprise": "LIP Tertiaire",
+   "extrait": "LIP Tertiaire — Grenoble, Auvergne-Rhône-Alpes — Les missions du poste Spécialiste de l'intérim et du recrutement par secteur, LIP compte plus de 190 agences en France et à l'étranger. Nos agences d'emploi Tertiaire, Commerce & I",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-08-15",
+   "source": "LI RSSI Toulouse",
+   "titre": "[UPDATE] [hoch] Google Chrome: Mehrere Schwachstellen ermöglichen nicht spezifizierten Angriff",
+   "lien": "https://fr.linkedin.com/jobs/view/update-hoch-google-chrome-mehrere-schwachstellen-erm%C3%B6glichen-nicht-spezifizierten-angriff-at-skopion-intelligence-4453906342",
+   "entreprise": "SKOPION Intelligence",
+   "extrait": "SKOPION Intelligence — La Bastide-de-Sérou — Ein ruhiger, defensiver Überblick über aktuelle Sicherheitshinweise aus öffentlichen offiziellen Quellen — mit einer kurzen SKOPION-Einordnung für kleine und mittlere Unternehmen. ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 0
+  },
+  {
+   "date": "2026-08-15",
+   "source": "LI RSSI Toulouse",
+   "titre": "ADHD and the Seductive Pull of Passion",
+   "lien": "https://fr.linkedin.com/jobs/view/adhd-and-the-seductive-pull-of-passion-at-the-dini-group-ltd-4450271616",
+   "entreprise": "The Dini Group Ltd",
+   "extrait": "The Dini Group Ltd — Pratviel — Clunking down the stairs, dragging myself to the laptop, an idea or two rattling in mind:<br><br>I need to get back to that person. It's been a couple of days since they emailed me",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 0
+  },
+  {
+   "date": "2026-08-15",
+   "source": "LI RSSI Toulouse",
+   "titre": "Creativity and Frustration",
+   "lien": "https://fr.linkedin.com/jobs/view/creativity-and-frustration-at-the-dini-group-ltd-4449628991",
+   "entreprise": "The Dini Group Ltd",
+   "extrait": "The Dini Group Ltd — Pratviel — AARRGHGGH. it's all going wrong!<br><br>Ordered pieces of whatever lying about. A screw is sitting there.<br><br>Where did that come from?<br><br>Frustration at work is quite the c",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 0
+  },
   {
    "date": "2026-08-14",
    "source": "HW RSSI national",
