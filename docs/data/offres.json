@@ -1,7 +1,79 @@
 {
- "scan": "2026-08-15T05:27:45+00:00",
+ "scan": "2026-08-16T05:31:34+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-08-16",
+   "source": "HW RSSI national",
+   "titre": "Consultant Grc H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/65334878.html",
+   "entreprise": "Groupe SII",
+   "extrait": "Groupe SII — Paris, Île-de-France · 55k€/an — Détail du poste Profil Diplômé·e d'une école d'ingénieur ou d'un cursus universitaire équivalent, vous justifiez d'au moins 3 ans d'expérience sur un poste similaire dans le domain",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 4
+  },
+  {
+   "date": "2026-08-16",
+   "source": "HW RSSI national",
+   "titre": "Chef de Projet Cybersoc H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81350492.html",
+   "entreprise": "AGH Consulting",
+   "extrait": "AGH Consulting — Île-de-France — Les missions du poste AGH Consulting est un Groupe de Conseil et d'Ingénierie lancé en 2005. On parle beaucoup du Monde d'Après en ce moment, et il est nécessaire de se demander de",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 0
+  },
+  {
+   "date": "2026-08-16",
+   "source": "HW RSSI national",
+   "titre": "Consultant Grc - Cybersécurité - Gouvernance - Conformité H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81357315.html",
+   "entreprise": "Cezam Recrutement",
+   "extrait": "Cezam Recrutement — Strasbourg, Grand Est · ~53k€/an estimé — Détail du poste Vous souhaitez accompagner les entreprises dans leurs enjeux de cybersécurité, de conformité et de gouvernance des systèmes d'information ? Notre client, société de",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 4
+  },
+  {
+   "date": "2026-08-16",
+   "source": "LI RSSI Toulouse",
+   "titre": "Vérificateur ou Vérificatrice d'études signalisation",
+   "lien": "https://fr.linkedin.com/jobs/view/v%C3%A9rificateur-ou-v%C3%A9rificatrice-d-%C3%A9tudes-signalisation-at-groupe-sncf-4450912172",
+   "entreprise": "Groupe SNCF",
+   "extrait": "Groupe SNCF — Toulouse — <strong>Description De L'employeur<br><br></strong>Chez SNCF Réseau, nous ne nous contentons pas de relier les gens entre eux, nous les connectons à l'un des plus grands systèmes f",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
+  {
+   "date": "2026-08-16",
+   "source": "LI GRC remote",
+   "titre": "Responsable Sécurité Informatique F/H",
+   "lien": "https://fr.linkedin.com/jobs/view/responsable-s%C3%A9curit%C3%A9-informatique-f-h-at-vinci-energies-4442107320",
+   "entreprise": "VINCI Energies",
+   "extrait": "VINCI Energies — Décines-Charpieu — VINCI Energies élabore des solutions et services multi techniques, sur-mesure, dédiés aux infrastructures d’énergie, de transport, de communication, ainsi qu’aux bâtiments, aux usi",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-08-16",
+   "source": "LI GRC remote",
+   "titre": "Responsable Conformité Cybersécurité",
+   "lien": "https://fr.linkedin.com/jobs/view/responsable-conformit%C3%A9-cybers%C3%A9curit%C3%A9-at-gazeltech-4434985818",
+   "entreprise": "GazelTech",
+   "extrait": "GazelTech — Lyon — &lt; Back<br><br>Responsable Conformité Cybersécurité<br><br>Apply Now<br><br>Lyon, France<br><br>Job Type<br><br>CDI<br><br>Workspace<br><br>ISO 27001, NIS2, DORA, GDPR, Audits, C",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 4
+  },
   {
    "date": "2026-08-15",
    "source": "FW ISO 27001",
