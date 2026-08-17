@@ -1,7 +1,91 @@
 {
- "scan": "2026-08-16T05:31:34+00:00",
+ "scan": "2026-08-17T05:37:45+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-08-17",
+   "source": "FW ISO 27001",
+   "titre": "Assistance RSSI, Consultant GRC IT Cybersécurité & Continuité (SMSI / BCM)",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant-cyber-securite/assistance-rssi-consultant-grc-it-cybersecurite-continuite-smsi-bcm",
+   "entreprise": "",
+   "extrait": "Dès que possible · 5 à 10 ans d’expérience · Télétravail partiel · Luxembourg — Nous recherchons un consultant expérimenté en Gouvernance, Risques & Conformité (GRC IT) , spécialisé en SMSI (ISO 27001) et Continuité d’Activité / BCM (ISO 22301) . La mission s’",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-08-17",
+   "source": "HW RSSI national",
+   "titre": "RSSI H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/82353563.html",
+   "entreprise": "Michael Page",
+   "extrait": "Michael Page — Lille, Hauts-de-France · 90k€/an — Les missions du poste Acteur majeur de son secteur, cette entreprise historique poursuit une ambitieuse transformation digitale en s'appuyant sur un portefeuille d'activités divers",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 1
+  },
+  {
+   "date": "2026-08-17",
+   "source": "LI RSSI Toulouse",
+   "titre": "[NEU] [hoch] BigBlueButton: Schwachstelle ermöglicht Offenlegung von Informationen",
+   "lien": "https://fr.linkedin.com/jobs/view/neu-hoch-bigbluebutton-schwachstelle-erm%C3%B6glicht-offenlegung-von-informationen-at-skopion-intelligence-4454210726",
+   "entreprise": "SKOPION Intelligence",
+   "extrait": "SKOPION Intelligence — La Bastide-de-Sérou — Ein ruhiger, defensiver Überblick über aktuelle Sicherheitshinweise aus öffentlichen offiziellen Quellen — mit einer kurzen SKOPION-Einordnung für kleine und mittlere Unternehmen. ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 0
+  },
+  {
+   "date": "2026-08-17",
+   "source": "LI RSSI Toulouse",
+   "titre": "[NEU] [niedrig] Podman: Schwachstelle ermöglicht nicht spezifizierten Angriff und Offenlegung von Informationen",
+   "lien": "https://fr.linkedin.com/jobs/view/neu-niedrig-podman-schwachstelle-erm%C3%B6glicht-nicht-spezifizierten-angriff-und-offenlegung-von-informationen-at-skopion-intelligence-4453983332",
+   "entreprise": "SKOPION Intelligence",
+   "extrait": "SKOPION Intelligence — La Bastide-de-Sérou — Ein ruhiger, defensiver Überblick über aktuelle Sicherheitshinweise aus öffentlichen offiziellen Quellen — mit einer kurzen SKOPION-Einordnung für kleine und mittlere Unternehmen. ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 0
+  },
+  {
+   "date": "2026-08-17",
+   "source": "LI RSSI Toulouse",
+   "titre": "E-Government Suisse Article",
+   "lien": "https://fr.linkedin.com/jobs/view/e-government-suisse-article-at-quicksite-s%C3%A0rl-4448634339",
+   "entreprise": "eAdmin Solutions SA",
+   "extrait": "eAdmin Solutions SA — Issel — Synchronisation avec des acteurs tiers<br><br>Connecteurs<br><br>Un guichet virtuel à proprement parler offre des services en ligne, et ils sont nombreux sur le marché. Il peut éga",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 0
+  },
+  {
+   "date": "2026-08-17",
+   "source": "LI ISO 27001 France",
+   "titre": "Information Systems Security Officer",
+   "lien": "https://fr.linkedin.com/jobs/view/information-systems-security-officer-at-interpol-4441531905",
+   "entreprise": "INTERPOL",
+   "extrait": "INTERPOL — Lyon — <strong>Vacancy Notice <strong><strong><strong>1930<br><br></strong></strong></strong></strong>INTERPOL is the world’s largest international police organization, with 196 Member Co",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 3
+  },
+  {
+   "date": "2026-08-17",
+   "source": "LI GRC remote",
+   "titre": "Global Cybersecurity Risk Manager",
+   "lien": "https://fr.linkedin.com/jobs/view/global-cybersecurity-risk-manager-at-l-or%C3%A9al-4447143991",
+   "entreprise": "L'Oréal",
+   "extrait": "L'Oréal — Saint-Ouen — Hello, we’re L’Oréal. We're not just building brands, we're shaping how the world experiences beauty (and it takes a lot of cool jobs to do it). Intrigued? Keep reading, this might",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 2
+  },
   {
    "date": "2026-08-16",
    "source": "HW RSSI national",
