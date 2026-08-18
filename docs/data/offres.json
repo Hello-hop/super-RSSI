@@ -1,7 +1,31 @@
 {
- "scan": "2026-08-17T05:37:45+00:00",
+ "scan": "2026-08-18T05:32:50+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-08-18",
+   "source": "HW RSSI national",
+   "titre": "RSSI Opérationnel - Sécurité des Opérations & Soc H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/82358627.html",
+   "entreprise": "Audiens Conseil",
+   "extrait": "Audiens Conseil — Paris, Île-de-France · ~63k€/an estimé — Les missions du poste Avec plus de 15 ans d'existence, Audiens Conseil aide les entreprises dans la recherche, la sélection et l'évaluation de talents. Audiens Conseil recrute pour",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 3
+  },
+  {
+   "date": "2026-08-18",
+   "source": "HW RSSI national",
+   "titre": "Dipn13-Marseille Assistant Local à la Sécurité du Numérique - RSSI H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/80332198.html",
+   "entreprise": "Direction zonale de Police Nationale – SUD",
+   "extrait": "Direction zonale de Police Nationale – SUD — Marseille, Provence-Alpes-Côte d'Azur — Détail du poste GROUPE RIFSEEP 1 Vos activités principales Ce poste basé au sein de l'Hôtel de Police dans le 2ème arrondissement de Marseille, relève de la Direction Interdép",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
   {
    "date": "2026-08-17",
    "source": "FW ISO 27001",
