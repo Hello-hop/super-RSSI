@@ -1,7 +1,91 @@
 {
- "scan": "2026-08-19T05:33:57+00:00",
+ "scan": "2026-08-20T05:34:01+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-08-20",
+   "source": "FW ISO 27001",
+   "titre": "CONSULTANT ISP SENIOR",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant/consultant-isp-senior",
+   "entreprise": "Groupe Aptenia",
+   "extrait": "Groupe Aptenia — Dès que possible · 6 mois renouvelable · 600-700 €⁄j · 5 à 10 ans d’expérience · Télétravail partiel · Paris, France — Intégration de la sécurité dans les projets Intervenir dès les phases de cadrage et de conception des projets. Identifier le",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 4
+  },
+  {
+   "date": "2026-08-20",
+   "source": "HW RSSI national",
+   "titre": "Consultant RSSI H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/58483075.html",
+   "entreprise": "Almond",
+   "extrait": "Almond — Rennes, Bretagne · 50k€/an — Les missions du poste Almond est un acteur Cyber de référence en Europe. Rejoignez nos équipes spécialisées en cybersécurité, infrastructure et cloud qui sécurisent le monde numéri",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 3
+  },
+  {
+   "date": "2026-08-20",
+   "source": "HW RSSI national",
+   "titre": "Consultant Gouvernance & Conformité H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81474954.html",
+   "entreprise": "Squad",
+   "extrait": "Squad — Paris, Île-de-France · 72k€/an — Les missions du poste Vous souhaitez faire partie de l'un des rares groupes qualifiés PASSI-LPM par l'ANSSI ? Vous aimeriez évoluer chez l'un des pures players de la cybersécurité,",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 5
+  },
+  {
+   "date": "2026-08-20",
+   "source": "LI RSSI Toulouse",
+   "titre": "Ingénieur recherche/Ingénieure recherche",
+   "lien": "https://fr.linkedin.com/jobs/view/ing%C3%A9nieur-recherche-ing%C3%A9nieure-recherche-at-enac-ecole-nationale-de-l-aviation-civile-4444409988",
+   "entreprise": "ENAC - Ecole Nationale de l'Aviation Civile",
+   "extrait": "ENAC - Ecole Nationale de l'Aviation Civile — Toulouse — <p>La Direction de la Technique et de l'Innovation (DTI) de la Direction Générale de l'Aviation Civile (DGAC) utilise le support de cet axe afin de réaliser des études scientifique",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 1
+  },
+  {
+   "date": "2026-08-20",
+   "source": "LI GRC Toulouse",
+   "titre": "Ingénieur Gouvernance cybersécurité H/F",
+   "lien": "https://fr.linkedin.com/jobs/view/ing%C3%A9nieur-gouvernance-cybers%C3%A9curit%C3%A9-h-f-at-viveris-4449635650",
+   "entreprise": "Viveris",
+   "extrait": "Viveris — Ramonville-Saint-Agne — Viveris est un groupe de conseil et d'ingénierie spécialisé dans la conduite et la réalisation de projets dans les domaines de l'informatique et de l'électronique.<br><br>S'engager",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-08-20",
+   "source": "LI GRC Toulouse",
+   "titre": "Ingénieur Gouvernance cybersécurité H/F",
+   "lien": "https://fr.linkedin.com/jobs/view/ing%C3%A9nieur-gouvernance-cybers%C3%A9curit%C3%A9-h-f-at-free-work-4456131234",
+   "entreprise": "Free-Work",
+   "extrait": "Free-Work — Ramonville-Saint-Agne · 45k€/an — Contexte de la mission :<br><br>Nous recrutons en CDI un ingénieur gouvernance cybersécurité H/F.<br><br>Intégré au sein de notre équipe cybersécurité, vous interviendrez dans des ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 4
+  },
+  {
+   "date": "2026-08-20",
+   "source": "LI ISO 27001 France",
+   "titre": "IT-Sicherheitsbeauftragter (m/w/d)/ Chief Information Security Officer",
+   "lien": "https://fr.linkedin.com/jobs/view/it-sicherheitsbeauftragter-m-w-d-chief-information-security-officer-at-totalenergies-4456179978",
+   "entreprise": "TotalEnergies",
+   "extrait": "TotalEnergies — Ger — <strong><strong>Activités</strong> <br><br></strong>Aufgabengebiet:<br><br><ul><li> Verantwortung für unternehmensweites Information Security Management System der PFW Division </l",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 4
+  },
   {
    "date": "2026-08-19",
    "source": "FW ISO 27001",
