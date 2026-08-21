@@ -1,7 +1,55 @@
 {
- "scan": "2026-08-20T05:34:01+00:00",
+ "scan": "2026-08-21T05:36:08+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-08-21",
+   "source": "HW RSSI national",
+   "titre": "Adjoint RSSI - Ciso H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/73860168.html",
+   "entreprise": "Talan",
+   "extrait": "Talan — Paris, Île-de-France · ~63k€/an estimé — Les missions du poste Fondé en France, Talan est aujourd'hui un groupe international qui accompagne ses clients dans leur transformation Data & IA, de bout en bout, en combinant co",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 5
+  },
+  {
+   "date": "2026-08-21",
+   "source": "HW RSSI national",
+   "titre": "Chef de Cellule H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/79248393.html",
+   "entreprise": "Service de Santé des Armées (SSA)",
+   "extrait": "Service de Santé des Armées (SSA) — Saint-Mandé, Île-de-France — Les missions du poste La Direction des Systèmes d'Information et du Numérique en Santé (DSIN-S) est l'opérateur des systèmes d'information et de communication (SIC) du Service de S",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
+  {
+   "date": "2026-08-21",
+   "source": "HW RSSI national",
+   "titre": "Chef de Section Cyber et Ossi-L H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/80437091.html",
+   "entreprise": "Commissariat au Numérique de Défense (CND)",
+   "extrait": "Commissariat au Numérique de Défense (CND) — Toulon, Provence-Alpes-Côte d'Azur — Les missions du poste Placé sous l'autorité du ministre des Armées, le Commissariat au Numérique de Défense (CND) a pour mission d'apporter un appui numérique performant et résil",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 3
+  },
+  {
+   "date": "2026-08-21",
+   "source": "LI Security Analyst remote",
+   "titre": "Analyste Cybersécurité F/H",
+   "lien": "https://fr.linkedin.com/jobs/view/analyste-cybers%C3%A9curit%C3%A9-f-h-at-opteven-4450332207",
+   "entreprise": "OPTEVEN",
+   "extrait": "OPTEVEN — Villeurbanne — <p>Au sein de la Direction Sécurité, vous contribuez à la protection des systèmes d'information d'Opteven en assurant la surveillance quotidienne des environnements de sécurité et ",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 3
+  },
   {
    "date": "2026-08-20",
    "source": "FW ISO 27001",
