@@ -1,7 +1,19 @@
 {
- "scan": "2026-08-22T05:30:57+00:00",
+ "scan": "2026-08-23T05:32:21+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-08-23",
+   "source": "LI RSSI Toulouse",
+   "titre": "Telecommunications Payload Engineer",
+   "lien": "https://fr.linkedin.com/jobs/view/telecommunications-payload-engineer-at-univity-4456219835",
+   "entreprise": "UNIVITY",
+   "extrait": "UNIVITY — Toulouse — <strong>Job Description<br><br></strong>At UNIVITY we believe that everyone on Earth should have access to internet connectivity and we are on a mission to empower telecom operator",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 1
+  },
   {
    "date": "2026-08-22",
    "source": "HW RSSI national",
