@@ -1,7 +1,67 @@
 {
- "scan": "2026-08-23T05:32:21+00:00",
+ "scan": "2026-08-24T05:41:03+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-08-24",
+   "source": "HW RSSI national",
+   "titre": "Consultant Grc H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81659935.html",
+   "entreprise": "Altim Emploi",
+   "extrait": "Altim Emploi — Anse, Auvergne-Rhône-Alpes · 45k€/an — Les missions du poste Agence d'emploi indépendante installée à Anse (69), nous collaborons depuis plus de 10 ans avec des entreprises locales. Nous écoutons avec attention votre pr",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 2
+  },
+  {
+   "date": "2026-08-24",
+   "source": "HW RSSI national",
+   "titre": "Consultant Grc H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/82590573.html",
+   "entreprise": "Atos",
+   "extrait": "Atos — Lyon, Auvergne-Rhône-Alpes · ~53k€/an estimé — Les missions du poste Atos est un leader international de la transformation digitale avec plus de 110 000 collaborateurs dans 73 pays et un chiffre d'affaires annuel de plus de 11 ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 4
+  },
+  {
+   "date": "2026-08-24",
+   "source": "HW RSSI national",
+   "titre": "Responsable Cybersécurité Grc - Expatriation aux Pays-Bas H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81683221.html",
+   "entreprise": "Thales",
+   "extrait": "Thales — Gennevilliers, Île-de-France · ~63k€/an estimé — Les missions du poste Lieu : Gennevilliers, France Construisons ensemble un avenir de confiance Thales est un leader mondial des hautes technologies spécialisé dans trois secteurs ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 4
+  },
+  {
+   "date": "2026-08-24",
+   "source": "HW RSSI national",
+   "titre": "Gestion des Demandes SSI & Vse - Confirmé - Lyon H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81683699.html",
+   "entreprise": "Visian",
+   "extrait": "Visian — Lyon, Auvergne-Rhône-Alpes — Détail du poste Le besoin Contexte Dans le cadre d'une prestation au sein d'un environnement bancaire à forte exigence de sécurité, le consultant intégrera une équipe en charge de ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
+  {
+   "date": "2026-08-24",
+   "source": "HW RSSI national",
+   "titre": "Référent SSI International - Ciso International H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81662871.html",
+   "entreprise": "Veilos",
+   "extrait": "Veilos — Île-de-France — Détail du poste Le besoin Description de l'offre Nous recherchons un Référent SSI pour intervenir en renfort du CISO international au sein d'un acteur du secteur bancaire, dans le ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
   {
    "date": "2026-08-23",
    "source": "LI RSSI Toulouse",
