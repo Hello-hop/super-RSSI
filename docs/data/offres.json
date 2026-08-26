@@ -1,7 +1,19 @@
 {
- "scan": "2026-08-25T05:34:18+00:00",
+ "scan": "2026-08-26T05:37:19+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-08-26",
+   "source": "FW Consultant cyber",
+   "titre": "[LFR] Consultation DDOS à Toulouse - 1812",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/autre/lfr-consultation-ddos-a-toulouse-1812",
+   "entreprise": "ISUPPLIER",
+   "extrait": "ISUPPLIER — 08/31/2026 · 10 mois · 300-475 €⁄j · > 10 ans d’expérience · Toulouse, Occitanie — Dans le cadre du renforcement de la sécurité de ses infrastructures, un groupe recherche un Consultant Cybersécurité spécialisé en protection DDoS pour contribuer à ",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 2
+  },
   {
    "date": "2026-08-25",
    "source": "HW Conformité Occitanie",
