@@ -1,7 +1,55 @@
 {
- "scan": "2026-08-27T16:12:48+00:00",
+ "scan": "2026-08-28T17:13:21+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-08-28",
+   "source": "HW RSSI national",
+   "titre": "Assistant RSSI - Assistant Ciso Senior H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/82788193.html",
+   "entreprise": "Audensiel Technologies",
+   "extrait": "Audensiel Technologies — Paris, Île-de-France · ~63k€/an estimé — Les missions du poste Acteur multi-spécialiste en transformation digitale, conseil métier et conseil en technologies, Audensiel accompagne ses clients de tout secteur d'activité en",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 2
+  },
+  {
+   "date": "2026-08-28",
+   "source": "HW RSSI national",
+   "titre": "Account Cybersecurity Lead Interne Groupe H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/82754599.html",
+   "entreprise": "Capgemini",
+   "extrait": "Capgemini — Issy-les-Moulineaux, Île-de-France · ~63k€/an estimé — Les missions du poste Choisir Capgemini, c'est choisir une entreprise où vous serez en mesure de façonner votre carrière selon vos aspirations. Avec le soutien et l'inspiration d'u",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 4
+  },
+  {
+   "date": "2026-08-28",
+   "source": "HW RSSI national",
+   "titre": "Bras Droit RSSI H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/82753508.html",
+   "entreprise": "LeHibou",
+   "extrait": "LeHibou — Jarrie, Auvergne-Rhône-Alpes — Détail du poste Le besoin Notre client dans le secteur Conseil et audit recherche un/une Bras droit RSSI H/F Description de la mission : Le client recherche un Référent IT Site en ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
+  {
+   "date": "2026-08-28",
+   "source": "HW RSSI national",
+   "titre": "Appui RSSI - Risque Cyber H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/82753469.html",
+   "entreprise": "Yeets",
+   "extrait": "Yeets — Saint-Denis, Île-de-France — Détail du poste Le besoin Cybersécurité - Analyse de Risques & Industrialisation Localisation : Paris Type de mission : Freelance Démarrage : 1er septembre Durée : 4 mois, renouvel",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
   {
    "date": "2026-08-27",
    "source": "FW ISO 27001",
