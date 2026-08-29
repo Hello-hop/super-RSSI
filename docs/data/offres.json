@@ -1,7 +1,43 @@
 {
- "scan": "2026-08-28T17:13:21+00:00",
+ "scan": "2026-08-29T11:31:53+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-08-29",
+   "source": "HW RSSI national",
+   "titre": "Coordinateur Cybersécurité Continuité et Tprm H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/80751845.html",
+   "entreprise": "Boulanger",
+   "extrait": "Boulanger — Lesquin, Hauts-de-France · 60k€/an — Les missions du poste Avec plus de 70 ans d'expérience et 25 000 références disponibles dans ses 200 magasins, sur son site boulanger.com et son application, Boulanger est aujourd'",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 2
+  },
+  {
+   "date": "2026-08-29",
+   "source": "HW RSSI national",
+   "titre": "Alsn - RSSI - Dipn 06 H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/76093056.html",
+   "entreprise": "Direction zonale de Police Nationale – SUD",
+   "extrait": "Direction zonale de Police Nationale – SUD — Nice, Provence-Alpes-Côte d'Azur — Détail du poste GROUPE RIFSEEP : 2 Vos activités principales : En tant qu'assistant local à la sécurité du numérique «départemental» (ALSN) de la DIPN 06, vous êtes rattaché au Dir",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
+  {
+   "date": "2026-08-29",
+   "source": "HW RSSI national",
+   "titre": "Cybersecurity Operation Leader H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/82812094.html",
+   "entreprise": "Thales",
+   "extrait": "Thales — Limours, Île-de-France · ~63k€/an estimé — Les missions du poste Lieu : Limours, France Construisons ensemble un avenir de confiance Thales est un leader mondial des hautes technologies spécialisé dans trois secteurs d'acti",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 2
+  },
   {
    "date": "2026-08-28",
    "source": "HW RSSI national",
