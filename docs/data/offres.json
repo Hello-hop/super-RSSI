@@ -1,7 +1,55 @@
 {
- "scan": "2026-08-29T11:31:53+00:00",
+ "scan": "2026-08-30T10:20:50+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-08-30",
+   "source": "HW RSSI national",
+   "titre": "Chef de Projet Cybersécurité H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81863729.html",
+   "entreprise": "Celexio",
+   "extrait": "Celexio — Île-de-France — Détail du poste Le besoin Pour accompagner la direction d'un acteur public de premier plan, nous recherchons un(e) Consultant(e) en Cybersécurité. Intégré(e) au sein d'un pôle d'ex",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-08-30",
+   "source": "LI RSSI Toulouse",
+   "titre": "Cadre référent(e) parcours inclusif Personnes âgées-Personnes Handicapées (F/H) (DD311150) H/F",
+   "lien": "https://fr.linkedin.com/jobs/view/cadre-r%C3%A9f%C3%A9rent-e-parcours-inclusif-personnes-%C3%A2g%C3%A9es-personnes-handicap%C3%A9es-f-h-dd311150-h-f-at-agence-r%C3%A9gionale-de-sant%C3%A9-occitanie-ars-4451418529",
+   "entreprise": "Agence Régionale de Santé Occitanie (ARS)",
+   "extrait": "Agence Régionale de Santé Occitanie (ARS) — Haute-Garonne — Description du poste<br><br>Métier<br><br>Santé - Chargée / chargé contrôle établs, sces sanit &amp; medico-socx<br><br>Intitulé du poste<br><br>Cadre référent(e) parcours inclusif",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 3
+  },
+  {
+   "date": "2026-08-30",
+   "source": "LI RSSI Toulouse",
+   "titre": "Collaborateur comptable - H/F",
+   "lien": "https://fr.linkedin.com/jobs/view/collaborateur-comptable-h-f-at-proesa-cabinet-de-conseil-recrutement-et-formation-4453937235",
+   "entreprise": "Proesa - Cabinet de conseil, recrutement et formation",
+   "extrait": "Proesa - Cabinet de conseil, recrutement et formation — Toulouse — <strong>Vous souhaitez évoluer dans un cabinet où votre expertise est valorisée, avec une véritable perspective d'évolution vers la supervision d'équipe ?<br><br></strong>Notre cli",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 1
+  },
+  {
+   "date": "2026-08-30",
+   "source": "LI RSSI Toulouse",
+   "titre": "Operations Maintenance Manager",
+   "lien": "https://fr.linkedin.com/jobs/view/operations-maintenance-manager-at-prosolia-energy-4363154146",
+   "entreprise": "Prosolia Energy",
+   "extrait": "Prosolia Energy — Toulouse — <p>Fondée en 2003, Prosolia Energy est un groupe leader dans le secteur des énergies renouvelables, avec des opérations en Espagne, au Portugal, en Italie, en France et en Allemagn",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
   {
    "date": "2026-08-29",
    "source": "HW RSSI national",
