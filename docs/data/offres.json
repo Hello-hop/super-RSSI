@@ -1,7 +1,43 @@
 {
- "scan": "2026-08-30T10:20:50+00:00",
+ "scan": "2026-08-31T11:27:02+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-08-31",
+   "source": "FW ISO 27001",
+   "titre": "Consultant IT Risk & Cybersecurity",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant/consultant-it-risk-cybersecurity",
+   "entreprise": "",
+   "extrait": "Dès que possible · 1 an renouvelable · Télétravail partiel · Île-de-France, France — Dans le cadre du renforcement de son dispositif de maîtrise des risques technologiques et de cybersécurité, une société internationale spécialisée dans la gestion d’actifs rec",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-08-31",
+   "source": "HW RSSI national",
+   "titre": "Acmoss - Dt -Chef de Bureau SSI RSSI Acmoss H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/80810464.html",
+   "entreprise": "Agence des communications mobiles opérationnelles de sécurité et de secours",
+   "extrait": "Agence des communications mobiles opérationnelles de sécurité et de secours — Nanterre, Île-de-France — Les missions du poste Vous avez envie de vous investir dans un grand projet de modernisation au service de celles et ceux qui nous protègent ? Vous avez le ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 3
+  },
+  {
+   "date": "2026-08-31",
+   "source": "HW RSSI national",
+   "titre": "Coordonnateur Pole Cybersecurite H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81904658.html",
+   "entreprise": "Centre Hospitalier Emile Durkheim d'Épinal",
+   "extrait": "Centre Hospitalier Emile Durkheim d'Épinal — Épinal, Grand Est — Détail du poste Rattaché au Centre Hospitalier Émile Durkheim d'Épinal, établissement support du GHT, vos missions s'exerceront sur les différents sites des établissements du GHT8 ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 3
+  },
   {
    "date": "2026-08-30",
    "source": "HW RSSI national",
