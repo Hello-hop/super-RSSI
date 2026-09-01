@@ -1,7 +1,19 @@
 {
- "scan": "2026-08-31T11:27:02+00:00",
+ "scan": "2026-09-01T09:49:37+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-01",
+   "source": "HW RSSI national",
+   "titre": "RSSI - Responsable de la Sécurité des Systèmes d'Information H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/82846559.html",
+   "entreprise": "Innova Solutions",
+   "extrait": "Innova Solutions — Nice, Provence-Alpes-Côte d'Azur — Les missions du poste A la fois société de conseil en ingénierie et cabinet de recrutement, Innova Solutions accompagne depuis plus de 25 ans les industriels et entreprises innovan",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
   {
    "date": "2026-08-31",
    "source": "FW ISO 27001",
