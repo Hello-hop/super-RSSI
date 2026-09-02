@@ -1,7 +1,67 @@
 {
- "scan": "2026-09-01T09:49:37+00:00",
+ "scan": "2026-09-02T09:22:14+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-02",
+   "source": "FW ISO 27001",
+   "titre": "Un(e) Consultant(e) Senior Cybersécurité / Chef de Projet SSI",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant-cyber-securite/un-e-consultant-e-senior-cybersecurite-chef-de-projet-ssi",
+   "entreprise": "Keypeople Consulting",
+   "extrait": "Keypeople Consulting — Dès que possible · 3 mois renouvelable · 400-460 €⁄j · > 10 ans d’expérience · Télétravail partiel · Île-de-France, France — Nous recherchons actuellement un(e) Consultant(e) Senior Cybersécurité / Chef de Projet SSI pour accompagner une",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 4
+  },
+  {
+   "date": "2026-09-02",
+   "source": "HW RSSI national",
+   "titre": "Security Champion - Data & IA H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/82912880.html",
+   "entreprise": "LeHibou",
+   "extrait": "LeHibou — Île-de-France — Détail du poste Le besoin Notre client dans le secteur Assurance recherche un/une Security Champion - Data & IA H/F Description de la mission : Au sein de notre client : Missions p",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 1
+  },
+  {
+   "date": "2026-09-02",
+   "source": "LI RSSI Toulouse",
+   "titre": "Analyste Suivi et Pilotage Recouvrement - H/F",
+   "lien": "https://fr.linkedin.com/jobs/view/analyste-suivi-et-pilotage-recouvrement-h-f-at-caisse-d-epargne-de-midi-pyr%C3%A9n%C3%A9es-4459511638",
+   "entreprise": "Caisse d'Epargne de Midi-Pyrénées",
+   "extrait": "Caisse d'Epargne de Midi-Pyrénées — Toulouse — Description de l'entreprise<br><br><strong>Rejoignez un Acteur Engagé au Service du territoire !<br><br></strong>À la Caisse d’Epargne Midi-Pyrénées, nous sommes profondément ancré",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
+  {
+   "date": "2026-09-02",
+   "source": "LI GRC Toulouse",
+   "titre": "Consultant(e) GRC confirmé(e)",
+   "lien": "https://fr.linkedin.com/jobs/view/consultant-e-grc-confirm%C3%A9-e-at-cyblex-consulting-4459917839",
+   "entreprise": "Cyblex Consulting",
+   "extrait": "Cyblex Consulting — Toulouse et périphérie — <p>Au sein de notre pôle d’expertise en GRC, vous serez amené(e) à :</p><ul><li>Accompagner la démarche de cyber d’une entreprise en fonction du cadre réglementaire et ses besoins ",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-09-02",
+   "source": "LI ISO 27001 France",
+   "titre": "Information Security & Compliance Manager",
+   "lien": "https://fr.linkedin.com/jobs/view/information-security-compliance-manager-at-oticon-medical-4460616430",
+   "entreprise": "Oticon Medical",
+   "extrait": "Oticon Medical — Nice — Would you like to contribute to strengthening the security, resilience, and compliance of a healthcare information system?<br><br>At Oticon/ITSA Medical, we develop, manufacture, a",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 4
+  },
   {
    "date": "2026-09-01",
    "source": "HW RSSI national",
