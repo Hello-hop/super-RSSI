@@ -1,7 +1,31 @@
 {
- "scan": "2026-09-03T09:32:24+00:00",
+ "scan": "2026-09-04T09:23:54+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-04",
+   "source": "FW ISO 27001",
+   "titre": "Consultant cybersécurité (H/F) - 93",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant-cyber-securite/consultant-cybersecurite-h-f-93-1",
+   "entreprise": "Mindquest",
+   "extrait": "Mindquest — Dès que possible · 6 mois renouvelable · 590-690 €⁄j · 5 à 10 ans d’expérience · Télétravail partiel · Saint-Denis, Île-de-France — 1. Contexte Dans le cadre du renforcement de l’équipe Cybersécurité d’un groupe international, nous recherchons un C",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 3
+  },
+  {
+   "date": "2026-09-04",
+   "source": "HW Conformité Occitanie",
+   "titre": "Consultant Indépendant en Conformité Contrôle Interne & Permanent ou Audit H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83016754.html",
+   "entreprise": "Bloomco",
+   "extrait": "Bloomco — Languedoc-Roussillon — Détail du poste Le besoin Pour faciliter les échanges, merci de candidater directement sur notre site via ce formulaire : Depuis 2017, Bloomco fédère une communauté de 7000 consult",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
   {
    "date": "2026-09-03",
    "source": "FW Cyber Toulouse",
