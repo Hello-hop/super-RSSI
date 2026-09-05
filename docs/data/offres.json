@@ -1,7 +1,55 @@
 {
- "scan": "2026-09-04T09:23:54+00:00",
+ "scan": "2026-09-05T08:53:01+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-05",
+   "source": "FW ISO 27001",
+   "titre": "Consultant Technology Risk Management – Gouvernance, Contrôle et Risques IT/Cyber",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/project-management-officer/consultant-technology-risk-management-gouvernance-controle-et-risques-it-cyber",
+   "entreprise": "Deodis",
+   "extrait": "Deodis — 09/06/2026 · 1 an renouvelable · 400 €⁄j · 2 à 5 ans d’expérience · Télétravail partiel · Île-de-France, France — Au sein d’une équipe dédiée à la gestion des risques technologiques et cyber d’une banque d’investissement, le consultant accompagnera le",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 4
+  },
+  {
+   "date": "2026-09-05",
+   "source": "HW RSSI national",
+   "titre": "& Cyber Enabler H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83046095.html",
+   "entreprise": "BNP Paribas",
+   "extrait": "BNP Paribas — Montreuil, Île-de-France · 60k€/an — Détail du poste AU QUOTIDIEN ÇA DONNE QUOI ? En tant que AI&Cyber Enabler, vous jouerez un rôle clé dans l'identification, la conception, l'expérimentation et l'adoption de solutio",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 2
+  },
+  {
+   "date": "2026-09-05",
+   "source": "HW RSSI national",
+   "titre": "RSSI Métier - Security Champion H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83059323.html",
+   "entreprise": "Veilos",
+   "extrait": "Veilos — Île-de-France — Détail du poste Le besoin Vous intégrez le Pôle Accompagnement Projets de l'équipe Sécurité des SI d'un grand compte du secteur de l'assurance, en tant que Security Champion dédié ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-09-05",
+   "source": "LI ISO 27001 France",
+   "titre": "Auditeur ISO 27001",
+   "lien": "https://fr.linkedin.com/jobs/view/auditeur-iso-27001-at-cyberr-4462790378",
+   "entreprise": "Cyberr",
+   "extrait": "Cyberr — Île-de-France — <p><strong>Fonction recherchée</strong></p><p>Auditeur expert ISO 27001, IDF - CDI</p><p><br></p><p><strong>Contexte</strong></p><p>Notre client est un organisme de certification s",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 3
+  },
   {
    "date": "2026-09-04",
    "source": "FW ISO 27001",
