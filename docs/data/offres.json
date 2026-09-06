@@ -1,7 +1,79 @@
 {
- "scan": "2026-09-06T19:37:52+00:00",
+ "scan": "2026-09-06T19:40:38+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-06",
+   "source": "LI GRC remote",
+   "titre": "Consultant cybersécurité GRC - F/H",
+   "lien": "https://fr.linkedin.com/jobs/view/consultant-cybers%C3%A9curit%C3%A9-grc-f-h-at-niji-4431970680",
+   "entreprise": "Niji",
+   "extrait": "Niji — Issy-les-Moulineaux — <strong>IMINETI by Niji</strong>, expert en cybersécurité, accompagne ses clients en conseil, audit et mise en œuvre de solutions sur mesure.<br><br>Notre force ? Une expertise rec",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-09-06",
+   "source": "LI GRC remote",
+   "titre": "Consultant Gouvernance Cybersécurité H/F",
+   "lien": "https://fr.linkedin.com/jobs/view/consultant-gouvernance-cybers%C3%A9curit%C3%A9-h-f-at-wlf-4440661754",
+   "entreprise": "WLF",
+   "extrait": "WLF — Paris — <p>WLF est un <strong>cabinet de conseil</strong><strong>indépendant</strong> spécialisé en <strong>Cybersécurité</strong> en pleine croissance.</p><p>Nous intervenons principaleme",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-09-06",
+   "source": "LI GRC remote",
+   "titre": "Consultante / Consultant Cybersécurité GRC",
+   "lien": "https://fr.linkedin.com/jobs/view/consultante-consultant-cybers%C3%A9curit%C3%A9-grc-at-capgemini-4303880147",
+   "entreprise": "Capgemini",
+   "extrait": "Capgemini — Issy-les-Moulineaux — Choisir Capgemini, c'est choisir une entreprise où vous serez en mesure de façonner votre carrière selon vos aspirations. Avec le soutien et l'inspiration d'une communauté d’expert",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-09-06",
+   "source": "LI Sécurité applicative remote",
+   "titre": "IT Security Specialist",
+   "lien": "https://fr.linkedin.com/jobs/view/it-security-specialist-at-spektrum-4386871097",
+   "entreprise": "Spektrum",
+   "extrait": "Spektrum — Strasbourg — Background:<p>eu-LISA is the European Union Agency for the Operational Management of Large-Scale IT Systems in the Area of Freedom, Security and Justice (eu-LISA) manages large-sca",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-09-06",
+   "source": "LI Sécurité applicative remote",
+   "titre": "Administrateur Exploitation SI & Cybersécurité H/F",
+   "lien": "https://fr.linkedin.com/jobs/view/administrateur-exploitation-si-cybers%C3%A9curit%C3%A9-h-f-at-a%C3%A9roports-de-la-c%C3%B4te-d-azur-4418194549",
+   "entreprise": "Aéroports de la Côte d’Azur",
+   "extrait": "Aéroports de la Côte d’Azur — Nice — Information du poste<br><br>Intitulé du poste<br><br>Administrateur Exploitation SI &amp; Cybersécurité H/F<br><br>Poste ouvert à toutes les candidatures, dans le cadre d’une polit",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 2
+  },
+  {
+   "date": "2026-09-06",
+   "source": "LI Sécurité applicative remote",
+   "titre": "Consultant Sécurité - Gestion de vulnérabilité",
+   "lien": "https://fr.linkedin.com/jobs/view/consultant-s%C3%A9curit%C3%A9-gestion-de-vuln%C3%A9rabilit%C3%A9-at-axa-en-france-4453143291",
+   "entreprise": "AXA en France",
+   "extrait": "AXA en France — Nanterre — <strong>Votre rôle et vos missions<br><br></strong>Au sein de l’équipe Détection et Réaction, le consultant en gestion de vulnérabilité est responsable des activités suivantes<br><",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 1
+  },
   {
    "date": "2026-09-06",
    "source": "FW ISO 27001",
