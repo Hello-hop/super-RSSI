@@ -78,6 +78,16 @@ SOURCES = [
     {"nom": "LI GRC remote", "type": "linkedin",
      "url": "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=GRC%20cybers%C3%A9curit%C3%A9&location=France&f_WT=2",
      "remote": True},
+    # Sécurité applicative / produit, en télétravail total. Deux flux : l'un
+    # en anglais, l'autre en français — les annonces françaises n'emploient
+    # pas les mêmes intitulés et seraient invisibles avec la seule requête
+    # anglophone.
+    {"nom": "LI AppSec remote", "type": "linkedin",
+     "url": "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=application%20security%20engineer&location=France&f_WT=2",
+     "remote": True},
+    {"nom": "LI Sécurité applicative remote", "type": "linkedin",
+     "url": "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=s%C3%A9curit%C3%A9%20applicative&location=France&f_WT=2",
+     "remote": True},
 
     # Malt : ni scraping (Cloudflare bloque tout, y compris un navigateur
     # simulé) ni Google Alert (Google n'indexe que les profils freelances de
@@ -122,6 +132,17 @@ REGLES_PLANCHER = [
     # du montant affiché.
     {"motif": r"(information |cyber ?)?security analyst|analyste s[ée]curit[ée]",
      "lieu": "toulouse_ou_remote", "note": 5, "hors_remuneration": True},
+    # Sécurité applicative / produit. Le motif couvre les variantes anglaises
+    # (product / application security engineer, appsec) ET françaises, car les
+    # annonces françaises disent « sécurité applicative » ou « security
+    # application » et ne contiennent jamais le mot « engineer ».
+    # Condition : télétravail total uniquement, comme demandé.
+    {"motif": r"\b(product|application|app ?sec)[\w\s/&-]{0,15}\bsecurity\b"
+              r"|\bsecurity[\w\s/&-]{0,15}\b(product|application)\b"
+              r"|\bapp ?sec\b"
+              r"|s[ée]curit[ée] applicative"
+              r"|application s[ée]curit[ée]",
+     "lieu": "remote", "note": 5, "hors_remuneration": True},
 ]
 
 # Télétravail total. Deux sources : le flux LinkedIn filtré f_WT=2 (qui ne
@@ -222,7 +243,14 @@ def scorer(texte: str, titre: str = "", toulouse: bool = False, remu=None,
 # poste "OT" n'a pas toujours "OT" dans son titre). Les motifs courts comme
 # "ot" DOIVENT être encadrés par \b : sans ça, "photo" ou "pilote" seraient
 # exclus par erreur, puisque la recherche est une simple sous-chaîne sinon.
-EXCLUSIONS = [
+# Deux familles d'exclusions, appliquées différemment.
+#
+# 1) NOMS DE MÉTIER — cherchés dans le TITRE seulement. Les chercher aussi
+#    dans le corps jetterait des offres pertinentes : une fiche de poste
+#    « sécurité applicative » mentionne presque toujours des campagnes de
+#    pentest et l'accompagnement des développeurs, sans être pour autant un
+#    poste de pentester ou de développeur.
+EXCLUSIONS_TITRE = [
     r"alternance", r"\bstage\b", r"stagiaire", r"apprenti",
     r"\bpentest", r"d[ée]veloppeur", r"\bcommercial\b",
     # Postes de supervision SOC, quel que soit l'ordre des mots. Le [\s-]* sans
@@ -230,16 +258,23 @@ EXCLUSIONS = [
     # non un centre de supervision.
     r"\bsoc[\s-]*analyst", r"analyste?[\s-]*\bsoc\b",
     r"business developer", r"\brecruteur\b",
+]
+
+# 2) DOMAINES HORS PÉRIMÈTRE — cherchés dans le titre ET le texte complet :
+#    un poste qualité ou OT ne s'annonce pas toujours comme tel dès l'intitulé.
+EXCLUSIONS_PARTOUT = [
     r"\bqualit[ée]\b", r"\bquality\b", r"\bconformance\b",
     r"\bot\b",  # réseaux industriels / operational technology — hors périmètre voulu
 ]
+
+EXCLUSIONS = EXCLUSIONS_TITRE + EXCLUSIONS_PARTOUT   # filtre appliqué au titre
 
 # Détection du lieu, appliquée au texte complet de l'annonce (pas seulement au titre).
 RE_TOULOUSE = re.compile(r"toulouse|haute[- ]garonne|\b31\d{3}\b", re.I)
 
 SORTIE = os.path.join("docs", "data", "offres.json")
 MAX_OFFRES = 600           # on garde un historique glissant
-MAX_ENRICHISSEMENTS = 130  # garde-fou : plafond de fiches détail visitées par scan,
+MAX_ENRICHISSEMENTS = 150  # garde-fou : plafond de fiches détail visitées par scan,
                             # partagé entre Free-Work, Hellowork et LinkedIn.
                             # Trop bas, les dernières sources de la liste sont
                             # notées sur leur seul titre et sortent artificiellement
@@ -555,8 +590,15 @@ def lire_rss(url: str):
 
 
 def exclu(texte: str) -> bool:
+    """Filtre du TITRE : noms de métier + domaines hors périmètre."""
     t = (texte or "").lower()
     return any(re.search(pat, t) for pat in EXCLUSIONS)
+
+
+def exclu_corps(texte: str) -> bool:
+    """Filtre du TEXTE COMPLET : uniquement les domaines hors périmètre."""
+    t = (texte or "").lower()
+    return any(re.search(pat, t) for pat in EXCLUSIONS_PARTOUT)
 
 
 # ──────────────────────────── DOUBLONS ────────────────────────────
@@ -703,7 +745,8 @@ def main() -> int:
 
             # Second filtre, sur le texte complet cette fois : un poste "OT"
             # ou "qualité" pas repéré au titre l'est souvent dans le corps.
-            if exclu(contexte):
+            # On n'y applique PAS les noms de métier — voir EXCLUSIONS_TITRE.
+            if exclu_corps(contexte):
                 continue
 
             tjm, annuel = extraire_remuneration(
