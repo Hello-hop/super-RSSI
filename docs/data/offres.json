@@ -1,7 +1,43 @@
 {
- "scan": "2026-09-07T06:57:47+00:00",
+ "scan": "2026-09-07T14:35:57+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-07",
+   "source": "HW RSSI national",
+   "titre": "Adjoint RSSI H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83096992.html",
+   "entreprise": "Luminari Group",
+   "extrait": "Luminari Group — Clisson, Pays de la Loire · 54k€/an — Les missions du poste Luminari Group est un cabinet de recrutement spécialisé qui vous connecte aux meilleures opportunités du marché. Grâce à nos divisions expertes, nous travaill",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 4
+  },
+  {
+   "date": "2026-09-07",
+   "source": "LI RSSI Toulouse",
+   "titre": "Backup Architect (f/m)",
+   "lien": "https://fr.linkedin.com/jobs/view/backup-architect-f-m-at-airbus-aircraft-4458045178",
+   "entreprise": "Airbus Aircraft",
+   "extrait": "Airbus Aircraft — Toulouse — <strong><strong>Job Description:<br><br></strong></strong><strong>Airbus Commercial Aircraft</strong> is looking for a <strong>Backup Architect</strong> (f/m) to join our <strong>D",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
+  {
+   "date": "2026-09-07",
+   "source": "LI ISO 27001 France",
+   "titre": "RSSI - Responsable Cybersécurité Groupe",
+   "lien": "https://fr.linkedin.com/jobs/view/rssi-responsable-cybers%C3%A9curit%C3%A9-groupe-at-2ride-group-4464306645",
+   "entreprise": "2Ride Group",
+   "extrait": "2Ride Group — Marseille — <p>Responsable Cybersécurité / RSSI Groupe</p><p><strong>CDI · Marseille · Dès que possible</strong></p><p>2Ride réunit des marques comme Shark, Bering, Segura, Nolan, Cairn Sport ",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 3
+  },
   {
    "date": "2026-09-07",
    "source": "HW RSSI national",
