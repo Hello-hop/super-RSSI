@@ -1,7 +1,67 @@
 {
- "scan": "2026-09-06T19:40:38+00:00",
+ "scan": "2026-09-07T06:57:47+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-07",
+   "source": "HW RSSI national",
+   "titre": "Vulnerability Manager H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/76491737.html",
+   "entreprise": "Devoteam",
+   "extrait": "Devoteam — Annecy, Auvergne-Rhône-Alpes · ~53k€/an estimé — Les missions du poste Agence multi spécialiste composée de 350 collaborateurs répartis en communautés d'experts, Devoteam Lyon accompagne les DSI dans leur transformation digitale,",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 2
+  },
+  {
+   "date": "2026-09-07",
+   "source": "LI Security Analyst remote",
+   "titre": "Analyste Cyber SOC confirmé.e (SPlunk / Elastic) H/F",
+   "lien": "https://fr.linkedin.com/jobs/view/analyste-cyber-soc-confirm%C3%A9-e-splunk-elastic-h-f-at-lutessa-4462444204",
+   "entreprise": "Lutessa",
+   "extrait": "Lutessa — Paris · 55k€/an — <strong>La mission<br><br></strong><strong>Contexte De La Mission<br><br></strong>En tant qu'analyste SOC, vous assurez la sécurité défensive d'un acteur souverain dans le domaine ",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": false,
+   "score": 0
+  },
+  {
+   "date": "2026-09-07",
+   "source": "LI Security Analyst remote",
+   "titre": "Analyste cybersécurité (H/F)",
+   "lien": "https://fr.linkedin.com/jobs/view/analyste-cybers%C3%A9curit%C3%A9-h-f-at-cegedim-cloud-4462159803",
+   "entreprise": "cegedim.cloud",
+   "extrait": "cegedim.cloud — Boulogne-Billancourt — <strong>Votre Mission Chez Cegedim<br><br></strong>Fondée en 1969, Cegedim est une entreprise innovante de technologies et de services spécialisée dans la gestion des flux numériqu",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 3
+  },
+  {
+   "date": "2026-09-07",
+   "source": "LI AppSec remote",
+   "titre": "Consultant DevSecOps H/F",
+   "lien": "https://fr.linkedin.com/jobs/view/consultant-devsecops-h-f-at-inetum-4306777488",
+   "entreprise": "Inetum",
+   "extrait": "Inetum — Saint-Ouen — <strong>Description De L'entreprise<br><br></strong>Inetum est un leader européen des services numériques. Pour les entreprises, les acteurs publics et la société dans son ensemble",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-09-07",
+   "source": "LI AppSec remote",
+   "titre": "Ingénieur DevSecOps/SecApp (F/H)",
+   "lien": "https://fr.linkedin.com/jobs/view/ing%C3%A9nieur-devsecops-secapp-f-h-at-groupe-sii-4417704076",
+   "entreprise": "Groupe SII",
+   "extrait": "Groupe SII — Toulouse — SII Sud-Ouest recrute un <strong>Ingénieur DevSecOps/SecApp (F/H) </strong>pour rejoindre ses <strong>usines logicielles </strong>et renforcer l'équipe de <strong>sécurité applicat",
+   "toulouse": true,
+   "remote": true,
+   "remuneration": null,
+   "score": 2
+  },
   {
    "date": "2026-09-06",
    "source": "LI GRC remote",
