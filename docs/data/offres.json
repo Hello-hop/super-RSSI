@@ -1,7 +1,55 @@
 {
- "scan": "2026-09-08T06:54:02+00:00",
+ "scan": "2026-09-08T13:10:53+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-08",
+   "source": "LI RSSI Toulouse",
+   "titre": "CADRE REFERENT ETABLISSEMENTS SANITAIRES ET GESTION DE CRISE (F/H) (SURC1448) H/F",
+   "lien": "https://fr.linkedin.com/jobs/view/cadre-referent-etablissements-sanitaires-et-gestion-de-crise-f-h-surc1448-h-f-at-agence-r%C3%A9gionale-de-sant%C3%A9-occitanie-ars-4456010647",
+   "entreprise": "Agence Régionale de Santé Occitanie (ARS)",
+   "extrait": "Agence Régionale de Santé Occitanie (ARS) — Ariège — Description du poste<br><br>Métier<br><br>Santé - Inspecteur élève d'action sanitaire et sociale<br><br>Intitulé du poste<br><br>CADRE REFERENT ETABLISSEMENTS SANITAIRES ET GESTION",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
+  {
+   "date": "2026-09-08",
+   "source": "LI RSSI Toulouse",
+   "titre": "Responsable Haute-Garonne, Gers et Fonctions Supports",
+   "lien": "https://fr.linkedin.com/jobs/view/responsable-haute-garonne-gers-et-fonctions-supports-at-rebonds%21-4464302607",
+   "entreprise": "Rebonds!",
+   "extrait": "Rebonds! — Toulouse — <p>Depuis 20 ans, Rebonds! (www.asso-rebonds.com) utilise le sport comme outil, moyen et point d’ancrage pour accompagner l’éducation et l’insertion sociale et professionnelle des ",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 1
+  },
+  {
+   "date": "2026-09-08",
+   "source": "LI RSSI Toulouse",
+   "titre": "Auditeur SI / IT Senior - Toulouse - 2026 - H/F",
+   "lien": "https://fr.linkedin.com/jobs/view/auditeur-si-it-senior-toulouse-2026-h-f-at-forvis-mazars-en-france-4448559826",
+   "entreprise": "Forvis Mazars en France",
+   "extrait": "Forvis Mazars en France — Toulouse — Votre poste<br><br>Forvis Mazars est un groupe international d'audit, de fiscalité et de conseil. Avec + de 40 000 collaborateurs présents dans une centaine de pays, nous faisons p",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 3
+  },
+  {
+   "date": "2026-09-08",
+   "source": "LI GRC remote",
+   "titre": "Consultant cybersécurité - GRC & IA",
+   "lien": "https://fr.linkedin.com/jobs/view/consultant-cybers%C3%A9curit%C3%A9-grc-ia-at-kedros-cybers%C3%A9curit%C3%A9-4464478848",
+   "entreprise": "Kedros Cybersécurité",
+   "extrait": "Kedros Cybersécurité — Ville de Paris — Kedros Cybersécurité recrute !<p>En rejoignant notre cabinet, vous avez l'assurance de valoriser votre savoir-faire et de monter en compétences dans le domaine de la cybersécurité,",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 4
+  },
   {
    "date": "2026-09-08",
    "source": "FW Cyber Toulouse",
