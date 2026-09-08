@@ -1,7 +1,55 @@
 {
- "scan": "2026-09-07T14:35:57+00:00",
+ "scan": "2026-09-08T06:54:02+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-08",
+   "source": "FW Cyber Toulouse",
+   "titre": "Ingénieur Sécurité (H/F)",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/administrateur-securite/ingenieur-securite-h-f-108",
+   "entreprise": "Link Consulting",
+   "extrait": "Link Consulting — Dès que possible · 1 mois · 500-550 €⁄j · 5 à 10 ans d’expérience · Télétravail partiel · France — Notre client, acteur reconnu de son secteur, est à la recherche de son futur Ingénieur Cybersécurité (H/F) pour son site de Blagnac, dans le ca",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": true,
+   "score": 2
+  },
+  {
+   "date": "2026-09-08",
+   "source": "FW Sécu Toulouse",
+   "titre": "Ingénieur SRE IAM/Active Directory H/F",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/ingenieur-apres-vente/ingenieur-sre-iam-active-directory-h-f",
+   "entreprise": "",
+   "extrait": "Dès que possible · 45k-55k €⁄an · 2 à 5 ans d’expérience · Toulouse, Occitanie — Nous recrutons un Ingénieur SRE pour accompagner notre client dans le cadre de nos activités de MCO/MCS et de la mise en place d'un projet de création/migration/réattribution d'un",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 2
+  },
+  {
+   "date": "2026-09-08",
+   "source": "LI RSSI Toulouse",
+   "titre": "Gestionnaire de patrimoine",
+   "lien": "https://fr.linkedin.com/jobs/view/gestionnaire-de-patrimoine-at-caisse-d-epargne-de-midi-pyr%C3%A9n%C3%A9es-4464320696",
+   "entreprise": "Caisse d'Epargne de Midi-Pyrénées",
+   "extrait": "Caisse d'Epargne de Midi-Pyrénées — Carmaux — <p>[OFFRE D'EMPLOI] – Gestionnaire Patrimonial (F/H/X) – Carmaux (Tarn) 📍</p><p><br></p><p>Vous souhaitez mettre votre expertise financière et humaine au service d’un territoire dy",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
+  {
+   "date": "2026-09-08",
+   "source": "LI AppSec remote",
+   "titre": "SENIOR PRODUCT SECURITY ENGINEER / SENIOR APPSEC ENGINEER",
+   "lien": "https://fr.linkedin.com/jobs/view/senior-product-security-engineer-senior-appsec-engineer-at-station-f-4454435660",
+   "entreprise": "STATION F",
+   "extrait": "STATION F — Paris — À propos<br><br>Depuis 30 ans, les contrats n'ont pas changé.<br><br>Leur contenu est simplement passé d'une feuille de papier à un écran d'ordinateur et les entreprises ont dû s'a",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 5
+  },
   {
    "date": "2026-09-07",
    "source": "HW RSSI national",
