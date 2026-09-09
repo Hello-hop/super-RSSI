@@ -1,7 +1,19 @@
 {
- "scan": "2026-09-09T07:02:18+00:00",
+ "scan": "2026-09-09T13:16:21+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-09",
+   "source": "LI Security Analyst remote",
+   "titre": "Security Analyst H/F",
+   "lien": "https://fr.linkedin.com/jobs/view/security-analyst-h-f-at-alten-4462972794",
+   "entreprise": "ALTEN",
+   "extrait": "ALTEN — Paris — LE CONTEXTE<br><br>Au sein d’une équipe dédiée à la cybersécurité, vous contribuez à renforcer la protection des systèmes et des données de l’entreprise.<br><br>Votre rôle est esse",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 5
+  },
   {
    "date": "2026-09-09",
    "source": "HW RSSI national",
