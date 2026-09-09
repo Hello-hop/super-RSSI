@@ -1,7 +1,31 @@
 {
- "scan": "2026-09-08T13:10:53+00:00",
+ "scan": "2026-09-09T07:02:18+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-09",
+   "source": "HW RSSI national",
+   "titre": "Adjoint au Fonctionnaire de Sécurité des Systèmes d'Information Fssi - Fssi Adjoint H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83166091.html",
+   "entreprise": "Ministère de l'Europe et des Affaires étrangères",
+   "extrait": "Ministère de l'Europe et des Affaires étrangères — Paris, Île-de-France · 71k€/an — Détail du poste Description synthétique du poste Sous l'autorité de la cheffe/du chef du bureau sécurité numérique et protection des données (direction de la sécurité diplomati",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 2
+  },
+  {
+   "date": "2026-09-09",
+   "source": "LI ISO 27001 France",
+   "titre": "Director of Cybersecurity & IT",
+   "lien": "https://fr.linkedin.com/jobs/view/director-of-cybersecurity-it-at-back-market-4464378075",
+   "entreprise": "Back Market",
+   "extrait": "Back Market — Paris — Hi, we’re Back Market.<br><br>We’re here to help <strong>make tech reliable, affordable, and better than new</strong>. We're a global marketplace for refurbished devices, helping l",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 3
+  },
   {
    "date": "2026-09-08",
    "source": "LI RSSI Toulouse",
