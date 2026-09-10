@@ -1,7 +1,31 @@
 {
- "scan": "2026-09-10T06:58:51+00:00",
+ "scan": "2026-09-10T13:13:30+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-10",
+   "source": "HW RSSI national",
+   "titre": "Correspondant Gestion de Crise H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83234902.html",
+   "entreprise": "CEA",
+   "extrait": "CEA — Grenoble, Auvergne-Rhône-Alpes · ~53k€/an estimé — Les missions du poste Le CEA est un acteur majeur de la recherche, au service des citoyens, de l'économie et de l'Etat. Il apporte des solutions concrètes à leurs besoins dans quat",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 2
+  },
+  {
+   "date": "2026-09-10",
+   "source": "LI Security Analyst remote",
+   "titre": "Analyste cybersécurité",
+   "lien": "https://fr.linkedin.com/jobs/view/analyste-cybers%C3%A9curit%C3%A9-at-neosoft-4463895205",
+   "entreprise": "Néosoft",
+   "extrait": "Néosoft — Paris et périphérie — <p>Groupe indépendant de conseil en transformation digitale de près de 1800 collaborateurs, Néosoft s’est construit, depuis 2005, sur un modèle qui place l’excellence, le dépasseme",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 1
+  },
   {
    "date": "2026-09-10",
    "source": "FW ISO 27001",
