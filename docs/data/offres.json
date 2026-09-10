@@ -1,7 +1,31 @@
 {
- "scan": "2026-09-09T13:16:21+00:00",
+ "scan": "2026-09-10T06:58:51+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-10",
+   "source": "FW ISO 27001",
+   "titre": "RSSI DevSecOps et Développement Groupe - (92)",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/ingenieur-securite/rssi-devsecops-et-developpement-groupe-92",
+   "entreprise": "Mindquest",
+   "extrait": "Mindquest — Dès que possible · 3 mois renouvelable · 5 à 10 ans d’expérience · Télétravail partiel · Courbevoie, Île-de-France — 1. Contexte Dans le cadre du développement de ses plateformes digitales stratégiques à dimension internationale , un acteur majeur ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-09-10",
+   "source": "HW Conformité Occitanie",
+   "titre": "Responsable Conformité en Matière de Contrôle des Exportations - France H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/82196898.html",
+   "entreprise": "Airbus Defense and Space",
+   "extrait": "Airbus Defense and Space — Toulouse, Occitanie · ~48k€/an estimé — Détail du poste Description de l'emploi: Airbus Commercial recherche un(e) Responsable conformité Contrôle des Exportations - France (f/h) pour rejoindre notre département du Contr",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 3
+  },
   {
    "date": "2026-09-09",
    "source": "LI Security Analyst remote",
