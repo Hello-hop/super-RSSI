@@ -1,7 +1,55 @@
 {
- "scan": "2026-09-10T13:13:30+00:00",
+ "scan": "2026-09-11T06:58:26+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-11",
+   "source": "HW RSSI national",
+   "titre": "Manager - Senior Manager Cybersécurité Grc H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81228107.html",
+   "entreprise": "PwC France et Maghreb",
+   "extrait": "PwC France et Maghreb — Neuilly-sur-Seine, Île-de-France · ~63k€/an estimé — Les missions du poste PwC, cabinet pluridisciplinaire, rassemble 7 000 collaborateurs en France et au Maghreb, au sein d'un réseau mondial de plus de 364 000 personnes dans 136 pay",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 5
+  },
+  {
+   "date": "2026-09-11",
+   "source": "HW RSSI national",
+   "titre": "RSSI Adjoint H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/80029612.html",
+   "entreprise": "Informatis",
+   "extrait": "Informatis — Villejuif, Île-de-France · ~63k€/an estimé — Détail du poste Dans le cadre du renforcement de sa gouvernance de la sécurité des systèmes d'information, notre client recherche un RSSI Adjoint H/F. Véritable bras droit du RSSI,",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 4
+  },
+  {
+   "date": "2026-09-11",
+   "source": "HW RSSI national",
+   "titre": "Décathlon France Recherche Un·e Information Security Officer Basé·e à Lille H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83270117.html",
+   "entreprise": "Decathlon Technology",
+   "extrait": "Decathlon Technology — Villeneuve-d'Ascq, Hauts-de-France — Les missions du poste Décathlon FRANCE gère les activités de distribution à travers son réseau de plus de 300 magasins présents dans toute la France. Décathlon FRANCE propose égale",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-09-11",
+   "source": "HW RSSI national",
+   "titre": "Chargé de Mission Cybersécurité H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83256664.html",
+   "entreprise": "Rectorat de Lyon",
+   "extrait": "Rectorat de Lyon — Lyon, Auvergne · ~53k€/an estimé — Les missions du poste Le titulaire du poste sera rattaché hiérarchiquement au RSSI de la région académique. Il sera affecté au sein du pôle sécurité numérique du service de défense",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 3
+  },
   {
    "date": "2026-09-10",
    "source": "HW RSSI national",
