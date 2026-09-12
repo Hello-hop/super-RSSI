@@ -1,7 +1,79 @@
 {
- "scan": "2026-09-11T13:07:54+00:00",
+ "scan": "2026-09-12T06:50:03+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-12",
+   "source": "FW ISO 27001",
+   "titre": "Consultant cybersécurité – gouvernance, risques & conformité",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant-cyber-securite/consultant-cybersecurite-gouvernance-risques-conformite",
+   "entreprise": "Mon Consultant Indépendant",
+   "extrait": "Mon Consultant Indépendant — 09/30/2026 · 6 mois renouvelable · 330-390 €⁄j · 2 à 5 ans d’expérience · Télétravail partiel · Paris, France — Contexte : Dans le cadre du renforcement de son programme de sécurité, notre client recherche un Consultant Cybersécuri",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 4
+  },
+  {
+   "date": "2026-09-12",
+   "source": "HW RSSI national",
+   "titre": "Internship - Cyber Operational Dashboard H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83301261.html",
+   "entreprise": "CMA CGM",
+   "extrait": "CMA CGM — Marseille, Provence-Alpes-Côte d'Azur — Les missions du poste Led by Rodolphe Saadé, the CMA CGM Group, a global leader in shipping and logistics, serves more than 420 ports around the world on five continents. With its ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 1
+  },
+  {
+   "date": "2026-09-12",
+   "source": "HW RSSI national",
+   "titre": "Head Of Appsec - Paris H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83300720.html",
+   "entreprise": "Tiime",
+   "extrait": "Tiime — Paris, Île-de-France · ~63k€/an estimé — Les missions du poste Qui sommes-nous ? Tiime est une start-up française créée en 2015. Chez Tiime, nous développons LA super app pour entreprendre, au service des entrepreneurs et",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 5
+  },
+  {
+   "date": "2026-09-12",
+   "source": "HW RSSI national",
+   "titre": "Alternant RSSI H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83285298.html",
+   "entreprise": "GROUPE ASTEN",
+   "extrait": "GROUPE ASTEN — Brest, Bretagne — Détail du poste - - - Alternant RSSI (H/F) Pourquoi nous avons besoin de vous ? Vous souhaitez développer vos compétences en cybersécurité tout en conservant une forte dimension te",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-09-12",
+   "source": "HW RSSI national",
+   "titre": "Chef de Projet Cybersécurité - Technique H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83299634.html",
+   "entreprise": "Cyberr France",
+   "extrait": "Cyberr France — Île-de-France — Détail du poste Le besoin Pour l'un de nos clients grands comptes, situé en Ile-de-France, dans le cadre d'une mission longue durée permettant 2 jours de télétravail hebdomadaires,",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-09-12",
+   "source": "LI RSSI Toulouse",
+   "titre": "Responsable du campus Cyber Occitanie",
+   "lien": "https://fr.linkedin.com/jobs/view/responsable-du-campus-cyber-occitanie-at-cyber-occ-4462142854",
+   "entreprise": "Cyber'Occ",
+   "extrait": "Cyber'Occ — Labège — <p><span>1-&nbsp;&nbsp;&nbsp;&nbsp;Présentation du poste</span></p><p><span>Nous recherchons un(e) </span><strong>Responsable du Campus Cyber territorial</strong><span> justifiant ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
   {
    "date": "2026-09-11",
    "source": "HW RSSI national",
