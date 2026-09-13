@@ -1,7 +1,19 @@
 {
- "scan": "2026-09-12T12:31:12+00:00",
+ "scan": "2026-09-13T07:08:05+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-13",
+   "source": "HW RSSI national",
+   "titre": "Experte - Expert en Vulnérabilités H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/82285804.html",
+   "entreprise": "EDF",
+   "extrait": "EDF — Lyon, Auvergne-Rhône-Alpes · 72k€/an — Détail du poste Le Centre d'Excellence Cyber d'EDF pilote et opère la sécurité des SI de toutes les entités du Groupe (EDF SA et filiales). Il mutualise les forces opérationnelles ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 1
+  },
   {
    "date": "2026-09-12",
    "source": "FW ISO 27001",
