@@ -1,7 +1,67 @@
 {
- "scan": "2026-09-14T07:32:03+00:00",
+ "scan": "2026-09-14T15:24:46+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-14",
+   "source": "HW Conformité Occitanie",
+   "titre": "Consultant Gouvernance & Conformité Dora H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83350679.html",
+   "entreprise": "TOHTEM",
+   "extrait": "TOHTEM — Toulouse, Occitanie · 45k€/an — Les missions du poste Le groupe TOHTEM est la convergence des métiers du design, de l'ingénierie mécanique et informatique. Depuis 20 ans, le groupe met au coeur de sa politique l'",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 3
+  },
+  {
+   "date": "2026-09-14",
+   "source": "HW RSSI national",
+   "titre": "RSSI Opérationnel - Responsable Sécurité Opérationnelle - CDI H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83333463.html",
+   "entreprise": "AOC",
+   "extrait": "AOC — Lille, Hauts-de-France · ~52k€/an estimé — Détail du poste Le besoin Nous recherchons pour l'un de nos clients, une fintech d'environ 250 collaborateurs évoluant dans un environnement technologique exigeant et sensible, son",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 4
+  },
+  {
+   "date": "2026-09-14",
+   "source": "LI RSSI Toulouse",
+   "titre": "Technical Lead Functional Safety for AI",
+   "lien": "https://fr.linkedin.com/jobs/view/technical-lead-functional-safety-for-ai-at-european-tech-recruit-4467211054",
+   "entreprise": "European Tech Recruit",
+   "extrait": "European Tech Recruit — Toulouse — <p><strong>Technical Lead Functional Safety for AI</strong></p><p><br></p><p>European Tech Recruit are working closely with a multinational Semiconductor company, based in Toulouse",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 3
+  },
+  {
+   "date": "2026-09-14",
+   "source": "LI ISO 27001 France",
+   "titre": "Directeur de la cybersécurité",
+   "lien": "https://fr.linkedin.com/jobs/view/directeur-de-la-cybers%C3%A9curit%C3%A9-at-marso-robotics-4464799796",
+   "entreprise": "Marso Robotics",
+   "extrait": "Marso Robotics — Ville de Paris — <p>As Marso's first cybersecurity hire, you will be responsible for protecting our systems, our product and our data. As <strong>Cybersecurity Lead</strong>, your role will cover t",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 2
+  },
+  {
+   "date": "2026-09-14",
+   "source": "LI GRC remote",
+   "titre": "Consultant/e Cybersécurité GRC senior - Défense & Sécurité - Le Plessis Robinson",
+   "lien": "https://fr.linkedin.com/jobs/view/consultant-e-cybers%C3%A9curit%C3%A9-grc-senior-d%C3%A9fense-s%C3%A9curit%C3%A9-le-plessis-robinson-at-cs-group-4467098747",
+   "entreprise": "CS GROUP",
+   "extrait": "CS GROUP — Le Plessis-Robinson — <strong>Description De L'entreprise<br><br></strong>CS, filiale du groupe Sopra Steria, est un acteur technologique de référence dans la conception, l’intégration et l’exploitation",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 4
+  },
   {
    "date": "2026-09-13",
    "source": "HW RSSI national",
