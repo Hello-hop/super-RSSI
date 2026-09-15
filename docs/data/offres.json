@@ -1,7 +1,19 @@
 {
- "scan": "2026-09-14T15:24:46+00:00",
+ "scan": "2026-09-15T07:08:56+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-15",
+   "source": "HW RSSI national",
+   "titre": "RSSI Opérationnel H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/81345435.html",
+   "entreprise": "illicado illi & co",
+   "extrait": "illicado illi & co — Croix, Hauts-de-France · ~52k€/an estimé — Les missions du poste POURQUOI REJOINDRE ILLI&CO Nous voulons interagir avec toutes nos parties prenantes avec les valeurs qui nous animent, notre BASE : #Bienveillance - Prendre s",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 4
+  },
   {
    "date": "2026-09-14",
    "source": "HW Conformité Occitanie",
