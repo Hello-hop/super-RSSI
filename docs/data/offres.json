@@ -1,7 +1,31 @@
 {
- "scan": "2026-09-15T07:08:56+00:00",
+ "scan": "2026-09-15T13:58:46+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-15",
+   "source": "HW RSSI national",
+   "titre": "Chef de Projet Cybersécurité H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83386875.html",
+   "entreprise": "DCS Easyware",
+   "extrait": "DCS Easyware — Paris, Île-de-France · ~63k€/an estimé — Les missions du poste Dès les années 70 DCS accompagne ses clients dans le domaine informatique. Son activité commence en Haute-Savoie, mais elle se déploie aujourd'hui partout en ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 4
+  },
+  {
+   "date": "2026-09-15",
+   "source": "LI RSSI Toulouse",
+   "titre": "PMO (H/F)",
+   "lien": "https://fr.linkedin.com/jobs/view/pmo-h-f-at-reisel-4467043937",
+   "entreprise": "Reisel",
+   "extrait": "Reisel — Toulouse — <p>Reisel Sud Ouest recherche pour son antenne Toulousaine un ingénieur généraliste qui interviendra sur des sujets de gestion de projets pour nos clients en région Toulousaine.</p",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
   {
    "date": "2026-09-15",
    "source": "HW RSSI national",
