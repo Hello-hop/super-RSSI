@@ -1,7 +1,31 @@
 {
- "scan": "2026-09-15T13:58:46+00:00",
+ "scan": "2026-09-16T07:09:36+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-16",
+   "source": "HW RSSI national",
+   "titre": "Analyste Vulnérabilités H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83399139.html",
+   "entreprise": "Groupe Trèfle",
+   "extrait": "Groupe Trèfle — Paris, Île-de-France · ~63k€/an estimé — Les missions du poste Notre coeur de métier est la sécurité informatique et, par extension, toute la gestion des services d'infrastructures IT. Externalisée ou sur site client, les",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 2
+  },
+  {
+   "date": "2026-09-16",
+   "source": "HW RSSI national",
+   "titre": "Pp-Dilt-Service Cyber- Chef du Service Cyber H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/77976833.html",
+   "entreprise": "Préfecture de Police de Paris",
+   "extrait": "Préfecture de Police de Paris — Paris, Île-de-France — Détail du poste Groupe RIFSEEP: 1 Vos activités principales: Le service Cyber a pour mission principale la sécurité des systèmes d'information (SSI) de la PP qui sont sous responsa",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
   {
    "date": "2026-09-15",
    "source": "HW RSSI national",
