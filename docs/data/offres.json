@@ -1,7 +1,31 @@
 {
- "scan": "2026-09-16T07:09:36+00:00",
+ "scan": "2026-09-16T13:52:39+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-16",
+   "source": "HW RSSI national",
+   "titre": "Adjoint RSSI H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83425290.html",
+   "entreprise": "Dexia Crédit Local",
+   "extrait": "Dexia Crédit Local — Courbevoie, Île-de-France · ~63k€/an estimé — Les missions du poste Au 31 décembre 2023, le groupe Dexia compte environ 500 collaborateurs. A côté de Bruxelles et Paris, le groupe a une présence internationale limitée en Irlan",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 5
+  },
+  {
+   "date": "2026-09-16",
+   "source": "LI Sécurité applicative remote",
+   "titre": "Qualys TotalAppSec Expert - H/F",
+   "lien": "https://fr.linkedin.com/jobs/view/qualys-totalappsec-expert-h-f-at-ozitem-4459959751",
+   "entreprise": "Ozitem",
+   "extrait": "Ozitem — Nanterre — <p>Dans le cadre du renforcement de ses activités en cybersécurité, notre client recherche un <strong>Expert Qualys TotalAppSec</strong> pour accompagner l’évaluation, l’optimisati",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 1
+  },
   {
    "date": "2026-09-16",
    "source": "HW RSSI national",
