@@ -1,7 +1,67 @@
 {
- "scan": "2026-09-16T13:52:39+00:00",
+ "scan": "2026-09-17T07:07:59+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-17",
+   "source": "FW ISO 27001",
+   "titre": "Pilote d'Activité GRC - Gouvernance, Risques & Conformité (H/F)",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/pupitreur-operateur-pilote-analyste-dexploitation/pilote-dactivite-grc-gouvernance-risques-conformite-h-f",
+   "entreprise": "",
+   "extrait": "Dès que possible · 3 mois renouvelable · 40k-45k €⁄an, 400-610 €⁄j · Télétravail partiel · Île-de-France, France — Contexte & Objectifs Pour structurer et piloter ses dispositifs de conformité, de maîtrise des risques et de gouvernance de la sécurité, notre or",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 4
+  },
+  {
+   "date": "2026-09-17",
+   "source": "HW RSSI Occitanie",
+   "titre": "Consultant Grc Confirmé H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/82714407.html",
+   "entreprise": "IMS Networks",
+   "extrait": "IMS Networks — Labège, Occitanie · ~48k€/an estimé — Les missions du poste Fort d'une expérience depuis plus de 25 ans d'opérateur de services managés de réseaux et de sécurité informatique, le groupe IMS Networks a créé la filiale C",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 4
+  },
+  {
+   "date": "2026-09-17",
+   "source": "HW RSSI Occitanie",
+   "titre": "Dgscgc 30 - Chef du Pôle Informatique Sic H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83460709.html",
+   "entreprise": "Direction générale de la sécurité civile et de la gestion de crise",
+   "extrait": "Direction générale de la sécurité civile et de la gestion de crise — Garons, Occitanie — Détail du poste Groupe RIFSEEP: 1 Au sein BSAO, le chef du pôle Informatique assure le pilotage, la modernisation et la sécurisation des systèmes d'information concourant ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 3
+  },
+  {
+   "date": "2026-09-17",
+   "source": "HW RSSI national",
+   "titre": "RSSI Adjoint - Expertise SSI - Insee H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83459819.html",
+   "entreprise": "Service Public",
+   "extrait": "Service Public — Montrouge, Île-de-France — Détail du poste Au sein de la DSI et plus particulièrement de la Division sécurité et maîtrise des risques, vous jouerez un rôle clé dans l'amélioration continue de la sécurité des",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-09-17",
+   "source": "HW RSSI national",
+   "titre": "Assistant RSSI H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83441346.html",
+   "entreprise": "Idline",
+   "extrait": "Idline — L'Isle-d'Espagnac, Nouvelle-Aquitaine — Les missions du poste Le Groupe NVL accompagne ses clients dans la transformation digitale. Nos activités en forte croissance nécessitent de recruter de nouveaux talents dans de no",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 3
+  },
   {
    "date": "2026-09-16",
    "source": "HW RSSI national",
