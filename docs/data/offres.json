@@ -1,7 +1,43 @@
 {
- "scan": "2026-09-17T07:07:59+00:00",
+ "scan": "2026-09-17T13:55:55+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-17",
+   "source": "FW Sécu Toulouse",
+   "titre": "Consultant Sécurité M365-Data Protection",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/administrateur-securite/consultant-securite-m365-data-protection",
+   "entreprise": "STHREE SAS",
+   "extrait": "STHREE SAS — Dès que possible · 6 mois · 140-400 €⁄j · 2 à 5 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — Bonjour, Je suis à la recherche d’un Consultant Sécurité M365-Data Protection : Missions principales : • Définir, paramétrer et améliore",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 2
+  },
+  {
+   "date": "2026-09-17",
+   "source": "HW RSSI Occitanie",
+   "titre": "Chef de Projet Cybersécurité Nis2 H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83470108.html",
+   "entreprise": "Amaris Consulting",
+   "extrait": "Amaris Consulting — Languedoc-Roussillon — Les missions du poste Amaris Consulting est une société indépendante de conseil et de technologies au service des entreprises. Avec plus de 1000 clients dans le monde, nous déployo",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-09-17",
+   "source": "LI Sécurité applicative remote",
+   "titre": "Security Engineer - Authentication, Identity & Payments F/M",
+   "lien": "https://fr.linkedin.com/jobs/view/security-engineer-authentication-identity-payments-f-m-at-betclic-group-4468398649",
+   "entreprise": "Betclic Group",
+   "extrait": "Betclic Group — Bordeaux — <strong>WE ARE BETCLIC </strong><strong>🎯<br><br></strong>Betclic, European leader in sports betting, is much more than just an online gaming site! Also offering Poker, Horse Racin",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 1
+  },
   {
    "date": "2026-09-17",
    "source": "FW ISO 27001",
