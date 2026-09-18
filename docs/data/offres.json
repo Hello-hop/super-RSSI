@@ -1,7 +1,31 @@
 {
- "scan": "2026-09-18T07:01:20+00:00",
+ "scan": "2026-09-18T13:15:54+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-18",
+   "source": "FW ISO 27001",
+   "titre": "Chef de Projet PMO SecOps / Gouvernance IT",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/assistant-chef-de-projet/chef-de-projet-pmo-secops-gouvernance-it",
+   "entreprise": "ALLEGIS GROUP",
+   "extrait": "ALLEGIS GROUP — Dès que possible · 6 mois renouvelable · > 10 ans d’expérience · Télétravail partiel · Paris, France — 📅 Démarrage : ASAP 📄 Mission longue durée Dans le cadre du renforcement de son département Sécurité Opérationnelle, notre client recherche un",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
+  {
+   "date": "2026-09-18",
+   "source": "HW RSSI national",
+   "titre": "RSSI Groupe Maif H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83509004.html",
+   "entreprise": "MAIF",
+   "extrait": "MAIF — Niort, Nouvelle-Aquitaine — Les missions du poste Acteur majeur de l'assurance en France, MAIF défend une autre idée de l'économie et a développé un modèle mutualiste centré sur l'humain. Travailler à la MAIF",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 3
+  },
   {
    "date": "2026-09-18",
    "source": "HW RSSI Occitanie",
