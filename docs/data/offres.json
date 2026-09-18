@@ -1,7 +1,31 @@
 {
- "scan": "2026-09-17T13:55:55+00:00",
+ "scan": "2026-09-18T07:01:20+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-18",
+   "source": "HW RSSI Occitanie",
+   "titre": "Responsable Sbu Its Intelligent Traffic Systems H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83489091.html",
+   "entreprise": "L'Industrie recrute",
+   "extrait": "L'Industrie recrute — Pins-Justaret, Occitanie — Détail du poste Rejoignez STERELA Depuis plus de 45 ans, STERELA conçoit, développe et déploie des solutions technologiques innovantes au service de la sécurité routière, de la mob",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
+  {
+   "date": "2026-09-18",
+   "source": "LI RSSI Toulouse",
+   "titre": "Technicien de support informatique (H/F)",
+   "lien": "https://fr.linkedin.com/jobs/view/technicien-de-support-informatique-h-f-at-reisel-4468669014",
+   "entreprise": "Reisel",
+   "extrait": "Reisel — Toulouse et périphérie — <p>Reisel Sud Ouest recherche pour son antenne Toulousaine un technicien systèmes et réseaux junior qui interviendra sur ce poste chez son client dans le secteur retail. Vous inter",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 1
+  },
   {
    "date": "2026-09-17",
    "source": "FW Sécu Toulouse",
