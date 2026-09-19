@@ -1,7 +1,43 @@
 {
- "scan": "2026-09-18T13:15:54+00:00",
+ "scan": "2026-09-19T06:59:21+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-19",
+   "source": "HW RSSI national",
+   "titre": "Consultant Senior Grc - RSSI H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83542137.html",
+   "entreprise": "Niji",
+   "extrait": "Niji — Issy-les-Moulineaux, Île-de-France · ~63k€/an estimé — Les missions du poste IMINETI by Niji, expert en cybersécurité, accompagne ses clients en conseil, audit et mise en oeuvre de solutions sur mesure. Notre force ? Une expertise reco",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 5
+  },
+  {
+   "date": "2026-09-19",
+   "source": "HW RSSI national",
+   "titre": "Responsable de la Cybersécurité et Modernisation des Systèmes d'Information - Clamart H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83551058.html",
+   "entreprise": "Communes",
+   "extrait": "Communes — Clamart, Île-de-France — Détail du poste Sous l'autorité du Directeur des systèmes d'information, vous définissez, pilotez et mettez en oeuvre la stratégie de sécurité et d'exploitation des infrastructures",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
+  {
+   "date": "2026-09-19",
+   "source": "LI AppSec remote",
+   "titre": "Expert(e) Vulnérabilités – VOC AppSec F/H",
+   "lien": "https://fr.linkedin.com/jobs/view/expert-e-vuln%C3%A9rabilit%C3%A9s-%E2%80%93-voc-appsec-f-h-at-devoteam-cyber-trust-4467862679",
+   "entreprise": "Devoteam | Cyber Trust",
+   "extrait": "Devoteam | Cyber Trust — Levallois-Perret — Devoteam est une entreprise de conseil en technologies, cloud, cyber, IA et développement durable. Avec plus de 11 000 collaborateurs dans plus de 25 pays, nous guidons nos clients",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 5
+  },
   {
    "date": "2026-09-18",
    "source": "FW ISO 27001",
