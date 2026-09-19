@@ -1,7 +1,19 @@
 {
- "scan": "2026-09-19T06:59:21+00:00",
+ "scan": "2026-09-19T12:46:50+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-19",
+   "source": "LI RSSI Toulouse",
+   "titre": "Gestionnaire administratif – soins psychiatriques sans consentement (DSPT0962) H/F",
+   "lien": "https://fr.linkedin.com/jobs/view/gestionnaire-administratif-%E2%80%93-soins-psychiatriques-sans-consentement-dspt0962-h-f-at-agence-r%C3%A9gionale-de-sant%C3%A9-occitanie-ars-4467878891",
+   "entreprise": "Agence Régionale de Santé Occitanie (ARS)",
+   "extrait": "Agence Régionale de Santé Occitanie (ARS) — Haute-Garonne — Description du poste<br><br>Métier<br><br>Conception et pilotage des politiques - Gestionnaire de dispositif(s)<br><br>Intitulé du poste<br><br>Gestionnaire administratif – soins p",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
   {
    "date": "2026-09-19",
    "source": "HW RSSI national",
