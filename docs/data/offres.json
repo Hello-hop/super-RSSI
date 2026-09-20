@@ -1,7 +1,31 @@
 {
- "scan": "2026-09-20T07:25:23+00:00",
+ "scan": "2026-09-20T13:18:33+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-20",
+   "source": "LI RSSI Toulouse",
+   "titre": "Diététicien / Diététicienne (H/F)",
+   "lien": "https://fr.linkedin.com/jobs/view/di%C3%A9t%C3%A9ticien-di%C3%A9t%C3%A9ticienne-h-f-4468425149",
+   "entreprise": "Pamiers Soyez un des premiers candidats il y a 3 semaines",
+   "extrait": "Pamiers Soyez un des premiers candidats il y a 3 semaines · Toulouse",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 1
+  },
+  {
+   "date": "2026-09-20",
+   "source": "LI RSSI Toulouse",
+   "titre": "Diététicien / Diététicienne",
+   "lien": "https://fr.linkedin.com/jobs/view/di%C3%A9t%C3%A9ticien-di%C3%A9t%C3%A9ticienne-h-f-4468065919",
+   "entreprise": "Réseau RNPC Officiel",
+   "extrait": "Réseau RNPC Officiel · Montauban",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 0
+  },
   {
    "date": "2026-09-20",
    "source": "HW RSSI national",
