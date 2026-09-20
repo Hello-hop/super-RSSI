@@ -1,7 +1,31 @@
 {
- "scan": "2026-09-19T12:46:50+00:00",
+ "scan": "2026-09-20T07:25:23+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-20",
+   "source": "HW RSSI national",
+   "titre": "Chef de Projet Cybersécurité H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83566197.html",
+   "entreprise": "E-Volve",
+   "extrait": "E-Volve — Lille, Hauts-de-France — Détail du poste Le besoin Contexte L'objectif de la mission est de piloter, coordonner et s'assurer de la bonne réalisation des actions de remédiation cyber de nos applications afi",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-09-20",
+   "source": "HW RSSI national",
+   "titre": "Chef de Projet Cybersécurité H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83566063.html",
+   "entreprise": "Hoxton Partners",
+   "extrait": "Hoxton Partners — Pau, Nouvelle-Aquitaine — Détail du poste Le besoin Dans le cadre d'un programme de sécurisation du SI, notre client recherche un Chef de Projet SI pour piloter et coordonner les actions de remédiation cybe",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
   {
    "date": "2026-09-19",
    "source": "LI RSSI Toulouse",
