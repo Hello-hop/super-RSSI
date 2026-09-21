@@ -1,7 +1,31 @@
 {
- "scan": "2026-09-20T13:18:33+00:00",
+ "scan": "2026-09-21T07:35:27+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-21",
+   "source": "FW ISO 27001",
+   "titre": "Security Champion - Domaine Data",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/directeur-de-la-data-cdo/security-champion-domaine-data",
+   "entreprise": "",
+   "extrait": "Dès que possible · 3 mois renouvelable · 40k-45k €⁄an, 400-680 €⁄j · Île-de-France, France — Dans le cadre de la mission, vous rejoindrez le Pôle Accompagnement Projets de l'équipe de Sécurité. Ce pôle est en charge d'accompagner les équipes de la DSI dans l'i",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 3
+  },
+  {
+   "date": "2026-09-21",
+   "source": "LI RSSI Toulouse",
+   "titre": "PMO / Responsable Pôle Pilotage (H/F)",
+   "lien": "https://fr.linkedin.com/jobs/view/pmo-responsable-p%C3%B4le-pilotage-h-f-at-free-work-4467356447",
+   "entreprise": "Free-Work",
+   "extrait": "Free-Work — Blagnac · 70k€/an — Notre client, acteur reconnu de son secteur, est à la recherche de son futur PMO DSI Senior (H/F) pour son site de Blagnac, dans le cadre du renforcement de la gouvernance de sa Di",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 1
+  },
   {
    "date": "2026-09-20",
    "source": "LI RSSI Toulouse",
