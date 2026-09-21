@@ -1,7 +1,19 @@
 {
- "scan": "2026-09-21T07:35:27+00:00",
+ "scan": "2026-09-21T15:28:42+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-21",
+   "source": "LI RSSI Toulouse",
+   "titre": "Consultant Gouvernance & Conformité DORA H/F",
+   "lien": "https://fr.linkedin.com/jobs/view/consultant-gouvernance-conformit%C3%A9-dora-h-f-at-free-work-4469912205",
+   "entreprise": "Free-Work",
+   "extrait": "Free-Work — Toulouse · 45k€/an — Vous souhaitez participer à la mise en conformité réglementaire d'un acteur majeur du secteur bancaire ?<br><br>Dans le cadre du renforcement de ses dispositifs de gestion des risq",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 2
+  },
   {
    "date": "2026-09-21",
    "source": "FW ISO 27001",
