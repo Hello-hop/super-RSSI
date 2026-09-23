@@ -1,7 +1,19 @@
 {
- "scan": "2026-09-22T13:47:20+00:00",
+ "scan": "2026-09-23T07:16:27+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-23",
+   "source": "HW Conformité Occitanie",
+   "titre": "Responsable Conformité et Risques H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83652340.html",
+   "entreprise": "Airbus Defense and Space",
+   "extrait": "Airbus Defense and Space — Toulouse, Occitanie · ~48k€/an estimé — Détail du poste Description de l'emploi: Airbus Commercial recherche un(e) Responsable Conformité et Risques (f/h) pour rejoindre notre équipe Prévention Groupe basée à Toulouse, F",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 3
+  },
   {
    "date": "2026-09-22",
    "source": "HW RSSI national",
