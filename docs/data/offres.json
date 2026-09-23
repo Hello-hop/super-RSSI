@@ -1,7 +1,43 @@
 {
- "scan": "2026-09-23T07:16:27+00:00",
+ "scan": "2026-09-23T13:58:27+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-23",
+   "source": "FW ISO 27001",
+   "titre": "RSSI Mi temps",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/autre/rssi-mi-temps-1",
+   "entreprise": "",
+   "extrait": "Dès que possible · 1 an renouvelable · 40k-73k €⁄an, 420-900 €⁄j · > 10 ans d’expérience · Télétravail partiel · Paris, France — Je recherche un RSSI part-time pour piloter la sécurité des systèmes d’information et accompagner nos clients sur des missions vari",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 5
+  },
+  {
+   "date": "2026-09-23",
+   "source": "FW Cyber Toulouse",
+   "titre": "Architecte réseau cybersécurité",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant-cyber-securite/architecte-reseau-cybersecurite-h-f",
+   "entreprise": "",
+   "extrait": "Dès que possible · 56k-70k €⁄an · > 10 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — Nous recherchons un consultant expérimenté en cybersécurité pour piloter la conception de l'architecture de sécurité et l'homologation formelle du système d'i",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": true,
+   "score": 3
+  },
+  {
+   "date": "2026-09-23",
+   "source": "FW Cyber Toulouse",
+   "titre": "Ingénierie en sécurité Opérationnelle M365 / Protection des données - Toulouse, Paris, Lyon",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/expert-e-protection-donnees/ingenierie-en-securite-operationnelle-m365-protection-des-donnees-toulouse-paris-lyon",
+   "entreprise": "NOVAMINDS",
+   "extrait": "NOVAMINDS — Dès que possible · 77 jours renouvelable · 550 €⁄j · 5 à 10 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — //MISSION A POURVOIR ENTRE TOULOUSE , PARIS ET LYON// Dans le cadre du renforcement d’une équipe spécialisée en protection de",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": true,
+   "score": 3
+  },
   {
    "date": "2026-09-23",
    "source": "HW Conformité Occitanie",
