@@ -1,7 +1,31 @@
 {
- "scan": "2026-09-24T07:07:30+00:00",
+ "scan": "2026-09-24T13:54:56+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-24",
+   "source": "FW ISO 27001",
+   "titre": "Piloter RSSI de transition",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/autre/piloter-rssi-de-transition",
+   "entreprise": "",
+   "extrait": "Dès que possible · 3 mois renouvelable · 40k-45k €⁄an, 400-600 €⁄j · Télétravail partiel · Ivry-sur-Seine, Île-de-France — Descriptif de la prestation : -Enjeux : Maintien de la Certification 27001 de la BU Archivage et de la facture électronique et améliorati",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 5
+  },
+  {
+   "date": "2026-09-24",
+   "source": "LI Sécurité applicative remote",
+   "titre": "Security Application – IT Security Associate – Client final (Private Equity) – CDI – Paris – 75/100 K€",
+   "lien": "https://fr.linkedin.com/jobs/view/security-application-%E2%80%93-it-security-associate-%E2%80%93-client-final-private-equity-%E2%80%93-cdi-%E2%80%93-paris-%E2%80%93-75-100-k%E2%82%AC-at-mr-search-4457790377",
+   "entreprise": "MR SEARCH",
+   "extrait": "MR SEARCH — Courbevoie — <p><strong>La société :</strong></p><p><br></p><p>Société spécialisée dans la gestion d'actifs dont le portefeuille dépasse les 50 milliards d'euros, qui compte 900 salariés répart",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 5
+  },
   {
    "date": "2026-09-24",
    "source": "LI AppSec remote",
