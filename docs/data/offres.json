@@ -1,7 +1,31 @@
 {
- "scan": "2026-09-25T07:05:23+00:00",
+ "scan": "2026-09-25T14:18:33+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-25",
+   "source": "FW Cyber Toulouse",
+   "titre": "Consultant Sécurité IA Générative & Cybersécurité",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant-cyber-securite/consultant-securite-ia-generative-cybersecurite-h-f",
+   "entreprise": "",
+   "extrait": "Dès que possible · 40k-50k €⁄an · 2 à 5 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — Au sein de la Direction Sécurité d'un acteur majeur du secteur bancaire, vous intervenez sur un programme structurant visant à déployer des solutions d'IA gé",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 4
+  },
+  {
+   "date": "2026-09-25",
+   "source": "HW RSSI national",
+   "titre": "Consultant Sénior Grc - RSSI Confirmé H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83768716.html",
+   "entreprise": "Randstad Digital",
+   "extrait": "Randstad Digital — Issy-les-Moulineaux, Île-de-France · ~63k€/an estimé — Les missions du poste À propos de notre entreprise : Randstad Digital, anciennement AUSY, est un partenaire technologique de référence qui facilite la transformation digitale des e",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 5
+  },
   {
    "date": "2026-09-25",
    "source": "HW RSSI national",
