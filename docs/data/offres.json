@@ -1,7 +1,31 @@
 {
- "scan": "2026-09-24T13:54:56+00:00",
+ "scan": "2026-09-25T07:05:23+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-25",
+   "source": "HW RSSI national",
+   "titre": "RSSI H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/82644318.html",
+   "entreprise": "Adsearch",
+   "extrait": "Adsearch — Dardilly, Auvergne-Rhône-Alpes · 80k€/an — Les missions du poste Adsearch vous propose des milliers d'opportunités de carrières dans toute la France pour les profils d'experts, cadres et managers. Que ce soit pour un emploi",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 5
+  },
+  {
+   "date": "2026-09-25",
+   "source": "HW RSSI national",
+   "titre": "RSSI H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83729885.html",
+   "entreprise": "Octopus IT",
+   "extrait": "Octopus IT — Paris, Île-de-France · ~63k€/an estimé — Détail du poste Lasociété Cet éditeur de logiciels propose une solution SaaS qui permet à tous de créer un site ultra personnalisé (avec Back end complexe) sans avoir aucune compét",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 1
+  },
   {
    "date": "2026-09-24",
    "source": "FW ISO 27001",
