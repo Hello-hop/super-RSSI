@@ -1,7 +1,67 @@
 {
- "scan": "2026-09-25T14:18:33+00:00",
+ "scan": "2026-09-26T07:01:44+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-26",
+   "source": "HW RSSI national",
+   "titre": "RSSI - Temps Partiel - Indépendant H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83774662.html",
+   "entreprise": "Celad",
+   "extrait": "Celad — Rennes, Bretagne · 480 €/j — Les missions du poste CELAD, 30 ans d'expertise et toujours l'envie d'innover ! Avec environs 1750 talents au service de 250 clients (PME, ETI et Grands Comptes), nous accompagnons",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 4
+  },
+  {
+   "date": "2026-09-26",
+   "source": "LI RSSI Toulouse",
+   "titre": "Gestionnaire en immobilier (H/F)",
+   "lien": "https://fr.linkedin.com/jobs/view/gestionnaire-en-immobilier-h-f-4470371938",
+   "entreprise": "Foix Soyez un des premiers candidats il y a 1 jour",
+   "extrait": "Foix Soyez un des premiers candidats il y a 1 jour · Toulouse",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 1
+  },
+  {
+   "date": "2026-09-26",
+   "source": "LI AppSec remote",
+   "titre": "Staff Product Security Engineer",
+   "lien": "https://fr.linkedin.com/jobs/view/staff-product-security-engineer-at-dashlane-4470321449",
+   "entreprise": "Dashlane",
+   "extrait": "Dashlane — Paris et périphérie — <strong>About Dashlane<br><br></strong>Dashlane’s mission is to deliver the credential security every business and employee needs to thrive. Millions of consumers, and over 25,000 ",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 5
+  },
+  {
+   "date": "2026-09-26",
+   "source": "LI Sécurité applicative remote",
+   "titre": "Senior Security Engineer",
+   "lien": "https://fr.linkedin.com/jobs/view/senior-security-engineer-at-cyberjobs-com-4470711625",
+   "entreprise": "CyberJobs.Com",
+   "extrait": "CyberJobs.Com — Paris — <strong>About Dashlane<br><br></strong>Dashlane’s mission is to deliver the credential security every business and employee needs to thrive. Millions of consumers, and over 25,000 ",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 2
+  },
+  {
+   "date": "2026-09-26",
+   "source": "LI Sécurité applicative remote",
+   "titre": "Staff Product Security Engineer",
+   "lien": "https://fr.linkedin.com/jobs/view/staff-product-security-engineer-at-cyberjobs-com-4470718211",
+   "entreprise": "CyberJobs.Com",
+   "extrait": "CyberJobs.Com — Paris — <strong>About Dashlane<br><br></strong>Dashlane’s mission is to deliver the credential security every business and employee needs to thrive. Millions of consumers, and over 25,000 ",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 5
+  },
   {
    "date": "2026-09-25",
    "source": "FW Cyber Toulouse",
