@@ -1,7 +1,43 @@
 {
- "scan": "2026-09-30T07:54:12+00:00",
+ "scan": "2026-09-30T15:28:35+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-09-30",
+   "source": "FW Cyber Toulouse",
+   "titre": "Ingénieur Cybersécurité",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/ingenieur-en-cyber-securite/ingenieur-cyber-securite-data-dspm",
+   "entreprise": "Deodis",
+   "extrait": "Deodis — 10/18/2026 · 12 mois renouvelable · 530-630 €⁄j · 5 à 10 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — Mission à Toulouse, télétravail partiel (2/3 jours/semaine) Dans le cadre du renforcement de sa stratégie de Data Security, l’organ",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": true,
+   "score": 2
+  },
+  {
+   "date": "2026-09-30",
+   "source": "HW RSSI national",
+   "titre": "Ciso Strategy Advisor H/F",
+   "lien": "https://www.hellowork.com/fr-fr/emplois/83938386.html",
+   "entreprise": "Cyberr",
+   "extrait": "Cyberr — Meudon, Île-de-France · 100k€/an — Détail du poste Le besoin Contexte Acteur majeur des télécommunications, au coeur des enjeux de transformation numérique et de cybersécurité. Missions Contribuer à la définition, l",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 5
+  },
+  {
+   "date": "2026-09-30",
+   "source": "LI GRC Toulouse",
+   "titre": "Consultant(e) senior Cybersécurité / GRC (H/F)",
+   "lien": "https://fr.linkedin.com/jobs/view/consultant-e-senior-cybers%C3%A9curit%C3%A9-grc-h-f-at-src-solution-4473754115",
+   "entreprise": "SRC Solution",
+   "extrait": "SRC Solution — Colomiers — <p><strong>🕵️♂️ Consultant(e) Cybersécurité 🚨💻</strong></p><p><br></p><p><strong>🛡️ Consultant Senior Cybersécurité / GRC (H/F)</strong></p><p><br></p><p><strong>🚀 Qui sommes-nous ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
   {
    "date": "2026-09-29",
    "source": "FW ISO 27001",
