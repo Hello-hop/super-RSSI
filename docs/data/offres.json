@@ -1,7 +1,31 @@
 {
- "scan": "2026-10-01T15:49:03+00:00",
+ "scan": "2026-10-02T07:53:32+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-02",
+   "source": "FW ISO 27001",
+   "titre": "Cybersecurity Project Manager Senior",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/community-manager-social-media-manager/cybersecurity-project-manager-senior",
+   "entreprise": "",
+   "extrait": "Dès que possible · 1 an · 5 à 10 ans d’expérience · France — Nous recrutons – Cybersecurity Project Manager Senior Nous recherchons un Chef de Projet Cybersécurité Senior pour piloter des initiatives Cyber complexes dans un environnement int",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
+  {
+   "date": "2026-10-02",
+   "source": "FW ISO 27001",
+   "titre": "Cybersecurity Business Analyst Senior",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/business-analyst/cybersecurity-business-analyst-senior",
+   "entreprise": "",
+   "extrait": "Dès que possible · 1 an · 5 à 10 ans d’expérience · Télétravail partiel · Marseille, Provence-Alpes-Côte d'Azur — Nous recrutons – Cybersecurity Business Analyst Senior Nous recherchons un Business Analyst Senior expérimenté sur des projets Cybersécurité, Risq",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 3
+  },
   {
    "date": "2026-09-30",
    "source": "FW Cyber Toulouse",
