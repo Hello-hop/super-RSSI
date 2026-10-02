@@ -1,7 +1,31 @@
 {
- "scan": "2026-10-02T07:53:32+00:00",
+ "scan": "2026-10-02T15:10:47+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-02",
+   "source": "FW ISO 27001",
+   "titre": "Team Leader PKI/IAM H/F",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/autre/team-leader-pki-iam-h-f",
+   "entreprise": "Insitoo Freelances",
+   "extrait": "Insitoo Freelances — Dès que possible · 2 ans · 500-700 €⁄j · > 10 ans d’expérience · Paris, Île-de-France — Basée à Lille, Lyon, Nantes, Grenoble, Marseille, Paris et Bruxelles, Insitoo Freelances est une société du groupe Insitoo, spécialisée dans le placeme",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 4
+  },
+  {
+   "date": "2026-10-02",
+   "source": "FW ISO 27001",
+   "titre": "GRC Information Security Officer",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/responsable-securite-informatique-ciso/grc-information-security-officer",
+   "entreprise": "Halian",
+   "extrait": "Halian — Dès que possible · 12 mois · 400-450 €⁄j · 2 à 5 ans d’expérience · Télétravail partiel · Bruxelles, Bruxelles-Capitale, Belgique — Vos missions Piloter et coordonner les analyses de risques IT. Organiser et animer les ateliers de gestion des risques ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 4
+  },
   {
    "date": "2026-10-02",
    "source": "FW ISO 27001",
