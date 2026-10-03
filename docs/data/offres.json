@@ -1,7 +1,31 @@
 {
- "scan": "2026-10-03T07:31:31+00:00",
+ "scan": "2026-10-03T14:03:56+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-03",
+   "source": "LI RSSI Toulouse",
+   "titre": "CDI Consultant (e) Senior SEO H/F-Toulouse",
+   "lien": "https://fr.linkedin.com/jobs/view/cdi-consultant-e-senior-seo-h-f-toulouse-at-pixalione-seo-paid-ia-data-cro-4474309498",
+   "entreprise": "PIXALIONE | SEO, PAID, IA, DATA &amp; CRO",
+   "extrait": "PIXALIONE | SEO, PAID, IA, DATA &amp; CRO — Toulouse — Pixalione est une agence digitale spécialisée en SEO et marketing digital, accompagnant des clients de tous secteurs, de PME aux groupes du CAC40, en France et à l’international. N",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 3
+  },
+  {
+   "date": "2026-10-03",
+   "source": "LI RSSI Toulouse",
+   "titre": "Coordinateur des opérations de gare routière (H/F)",
+   "lien": "https://fr.linkedin.com/jobs/view/coordinateur-des-op%C3%A9rations-de-gare-routi%C3%A8re-h-f-4472352405",
+   "entreprise": "Toulouse Soyez un des premiers candidats il y a 1 semaine",
+   "extrait": "Toulouse Soyez un des premiers candidats il y a 1 semaine · Toulouse",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 1
+  },
   {
    "date": "2026-10-02",
    "source": "FW ISO 27001",
