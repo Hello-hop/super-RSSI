@@ -1,7 +1,43 @@
 {
- "scan": "2026-10-05T08:12:53+00:00",
+ "scan": "2026-10-05T17:34:22+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-05",
+   "source": "FW ISO 27001",
+   "titre": "Auditeur Sécurité GRC",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/administrateur-securite/auditeur-securite-grc",
+   "entreprise": "",
+   "extrait": "11/01/2026 · 2 mois renouvelable · 50k-55k €⁄an, 500-550 €⁄j · 2 à 5 ans d’expérience · Télétravail partiel · Venelles, Provence-Alpes-Côte d'Azur — Dans le cadre de la mise en place d'un nouveau portefeuille applicatif, il est nécessaire de créer une nouvelle",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 4
+  },
+  {
+   "date": "2026-10-05",
+   "source": "FW Cyber Toulouse",
+   "titre": "Ingénieur sécurité / sécurité des données (H/F)",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/expert-e-protection-donnees/ingenieur-securite-securite-des-donnees-h-f",
+   "entreprise": "",
+   "extrait": "Dès que possible · 3 ans · 45k-50k €⁄an, 550 €⁄j · 5 à 10 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — Contexte : Le service Sécurité des Données recherche un(e) expert(e) en protection de la donnée pour accompagner les missions de sécurisati",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": true,
+   "score": 2
+  },
+  {
+   "date": "2026-10-05",
+   "source": "FW Cyber Toulouse",
+   "titre": "Ingénieur en sécurité Opérationnelle - Sécurité des Données & DSPM - N3",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/expert-e-protection-donnees/ingenieur-en-securite-operationnelle-securite-des-donnees-dspm-n3",
+   "entreprise": "",
+   "extrait": "Dès que possible · 18 mois · 20k-40k €⁄an, 500 €⁄j · > 10 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — Contexte: Objectif global : Réaliser Expert Sécurité des Données & DSPM Notre client recherche, pour son service Sécurité des Données, un(e",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 3
+  },
   {
    "date": "2026-10-03",
    "source": "LI RSSI Toulouse",
