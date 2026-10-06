@@ -1,7 +1,19 @@
 {
- "scan": "2026-10-06T08:30:24+00:00",
+ "scan": "2026-10-06T15:33:17+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-06",
+   "source": "LI RSSI Toulouse",
+   "titre": "Consultant(e) Cybersécurité GRC F/H",
+   "lien": "https://fr.linkedin.com/jobs/view/charg%C3%A9-e-de-pr%C3%A9vention-en-sant%C3%A9-h-f-4471583403",
+   "entreprise": "CGI",
+   "extrait": "CGI · Toulouse et périphérie",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
   {
    "date": "2026-10-06",
    "source": "FW ISO 27001",
