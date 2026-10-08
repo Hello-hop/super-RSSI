@@ -1,7 +1,31 @@
 {
- "scan": "2026-10-08T08:22:15+00:00",
+ "scan": "2026-10-08T15:57:23+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-08",
+   "source": "FW Sécu Toulouse",
+   "titre": "Ingénieur Développement FPGA & Systems-on-Chip ( SoC",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/ingenieur-apres-vente/ingenieur-developpement-fpga-systems-on-chip-soc",
+   "entreprise": "",
+   "extrait": "",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 0
+  },
+  {
+   "date": "2026-10-08",
+   "source": "FW Sécu Toulouse",
+   "titre": "Expert Web Conferencing / Cisco VoIP & Visio – Toulouse",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/analyste-web/expert-web-conferencing-cisco-voip-visio-toulouse",
+   "entreprise": "",
+   "extrait": "Dès que possible · 3 ans renouvelable · 2 à 5 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — Dans le cadre d’un environnement international, nous recherchons un Expert Web Conferencing / Cisco Collaboration pour assurer le support, le maintien ",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
   {
    "date": "2026-10-07",
    "source": "FW ISO 27001",
