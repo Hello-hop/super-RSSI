@@ -1,7 +1,31 @@
 {
- "scan": "2026-10-09T08:25:17+00:00",
+ "scan": "2026-10-09T15:40:05+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-09",
+   "source": "FW Cyber Toulouse",
+   "titre": "Expert Sécurité de l’IA / LLM (H/F) - Toulouse",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/administrateur-securite/expert-securite-de-lia-llm-h-f-toulouse",
+   "entreprise": "Intuition IT Solutions Ltd.",
+   "extrait": "Intuition IT Solutions Ltd. — Dès que possible · 3 mois renouvelable · 350 €⁄j · 2 à 5 ans d’expérience · Toulouse, Occitanie — Dans le cadre de ses activités en cybersécurité, notre client recherche un Expert Sécurité de l’IA / LLM pour renforcer la sécurité ",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 4
+  },
+  {
+   "date": "2026-10-09",
+   "source": "LI RSSI Toulouse",
+   "titre": "Lean Portfolio Manager - PMO H/F",
+   "lien": "https://fr.linkedin.com/jobs/view/lean-portfolio-manager-pmo-h-f-at-free-work-4475239252",
+   "entreprise": "Free-Work",
+   "extrait": "Free-Work — Toulouse · 50k€/an — Tu souhaites évoluer dans un environnement stratégique au cœur des enjeux d’infrastructure et de transformation ?<br><br>Au sein d’une direction en charge des moyens techniques per",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 2
+  },
   {
    "date": "2026-10-08",
    "source": "FW Sécu Toulouse",
