@@ -1,7 +1,19 @@
 {
- "scan": "2026-10-09T15:40:05+00:00",
+ "scan": "2026-10-10T08:02:25+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-10",
+   "source": "LI ISO 27001 France",
+   "titre": "RSSI - interne & externe",
+   "lien": "https://fr.linkedin.com/jobs/view/rssi-interne-externe-at-rzilient-4476897484",
+   "entreprise": "_rzilient",
+   "extrait": "_rzilient — Paris — <p>En tant que RSSI (CDI, temps plein), tu portes la cybersécurité sur deux périmètres : celui de rzilient, et celui de nos clients PME. Le poste est à cheval entre 2 mondes et te ",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 4
+  },
   {
    "date": "2026-10-09",
    "source": "FW Cyber Toulouse",
