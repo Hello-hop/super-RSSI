@@ -1,7 +1,31 @@
 {
- "scan": "2026-10-12T08:31:19+00:00",
+ "scan": "2026-10-12T18:21:46+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-12",
+   "source": "FW ISO 27001",
+   "titre": "Ingénieur Cybersécurité H/F",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/ingenieur-en-cyber-securite/ingenieur-cybersecurite-h-f-210",
+   "entreprise": "",
+   "extrait": "Dès que possible · 1 an renouvelable · 5 à 10 ans d’expérience · Venelles, Provence-Alpes-Côte d'Azur — Au sein de l'équipe cybersécurité, vous accompagnez les projets IT afin de garantir la prise en compte des exigences de sécurité tout au long de leur cycle ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 3
+  },
+  {
+   "date": "2026-10-12",
+   "source": "LI RSSI Toulouse",
+   "titre": "Expert F/H",
+   "lien": "https://fr.linkedin.com/jobs/view/expert-f-h-4477248382",
+   "entreprise": "Castres Soyez un des premiers candidats il y a 2 jours",
+   "extrait": "Castres Soyez un des premiers candidats il y a 2 jours · Toulouse",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 1
+  },
   {
    "date": "2026-10-12",
    "source": "FW ISO 27001",
