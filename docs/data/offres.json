@@ -1,7 +1,19 @@
 {
- "scan": "2026-10-11T15:12:06+00:00",
+ "scan": "2026-10-12T08:31:19+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-12",
+   "source": "FW ISO 27001",
+   "titre": "Deputy CISO – Secteur Bancaire",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/responsable-securite-informatique-ciso/deputy-ciso-secteur-bancaire",
+   "entreprise": "Syneam",
+   "extrait": "Syneam — Dès que possible · 6 mois renouvelable · > 10 ans d’expérience · Télétravail partiel · Hauts-de-Seine, France — Une institution bancaire recherche un(e) Deputy CISO pour appuyer le RSSI dans le pilotage de la stratégie de cybersécurité du groupe. La m",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
   {
    "date": "2026-10-10",
    "source": "LI ISO 27001 France",
