@@ -1,7 +1,67 @@
 {
- "scan": "2026-10-12T18:21:46+00:00",
+ "scan": "2026-10-13T08:55:02+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-13",
+   "source": "FW ISO 27001",
+   "titre": "Consultant Sécurité des SI – SMSI / PCA-PRA / DORA (H/F)",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/administrateur-securite/consultant-securite-des-si-smsi-pca-pra-dora-h-f",
+   "entreprise": "AKERWISE",
+   "extrait": "AKERWISE — 10/25/2026 · 3 mois renouvelable · 5 à 10 ans d’expérience · Télétravail partiel · France — Contexte Un groupe d'assurance mutualiste indépendant présent en France et au Benelux, actif en assurance vie, épargne, retraite, IARD et réassurance, recher",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-10-13",
+   "source": "FW Cyber Toulouse",
+   "titre": "MISSION FREELANCE – INTÉGRATEUR TECHNIQUE WINDOWS – TOULOUSE📍",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/administrateur-systeme-windows/mission-freelance-integrateur-technique-windows-toulouse",
+   "entreprise": "",
+   "extrait": "Dès que possible · 1 an renouvelable · 5 à 10 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — MISSION FREELANCE – INTÉGRATEUR TECHNIQUE WINDOWS – TOULOUSE📍 Localisation : Toulouse🏢 Secteur : PublicNous recherchons un Intégrateur technique Window",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 3
+  },
+  {
+   "date": "2026-10-13",
+   "source": "FW Sécu Toulouse",
+   "titre": "Consultant (e) Sécurité des Données & DSPM (Varonis)",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/expert-e-protection-donnees/consultant-e-securite-des-donnees-dspm-varonis",
+   "entreprise": "KEYES",
+   "extrait": "KEYES — Dès que possible · 36 mois renouvelable · 450-500 €⁄j · 5 à 10 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — Notre client, un grand groupe bancaire français, recherche pour le département Data Protection de sa Direction de la Sécurité ",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 2
+  },
+  {
+   "date": "2026-10-13",
+   "source": "LI RSSI Toulouse",
+   "titre": "Diététicien(ne) Référent(e) Mobile – Région Toulousaine (H/F)",
+   "lien": "https://fr.linkedin.com/jobs/view/di%C3%A9t%C3%A9ticien-ne-r%C3%A9f%C3%A9rent-e-mobile-%E2%80%93-r%C3%A9gion-toulousaine-h-f-at-r%C3%A9seau-rnpc-officiel-4437012683",
+   "entreprise": "Réseau RNPC Officiel",
+   "extrait": "Réseau RNPC Officiel · Toulouse",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 1
+  },
+  {
+   "date": "2026-10-13",
+   "source": "LI Sécurité applicative remote",
+   "titre": "🔐 Application Security / Product Security Analyst – CDI",
+   "lien": "https://fr.linkedin.com/jobs/view/%F0%9F%94%90-application-security-product-security-analyst-%E2%80%93-cdi-at-free-work-4476057197",
+   "entreprise": "Free-Work",
+   "extrait": "Free-Work — Caen · 45k€/an — Nous recherchons un(e) <strong>Application Security / Product Security Analyst</strong> pour rejoindre l’équipe en charge de GLPI, une solution ITSM open source utilisée par des or",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": false,
+   "score": 5
+  },
   {
    "date": "2026-10-12",
    "source": "FW ISO 27001",
