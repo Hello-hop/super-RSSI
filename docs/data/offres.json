@@ -1,7 +1,55 @@
 {
- "scan": "2026-10-13T08:55:02+00:00",
+ "scan": "2026-10-13T16:35:52+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-13",
+   "source": "FW ISO 27001",
+   "titre": "Expert GRC- SSI- DATA PRIVACY- DORA",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/directeur-de-la-data-cdo/expert-grc-ssi-data-privacy-dora",
+   "entreprise": "",
+   "extrait": "Dès que possible · 18 mois · 21k-40k €⁄an, 550 €⁄j · 5 à 10 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — Contexte Notre client recherche un consultant Senior Expert DATA PRIVACY pour intégrer l'équipe Control, en charge des sujets et activité",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": true,
+   "score": 4
+  },
+  {
+   "date": "2026-10-13",
+   "source": "FW Cyber Toulouse",
+   "titre": "Expert ingénieur sécurité des données - Toulouse",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/expert-e-protection-donnees/expert-ingenieur-securite-des-donnees-toulouse",
+   "entreprise": "NOVAMINDS",
+   "extrait": "NOVAMINDS — Dès que possible · 57 jours renouvelable · 550 €⁄j · 5 à 10 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — Au sein de la direction de la sécurité d’un grand groupe bancaire, vous rejoindrez une équipe d’experts dédiée à la protectio",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": true,
+   "score": 2
+  },
+  {
+   "date": "2026-10-13",
+   "source": "FW Cyber Toulouse",
+   "titre": "RSSI (H/F)",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/autre/rssi-h-f-69",
+   "entreprise": "Link Consulting",
+   "extrait": "Link Consulting — Dès que possible · 3 mois · 650-750 €⁄j · 5 à 10 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — Notre client, acteur reconnu de son secteur d’activité, recherche son futur RSSI (H/F) pour accompagner ses enjeux de cybersécurit",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": true,
+   "score": 4
+  },
+  {
+   "date": "2026-10-13",
+   "source": "FW Sécu Toulouse",
+   "titre": "Expert ingénieur sécurité des données - Toulouse",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/expert-e-protection-donnees/expert-ingenieur-securite-des-donnees-toulouse-1",
+   "entreprise": "Mon Consultant Indépendant",
+   "extrait": "Mon Consultant Indépendant — Dès que possible · 3 mois renouvelable · 450-510 €⁄j · 5 à 10 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — Contexte de la mission Au sein de la direction de la sécurité d’un grand groupe bancaire, vous rejoindrez ",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 2
+  },
   {
    "date": "2026-10-13",
    "source": "FW ISO 27001",
