@@ -1,7 +1,21 @@
 {
- "scan": "2026-10-13T16:35:52+00:00",
- "incidents": [],
+ "scan": "2026-10-14T07:04:56+00:00",
+ "incidents": [
+  "LI GRC remote : HTTP Error 429: Too Many Requests"
+ ],
  "offres": [
+  {
+   "date": "2026-10-14",
+   "source": "LI RSSI Toulouse",
+   "titre": "Consultant GRC (H/F)",
+   "lien": "https://fr.linkedin.com/jobs/view/consultant-grc-h-f-at-cheops-technology-4472738424",
+   "entreprise": "CHEOPS TECHNOLOGY",
+   "extrait": "CHEOPS TECHNOLOGY · Toulouse",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
   {
    "date": "2026-10-13",
    "source": "FW ISO 27001",
