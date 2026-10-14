@@ -1,9 +1,79 @@
 {
- "scan": "2026-10-14T07:04:56+00:00",
- "incidents": [
-  "LI GRC remote : HTTP Error 429: Too Many Requests"
- ],
+ "scan": "2026-10-14T14:12:10+00:00",
+ "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-14",
+   "source": "FW Cyber Toulouse",
+   "titre": "Administrateur Sécurité Systèmes",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/administrateur-securite/administrateur-securite-systemes",
+   "entreprise": "LeHibou",
+   "extrait": "LeHibou — Dès que possible · 8 mois renouvelable · 415 €⁄j · 2 à 5 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — Notre client dans le secteur Aérospatial et défense recherche un/une Administrateur Sécurité Systèmes H/F Description de la missio",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 3
+  },
+  {
+   "date": "2026-10-14",
+   "source": "FW Sécu Toulouse",
+   "titre": "Expert(e) Data Security",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/directeur-de-la-data-cdo/expert-e-data-security-dspm-varonis-h-f",
+   "entreprise": "Insitoo Freelances",
+   "extrait": "Insitoo Freelances — Dès que possible · 2 ans · 500-560 €⁄j · 5 à 10 ans d’expérience · Toulouse, Occitanie — Le contexte : Nous recherchons pour l’un de nos clients, un grand groupe bancaire français, u n(e) expert(e) en protection des données . Vous rejoindr",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": true,
+   "score": 1
+  },
+  {
+   "date": "2026-10-14",
+   "source": "LI ISO 27001 France",
+   "titre": "Assistant RSSI — Cybersécurité / GRC",
+   "lien": "https://fr.linkedin.com/jobs/view/assistant-rssi-%E2%80%94-cybers%C3%A9curit%C3%A9-grc-at-devoteam-cyber-trust-4476313617",
+   "entreprise": "Devoteam | Cyber Trust",
+   "extrait": "Devoteam | Cyber Trust — Île-de-France — <p>Assistant RSSI — Cybersécurité / GRC</p><p><br></p><p>Contexte</p><p>Nous recherchons un <strong>Assistant RSSI</strong> pour accompagner le RSSI dans le pilotage de la sécurité",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-10-14",
+   "source": "LI AppSec remote",
+   "titre": "Senior Application Security Engineer",
+   "lien": "https://fr.linkedin.com/jobs/view/senior-application-security-engineer-at-nabla-4476678104",
+   "entreprise": "Nabla",
+   "extrait": "Nabla — Paris — <strong>About Nabla<br><br></strong>Nabla delivers a unified clinical AI platform used by healthcare organizations across specialties and care settings. The platform includes:<br><",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 5
+  },
+  {
+   "date": "2026-10-14",
+   "source": "LI AppSec remote",
+   "titre": "Auditeur SecDevOps / Securité applicative - MARSEILLE (H/F)",
+   "lien": "https://fr.linkedin.com/jobs/view/auditeur-secdevops-securit%C3%A9-applicative-marseille-h-f-at-devoteam-cyber-trust-4332222393",
+   "entreprise": "Devoteam | Cyber Trust",
+   "extrait": "Devoteam | Cyber Trust · Marseille",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 5
+  },
+  {
+   "date": "2026-10-14",
+   "source": "LI AppSec remote",
+   "titre": "CDI - Ingénieur Sécurité applicative & cloud (DevSecOps) H/F",
+   "lien": "https://fr.linkedin.com/jobs/view/cdi-ing%C3%A9nieur-s%C3%A9curit%C3%A9-applicative-cloud-devsecops-h-f-at-herm%C3%A8s-4424237149",
+   "entreprise": "Hermès",
+   "extrait": "Hermès · Pantin",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 5
+  },
   {
    "date": "2026-10-14",
    "source": "LI RSSI Toulouse",
