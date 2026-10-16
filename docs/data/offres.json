@@ -1,7 +1,19 @@
 {
- "scan": "2026-10-16T06:42:20+00:00",
+ "scan": "2026-10-16T13:37:46+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-16",
+   "source": "FW ISO 27001",
+   "titre": "Consultant Senior Cybersécurité - Conformité DORA & Résilience Opérationnelle - GRC (H/F)",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant-cyber-securite/consultant-senior-cybersecurite-conformite-dora-resilience-operationnelle-grc-h-f-1",
+   "entreprise": "",
+   "extrait": "Dès que possible · 3 ans renouvelable · 5 à 10 ans d’expérience · Télétravail partiel · Île-de-France, France — Rejoignez-nous ! Nous recherchons un(e) Consultant(e) Senior en Cybersécurité - GRC pour accompagner un programme stratégique de mise en conformité ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
   {
    "date": "2026-10-16",
    "source": "FW ISO 27001",
