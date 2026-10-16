@@ -1,7 +1,43 @@
 {
- "scan": "2026-10-15T13:48:32+00:00",
+ "scan": "2026-10-16T06:42:20+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-16",
+   "source": "FW ISO 27001",
+   "titre": "Mission freelance",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant-en-architecture/cto-chief-technology-officer-directeur-des-technologies-it-architecture-et-infrastructure-it-senior-rueil-malmaison-92-h-f",
+   "entreprise": "",
+   "extrait": "",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 0
+  },
+  {
+   "date": "2026-10-16",
+   "source": "FW ISO 27001",
+   "titre": "Assistant RSSI – Gestion des risques cyber",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/assistant-chef-de-projet/assistant-rssi-gestion-des-risques-cyber",
+   "entreprise": "",
+   "extrait": "Dès que possible · 18 mois · 20k-60k €⁄an, 450 €⁄j · 2 à 5 ans d’expérience · Télétravail partiel · Paris, Île-de-France — Contexte Dans le cadre du renforcement de la sécurité des systèmes d'information au sein de la Direction des Risques, nous recherchons un",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 4
+  },
+  {
+   "date": "2026-10-16",
+   "source": "LI RSSI Toulouse",
+   "titre": "Controleuse / Contrôleur de sécurité - Nord du 32 / Est du 82 (H/F)",
+   "lien": "https://fr.linkedin.com/jobs/view/controleuse-contr%C3%B4leur-de-s%C3%A9curit%C3%A9-nord-du-32-est-du-82-h-f-4479316263",
+   "entreprise": "Toulouse Soyez un des premiers candidats il y a 16 heures",
+   "extrait": "Toulouse Soyez un des premiers candidats il y a 16 heures · Toulouse",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 1
+  },
   {
    "date": "2026-10-14",
    "source": "FW Cyber Toulouse",
