@@ -1,7 +1,31 @@
 {
- "scan": "2026-10-16T13:37:46+00:00",
+ "scan": "2026-10-17T06:30:56+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-17",
+   "source": "FW ISO 27001",
+   "titre": "Expert sécurité des opérations Datacenter – Gouvernance, risques et contrôles (NIST / ISO 27001",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/expert-e-protection-donnees/expert-securite-des-operations-datacenter-gouvernance-risques-et-controles-nist-iso-27001",
+   "entreprise": "Deodis",
+   "extrait": "Deodis — 10/18/2026 · 1 an renouvelable · 550 €⁄j · > 10 ans d’expérience · Télétravail partiel · Île-de-France, France — Dans le cadre du déploiement d’un plan de contrôle global dédié à la sécurité physique et opérationnelle des datacenters, vous participere",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 4
+  },
+  {
+   "date": "2026-10-17",
+   "source": "LI RSSI Toulouse",
+   "titre": "Technicien Support N1 - Astreinte - H/F",
+   "lien": "https://fr.linkedin.com/jobs/view/technicien-support-n1-astreinte-h-f-at-free-work-4477718002",
+   "entreprise": "Free-Work",
+   "extrait": "Free-Work — Toulouse · 26k€/an — Au sein du centre de services d'un client toulousain, tu intègres l'équipe dédiée au pilotage des systèmes d'information en environnement 24/7. Ta mission : assurer la surveillance",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 1
+  },
   {
    "date": "2026-10-16",
    "source": "FW ISO 27001",
