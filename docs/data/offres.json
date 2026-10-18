@@ -1,9 +1,19 @@
 {
- "scan": "2026-10-17T12:35:17+00:00",
- "incidents": [
-  "LI ISO 27001 France : HTTP Error 429: Too Many Requests"
- ],
+ "scan": "2026-10-18T06:55:52+00:00",
+ "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-18",
+   "source": "LI Security Analyst remote",
+   "titre": "SIR Analyst - Cybersécurité Opérationnelle (F/H)",
+   "lien": "https://fr.linkedin.com/jobs/view/sir-analyst-cybers%C3%A9curit%C3%A9-op%C3%A9rationnelle-f-h-at-free-work-4477784865",
+   "entreprise": "Free-Work",
+   "extrait": "Free-Work — Chambéry · 50k€/an — SIR Analyst - Cybersécurité Opérationnelle (F/H) - Chambéry<br><br>Experis recherche un(e) <strong>SIR Analyst (F/H)</strong> pour rejoindre une équipe CSIRT intervenant au sein d'",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": false,
+   "score": 1
+  },
   {
    "date": "2026-10-17",
    "source": "LI RSSI Toulouse",
