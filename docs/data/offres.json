@@ -1,7 +1,31 @@
 {
- "scan": "2026-10-19T07:16:23+00:00",
+ "scan": "2026-10-19T16:00:56+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-19",
+   "source": "FW Cyber Toulouse",
+   "titre": "Consultant Sécurité infrastructure",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/administrateur-securite/consultant-securite-infrastructure-1",
+   "entreprise": "Deodis",
+   "extrait": "Deodis — Dès que possible · 12 mois · 500-530 €⁄j · 5 à 10 ans d’expérience · Toulouse, Occitanie — Mission sur site à Toulouse, 2 jours de télétravail / semaine Nous recherchons un ingénieur en sécurité et infrastructure pour travailler sur la sécurité des do",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 2
+  },
+  {
+   "date": "2026-10-19",
+   "source": "LI Security Analyst remote",
+   "titre": "Analyste confirmé SOC F/H",
+   "lien": "https://fr.linkedin.com/jobs/view/analyste-confirm%C3%A9-soc-f-h-at-bouygues-telecom-4480983911",
+   "entreprise": "Bouygues Telecom",
+   "extrait": "Bouygues Telecom — Toulouse · 55k€/an — Description du poste :<br><br><p><strong>Localisation : </strong>1 place Occitane, 31000 Toulouse <strong><br>Type de contrat :</strong> CDI<strong><br>Entité de rattachement : </s",
+   "toulouse": true,
+   "remote": true,
+   "remuneration": false,
+   "score": 3
+  },
   {
    "date": "2026-10-18",
    "source": "LI Security Analyst remote",
