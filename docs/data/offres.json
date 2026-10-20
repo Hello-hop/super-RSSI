@@ -1,7 +1,43 @@
 {
- "scan": "2026-10-19T16:00:56+00:00",
+ "scan": "2026-10-20T07:05:55+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-20",
+   "source": "FW ISO 27001",
+   "titre": "Consultant Shadow IT / Gouvernance SI - F/H",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant/consultant-shadow-it-gouvernance-si-f-h",
+   "entreprise": "",
+   "extrait": "Dès que possible · 1 mois · 2 à 5 ans d’expérience · Paris, France — Nous recherchons pour une mission longue chez notre client secteur banque/finance en région parisienne un(e) consultant(e) en gouvernance SI, pour piloter l'identification des usag",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-10-20",
+   "source": "LI RSSI Toulouse",
+   "titre": "Assistant exploitation (H/F)",
+   "lien": "https://fr.linkedin.com/jobs/view/assistant-exploitation-h-f-4479314300",
+   "entreprise": "Toulouse Soyez un des premiers candidats il y a 4 jours",
+   "extrait": "Toulouse Soyez un des premiers candidats il y a 4 jours · Colomiers",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 1
+  },
+  {
+   "date": "2026-10-20",
+   "source": "LI ISO 27001 France",
+   "titre": "Consultant Sécurité GRC Confirmé ou Senior (H/F)",
+   "lien": "https://fr.linkedin.com/jobs/view/consultant-s%C3%A9curit%C3%A9-grc-confirm%C3%A9-ou-senior-h-f-at-bk-consulting-4481293315",
+   "entreprise": "BK Consulting France",
+   "extrait": "BK Consulting France — Courbevoie — Rejoignez le Groupe BK, acteur majeur du conseil en transformation digitale et métier.<br><br>Depuis 2000, nous accompagnons les entreprises dans leurs projets stratégiques et tech",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 4
+  },
   {
    "date": "2026-10-19",
    "source": "FW Cyber Toulouse",
