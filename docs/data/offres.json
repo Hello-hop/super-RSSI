@@ -1,7 +1,31 @@
 {
- "scan": "2026-10-21T14:14:07+00:00",
+ "scan": "2026-10-22T07:01:57+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-22",
+   "source": "FW ISO 27001",
+   "titre": "Responsable Sécurité Applicative / Expert Cyersécurité",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/expert-seo-consultant-referencement/responsable-securite-applicative-expert-cyersecurite",
+   "entreprise": "STHREE SAS",
+   "extrait": "STHREE SAS — Dès que possible · 6 mois renouvelable · 5 à 10 ans d’expérience · Télétravail partiel · Niort, Nouvelle-Aquitaine — Dans le cadre du renforcement de sa gouvernance cybersécurité, notre client, acteur majeur de l'assurance, recherche un Responsabl",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-10-22",
+   "source": "FW ISO 27001",
+   "titre": "Consultant Senior Gouvernance SI / Shadow IT & Gestion des Risques",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant/consultant-senior-gouvernance-si-shadow-it-gestion-des-risques",
+   "entreprise": "",
+   "extrait": "Dès que possible · 1 an renouvelable · Île-de-France, France — Contexte de la mission Dans un contexte de transformation digitale et d'accélération des usages numériques, notamment liés à l'intelligence artificielle, un acteur majeur du secteu",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
   {
    "date": "2026-10-21",
    "source": "FW ISO 27001",
