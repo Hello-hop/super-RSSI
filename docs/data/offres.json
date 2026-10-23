@@ -1,7 +1,31 @@
 {
- "scan": "2026-10-22T14:13:26+00:00",
+ "scan": "2026-10-23T06:54:18+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-23",
+   "source": "LI GRC Toulouse",
+   "titre": "Consultant en Gouvernance / Cybersécurité",
+   "lien": "https://fr.linkedin.com/jobs/view/consultant-en-gouvernance-cybers%C3%A9curit%C3%A9-at-neverhack-france-4480057334",
+   "entreprise": "NEVERHACK France",
+   "extrait": "NEVERHACK France — Toulouse et périphérie · 56k€/an — <p>NEVERHACK est un groupe international de cybersécurité fort de plus de 40 ans d’expertise. Présent dans plus de 10 pays et comptant environ 1 200 collaborateurs, notre mission e",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 4
+  },
+  {
+   "date": "2026-10-23",
+   "source": "LI ISO 27001 France",
+   "titre": "VP Security",
+   "lien": "https://fr.linkedin.com/jobs/view/vp-security-at-swan-4481632663",
+   "entreprise": "Swan",
+   "extrait": "Swan — Paris · 140k€/an — <strong>About<br><br></strong>Swan is Europe’s embedded banking specialist. We empower software companies to embed banking features like accounts, cards, and payments directly into",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": true,
+   "score": 4
+  },
   {
    "date": "2026-10-22",
    "source": "FW ISO 27001",
