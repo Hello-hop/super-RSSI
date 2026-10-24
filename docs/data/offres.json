@@ -1,7 +1,19 @@
 {
- "scan": "2026-10-23T13:56:29+00:00",
+ "scan": "2026-10-24T06:50:46+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-24",
+   "source": "LI RSSI Toulouse",
+   "titre": "Educateur APA et Prévention Santé (H/F)",
+   "lien": "https://fr.linkedin.com/jobs/view/controleuse-contr%C3%B4leur-de-s%C3%A9curit%C3%A9-nord-du-32-est-du-82-h-f-4481964788",
+   "entreprise": "Fonsorbes Soyez un des premiers candidats il y a 3 jours",
+   "extrait": "Fonsorbes Soyez un des premiers candidats il y a 3 jours · Toulouse",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
   {
    "date": "2026-10-23",
    "source": "FW ISO 27001",
