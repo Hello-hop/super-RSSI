@@ -1,7 +1,19 @@
 {
- "scan": "2026-10-24T06:50:46+00:00",
+ "scan": "2026-10-24T13:00:30+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-24",
+   "source": "LI RSSI Toulouse",
+   "titre": "Technicien QSE H/F",
+   "lien": "https://fr.linkedin.com/jobs/view/technicien-qse-h-f-at-tso-rail-limited-4479711951",
+   "entreprise": "TSO Rail Limited",
+   "extrait": "TSO Rail Limited — Occitanie — Participer à la construction et à la rénovation d'infrastructures au service des territoires. Rejoindre un Groupe en plein développement en France et à l'international (5 milliards",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 1
+  },
   {
    "date": "2026-10-24",
    "source": "LI RSSI Toulouse",
