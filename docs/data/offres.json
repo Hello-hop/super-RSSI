@@ -1,7 +1,19 @@
 {
- "scan": "2026-10-26T07:22:25+00:00",
+ "scan": "2026-10-26T15:37:20+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-26",
+   "source": "LI RSSI Toulouse",
+   "titre": "CDI Consultant (e) Senior SEO H/F-Toulouse",
+   "lien": "https://fr.linkedin.com/jobs/view/expert-grc-ssi-data-privacy-dora-at-free-work-4481404933",
+   "entreprise": "Free-Work",
+   "extrait": "Free-Work — Toulouse · 40k€/an — Contexte<br><br>Notre client recherche un consultant Senior Expert DATA PRIVACY pour intégrer l'équipe Control, en charge des sujets et activités de Gouvernance Sécurité.<br><br>MI",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 3
+  },
   {
    "date": "2026-10-24",
    "source": "LI RSSI Toulouse",
