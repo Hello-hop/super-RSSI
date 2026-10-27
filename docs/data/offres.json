@@ -1,7 +1,31 @@
 {
- "scan": "2026-10-27T07:14:26+00:00",
+ "scan": "2026-10-27T15:02:44+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-27",
+   "source": "FW Sécu Toulouse",
+   "titre": "Expert Technique GENETEC – Sûreté Électronique (H/F)",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/architecte-technique/expert-technique-genetec-surete-electronique-h-f",
+   "entreprise": "Pickmeup",
+   "extrait": "Pickmeup — Dès que possible · 1 an renouvelable · 400 €⁄j · 5 à 10 ans d’expérience · Toulouse, Occitanie — Dans le cadre d'un projet de sécurisation d'environnements industriels sensibles, notre client recherche un Expert Technique GENETEC pour intervenir sur",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 1
+  },
+  {
+   "date": "2026-10-27",
+   "source": "LI RSSI Toulouse",
+   "titre": "Software Asset Manager - Gestion et optimisation des licences logicielles (H/F)",
+   "lien": "https://fr.linkedin.com/jobs/view/software-asset-manager-gestion-et-optimisation-des-licences-logicielles-h-f-at-urssaf-caisse-nationale-4483540433",
+   "entreprise": "Urssaf Caisse nationale",
+   "extrait": "Urssaf Caisse nationale — Toulouse — URSSAF CAISSE NATIONALE<strong>Avec vous, agir pour une protection sociale durable et solidaire</strong>Travailler au sein du réseau des URSSAF, c'est faire partie d'un collectif q",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
   {
    "date": "2026-10-27",
    "source": "FW ISO 27001",
