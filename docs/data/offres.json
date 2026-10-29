@@ -1,7 +1,19 @@
 {
- "scan": "2026-10-29T07:58:14+00:00",
+ "scan": "2026-10-29T15:43:37+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-29",
+   "source": "LI RSSI Toulouse",
+   "titre": "Directeur/directrice adjoint(e) – responsable de l'unité sanitaire (DD811219)",
+   "lien": "https://fr.linkedin.com/jobs/view/directeur-directrice-adjoint-e-%E2%80%93-responsable-de-l-unit%C3%A9-sanitaire-dd811219-at-agence-r%C3%A9gionale-de-sant%C3%A9-occitanie-ars-4483845789",
+   "entreprise": "Agence Régionale de Santé Occitanie (ARS)",
+   "extrait": "Agence Régionale de Santé Occitanie (ARS) — Puygouzon — <p>📣 <strong>L’ARS Occitanie recrute dans le Tarn !</strong></p><p><br></p><p>Vous souhaitez <strong>manager, décider et agir concrètement pour la santé d’un territoire</strong> ?<",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
   {
    "date": "2026-10-29",
    "source": "LI AppSec remote",
