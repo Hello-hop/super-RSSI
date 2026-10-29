@@ -1,7 +1,19 @@
 {
- "scan": "2026-10-28T15:37:14+00:00",
+ "scan": "2026-10-29T07:58:14+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-29",
+   "source": "LI AppSec remote",
+   "titre": "Ingénieur DevSecOps / Sécurité Applicative",
+   "lien": "https://fr.linkedin.com/jobs/view/ing%C3%A9nieur-devsecops-s%C3%A9curit%C3%A9-applicative-at-groupe-sii-4484495974",
+   "entreprise": "Groupe SII",
+   "extrait": "Groupe SII — Strasbourg — Au sein d’une équipe cybersécurité, votre mission principale consiste à <strong>renforcer la sécurité du cycle de développement et de livraison des applications</strong>, dans une ",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 5
+  },
   {
    "date": "2026-10-28",
    "source": "FW ISO 27001",
