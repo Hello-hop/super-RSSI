@@ -1,7 +1,19 @@
 {
- "scan": "2026-10-29T15:43:37+00:00",
+ "scan": "2026-10-30T08:00:45+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-30",
+   "source": "FW ISO 27001",
+   "titre": "Architecte Amazon EVS ; VMware Cloud on AWS ou de VMware HCX - Anglais",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/ingenieur-devops-cloud/architecte-amazon-evs-vmware-cloud-on-aws-ou-de-vmware-hcx-anglais",
+   "entreprise": "",
+   "extrait": "Dès que possible · 3 mois · 40k-45k £GB⁄an, 600-700 £GB⁄j · 5 à 10 ans d’expérience · Télétravail partiel · Île-de-France, France — Architecte Amazon EVS ; VMware Cloud on AWS ou de VMware HCX Dans le cadre de son programme Move to Cloud (migration de VM vers ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
   {
    "date": "2026-10-29",
    "source": "LI RSSI Toulouse",
