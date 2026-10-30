@@ -1,7 +1,31 @@
 {
- "scan": "2026-10-30T08:00:45+00:00",
+ "scan": "2026-10-30T15:26:23+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-30",
+   "source": "FW ISO 27001",
+   "titre": "Consultant cybersécurité senior – modern workplace, gouvernance & ISO 27001",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant-cyber-securite/consultant-cybersecurite-senior-modern-workplace-gouvernance-iso-27001",
+   "entreprise": "Mon Consultant Indépendant",
+   "extrait": "Mon Consultant Indépendant — Dès que possible · 6 mois renouvelable · 506-606 €⁄j · 5 à 10 ans d’expérience · Télétravail partiel · Paris, France — Contexte de la mission Dans le cadre du renforcement de la sécurité de son environnement Modern Workplace, notre",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 5
+  },
+  {
+   "date": "2026-10-30",
+   "source": "FW ISO 27001",
+   "titre": "Référent(e) VOC et gouvernance de la remédiation",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/autre/referent-e-voc-et-gouvernance-de-la-remediation",
+   "entreprise": "LeHibou",
+   "extrait": "LeHibou — 05/11/2026 · 6 mois renouvelable · 550 €⁄j · 5 à 10 ans d’expérience · Télétravail partiel · Paris, France — Notre client dans le secteur Retail recherche un/une Référent(e) VOC et gouvernance de la remédiation H/F Description de la mission : Context",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": true,
+   "score": 4
+  },
   {
    "date": "2026-10-30",
    "source": "FW ISO 27001",
