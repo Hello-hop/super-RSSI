@@ -1,7 +1,31 @@
 {
- "scan": "2026-10-31T07:57:00+00:00",
+ "scan": "2026-10-31T14:54:15+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-10-31",
+   "source": "FW ISO 27001",
+   "titre": "RSSI / Responsable SI & Sécurité - Freelance - Paris sur site",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/responsable-securite-informatique-ciso/rssi-responsable-si-securite-freelance-paris-sur-site",
+   "entreprise": "Mon Consultant Indépendant",
+   "extrait": "Mon Consultant Indépendant — 15/11/2026 · 12 mois renouvelable · 540-640 €⁄j · > 10 ans d’expérience · Paris, France — Dans le cadre du renforcement de sa posture de sécurité, notre client, une entreprise tech française en forte croissance présente en France e",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 4
+  },
+  {
+   "date": "2026-10-31",
+   "source": "LI RSSI Toulouse",
+   "titre": "ASSISTANT RESSOURCES HUMAINES (H/F)",
+   "lien": "https://fr.linkedin.com/jobs/view/assistant-ressources-humaines-h-f-at-r%C3%A9so-r%C3%A9silience-occitanie-4483494260",
+   "entreprise": "Réso - Résilience Occitanie",
+   "extrait": "Réso - Résilience Occitanie — Pechbonnieu — Métier<br><br>Assistant Ressources Humaines (H/F)<br><br>Type de contrat<br><br>CDI<br><br>Etablissement<br><br>MAS MARQUIOL<br><br>Lieu<br><br>31140 PECHBONNIEU<br><br>Document an",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 1
+  },
   {
    "date": "2026-10-30",
    "source": "FW ISO 27001",
