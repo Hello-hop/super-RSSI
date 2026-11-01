@@ -1,7 +1,19 @@
 {
- "scan": "2026-10-31T14:54:15+00:00",
+ "scan": "2026-11-01T08:39:48+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-01",
+   "source": "LI RSSI Toulouse",
+   "titre": "Moniteur d’atelier (H/F) – CDI – Colomiers (31)",
+   "lien": "https://fr.linkedin.com/jobs/view/administrateur-sauvegarde-rubrik-veeam-kasten-h-f-at-free-work-4483971493",
+   "entreprise": "Free-Work",
+   "extrait": "Free-Work — Balma · 50k€/an — Vous êtes expert(e) en administration des sauvegardes et souhaitez mettre vos compétences au service d'un environnement de production exigeant ?<br><br>Dans le cadre du renforcemen",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 2
+  },
   {
    "date": "2026-10-31",
    "source": "FW ISO 27001",
