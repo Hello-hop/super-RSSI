@@ -1,7 +1,19 @@
 {
- "scan": "2026-11-01T15:34:58+00:00",
+ "scan": "2026-11-02T08:49:08+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-02",
+   "source": "LI RSSI Toulouse",
+   "titre": "Responsable IT & Cybersécurité - PME Editrice de logiciel - F/H",
+   "lien": "https://fr.linkedin.com/jobs/view/responsable-it-cybers%C3%A9curit%C3%A9-pme-editrice-de-logiciel-f-h-at-forsk-4483436445",
+   "entreprise": "Forsk",
+   "extrait": "Forsk — Toulouse — <p><strong>Qui sommes-nous ?</strong></p><p>Editeur de logiciel indépendant, basé à Toulouse, Chicago-USA et Canton-Chine, Forsk est leader sur le marché du radio planning et de l’",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 3
+  },
   {
    "date": "2026-11-01",
    "source": "LI RSSI Toulouse",
