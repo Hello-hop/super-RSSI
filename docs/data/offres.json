@@ -1,7 +1,19 @@
 {
- "scan": "2026-11-03T08:58:47+00:00",
+ "scan": "2026-11-03T16:43:32+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-03",
+   "source": "LI ISO 27001 France",
+   "titre": "Lead Consultant Sécurité des paiements H/F",
+   "lien": "https://fr.linkedin.com/jobs/view/lead-consultant-s%C3%A9curit%C3%A9-des-paiements-h-f-at-cnpp-4481699657",
+   "entreprise": "Groupe CNPP",
+   "extrait": "Groupe CNPP — Clichy · 90k€/an — Groupe CNPP est un acteur international de référence en prévention et maîtrise des risques.<br>Forts de la diversité de ses métiers, CNPP propose des solutions globales en cyberséc",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": true,
+   "score": 4
+  },
   {
    "date": "2026-11-02",
    "source": "FW ISO 27001",
