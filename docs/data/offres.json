@@ -1,7 +1,19 @@
 {
- "scan": "2026-11-04T08:32:45+00:00",
+ "scan": "2026-11-04T16:40:53+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-04",
+   "source": "FW ISO 27001",
+   "titre": "Responsable Architecture Sécurité & Cyber Engineering (H/F) - CDI",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant-en-architecture/responsable-architecture-securite-cyber-engineering-h-f-cdi",
+   "entreprise": "",
+   "extrait": "Dès que possible · > 10 ans d’expérience · Télétravail partiel · La Défense, Île-de-France — Je recherche un Responsable Architecture Sécurité & Cyber Engineering pour un poste en CDI au sein d'un cabinet de conseil basé à La Défense. Rattaché au Directeur Cyb",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 3
+  },
   {
    "date": "2026-11-04",
    "source": "FW ISO 27001",
