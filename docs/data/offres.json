@@ -1,7 +1,31 @@
 {
- "scan": "2026-11-03T16:43:32+00:00",
+ "scan": "2026-11-04T08:32:45+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-04",
+   "source": "FW ISO 27001",
+   "titre": "Information Security Manager with Network Engineering Skills",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/administrateur-reseaux/information-security-manager-with-network-engineering-skills-4",
+   "entreprise": "",
+   "extrait": "Dès que possible · £85k-100k⁄an · 5 à 10 ans d’expérience · Télétravail partiel · London Borough of Islington, Royaume-Uni — Information Security Manager with Network Engineering Skills Our Client is a bank based in Central London who are looking to recruit a ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-11-04",
+   "source": "LI RSSI Toulouse",
+   "titre": "Moniteur d’atelier (H/F) – CDI – Colomiers (31)",
+   "lien": "https://fr.linkedin.com/jobs/view/consultant-e-seo-h-f-toulouse-at-pixalione-seo-paid-ia-data-cro-4474309498",
+   "entreprise": "PIXALIONE | SEO, PAID, IA, DATA &amp; CRO",
+   "extrait": "PIXALIONE | SEO, PAID, IA, DATA &amp; CRO — Toulouse — Pixalione est une agence digitale spécialisée en SEO et marketing digital, accompagnant des clients de tous secteurs, de PME aux groupes du CAC40, en France et à l’international. N",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 3
+  },
   {
    "date": "2026-11-03",
    "source": "LI ISO 27001 France",
