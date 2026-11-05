@@ -1,7 +1,19 @@
 {
- "scan": "2026-11-05T08:55:39+00:00",
+ "scan": "2026-11-05T16:56:43+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-05",
+   "source": "FW Cyber Toulouse",
+   "titre": "Product Owner Sécurité IT",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/product-owner/product-owner-securite-it",
+   "entreprise": "",
+   "extrait": "Dès que possible · 1 an renouvelable · 40k-45k €⁄an, 400-550 €⁄j · 2 à 5 ans d’expérience · Toulouse, Occitanie — Titre : Product Owner Sécurité IT – Toulouse (H/F) – Habilitation Secret Localisation : Toulouse, 100 % sur site, sans télétravail Démarrage : [à ",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": true,
+   "score": 2
+  },
   {
    "date": "2026-11-05",
    "source": "FW ISO 27001",
