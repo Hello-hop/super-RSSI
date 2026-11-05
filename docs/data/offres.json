@@ -1,7 +1,19 @@
 {
- "scan": "2026-11-04T16:40:53+00:00",
+ "scan": "2026-11-05T08:55:39+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-05",
+   "source": "FW ISO 27001",
+   "titre": "Architecte Data Anonymisation & Test Data Management - Bruxelles",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/project-management-officer/architecte-data-anonymisation-test-data-management-bruxelles",
+   "entreprise": "EMGS GROUP",
+   "extrait": "EMGS GROUP — 30/11/2026 · 6 mois · 600-700 €⁄j · 5 à 10 ans d’expérience · Télétravail partiel · Bruxelles, Bruxelles-Capitale, Belgique — Dans le cadre d'un projet de structuration et de sécurisation des environnements de test, nous recherchons un Architecte ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 3
+  },
   {
    "date": "2026-11-04",
    "source": "FW ISO 27001",
