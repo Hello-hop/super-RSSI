@@ -1,7 +1,19 @@
 {
- "scan": "2026-11-05T16:56:43+00:00",
+ "scan": "2026-11-06T08:54:53+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-06",
+   "source": "LI RSSI Toulouse",
+   "titre": "Comptable",
+   "lien": "https://fr.linkedin.com/jobs/view/comptable-at-cabinet-ressource-experts-4485458604",
+   "entreprise": "Cabinet Ressource Experts",
+   "extrait": "Cabinet Ressource Experts — Toulouse · 38k€/an — <p><strong>Collaborateur Comptable Spécialisé BNC H/F</strong></p><p><br></p><p><strong>Les missions du poste</strong></p><p><br></p><p><strong>Vous êtes un(e) collaborateur(trice)",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 1
+  },
   {
    "date": "2026-11-05",
    "source": "FW Cyber Toulouse",
