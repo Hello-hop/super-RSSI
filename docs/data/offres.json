@@ -1,7 +1,19 @@
 {
- "scan": "2026-11-06T16:28:54+00:00",
+ "scan": "2026-11-07T08:15:09+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-07",
+   "source": "LI Sécurité applicative remote",
+   "titre": "Ingénieur Cybersécurité Applicative - Analyse & Remédiation",
+   "lien": "https://fr.linkedin.com/jobs/view/ing%C3%A9nieur-cybers%C3%A9curit%C3%A9-applicative-analyse-rem%C3%A9diation-at-weeneo-consulting-4485853877",
+   "entreprise": "WEENEO Consulting",
+   "extrait": "WEENEO Consulting — Ramonville-Saint-Agne — Weeneo Consulting recherche un ingénieur cybersécurité spécialisé en sécurité applicative pour analyser et sécuriser des composants logiciels, garantir la conformité et limiter les",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 5
+  },
   {
    "date": "2026-11-06",
    "source": "FW ISO 27001",
