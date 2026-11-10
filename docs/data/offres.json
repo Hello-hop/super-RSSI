@@ -1,9 +1,43 @@
 {
- "scan": "2026-11-10T09:09:55+00:00",
- "incidents": [
-  "LI GRC remote : HTTP Error 429: Too Many Requests"
- ],
+ "scan": "2026-11-10T16:40:45+00:00",
+ "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-10",
+   "source": "FW ISO 27001",
+   "titre": "Assistant RSSI Cybersécurité & Sécurité des SI (H/F)",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant-cyber-securite/assistant-rssi-cybersecurite-securite-des-si-h-f",
+   "entreprise": "",
+   "extrait": "Dès que possible · 3 ans · 5 à 10 ans d’expérience · Télétravail partiel · Île-de-France, France — Rejoignez-nous ! Nous recherchons un(e) Assistant(e) RSSI - Cybersécurité pour accompagner les directions métiers dans la maîtrise de leurs risques liés à la séc",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
+  {
+   "date": "2026-11-10",
+   "source": "FW Sécu Toulouse",
+   "titre": "Ingénieur SSI H/F",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/ingenieur-apres-vente/ingenieur-ssi-h-f-34",
+   "entreprise": "Insitoo Freelances",
+   "extrait": "Insitoo Freelances — Dès que possible · 2 ans · 410-420 €⁄j · 5 à 10 ans d’expérience · Toulouse, Occitanie — Basée à Lille, Lyon, Nantes, Grenoble, Marseille, Paris et Bruxelles, Insitoo Freelances est une société du groupe Insitoo, spécialisée dans le placem",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 4
+  },
+  {
+   "date": "2026-11-10",
+   "source": "FW Sécu Toulouse",
+   "titre": "Consultant sécurité projet H/F",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/administrateur-securite/consultant-securite-projet-h-f",
+   "entreprise": "",
+   "extrait": "Dès que possible · 45k-50k €⁄an · 2 à 5 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — Contrat : Salarié (Toulouse) ou Freelance (sur Rennes) 📍 Toulouse ou Rennes | Mission longue durée Salaire entre 45k à 50k brut TJM : 450€ max Télétravail : ",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 4
+  },
   {
    "date": "2026-11-10",
    "source": "LI ISO 27001 France",
