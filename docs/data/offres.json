@@ -1,7 +1,19 @@
 {
- "scan": "2026-11-11T08:48:13+00:00",
+ "scan": "2026-11-11T16:46:15+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-11",
+   "source": "FW ISO 27001",
+   "titre": "Expert en Gouvernance de la Sécurité de l’Information",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/administrateur-securite/expert-en-gouvernance-de-la-securite-de-linformation",
+   "entreprise": "WIKEYS",
+   "extrait": "WIKEYS — Dès que possible · 12 mois renouvelable · 700 €⁄j · 5 à 10 ans d’expérience · Télétravail partiel · Bruxelles, Bruxelles-Capitale, Belgique — Régime : Temps partiel – 3/5 Contexte de la mission Dans le cadre du renforcement de La fonction de sécurité ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 5
+  },
   {
    "date": "2026-11-11",
    "source": "FW ISO 27001",
