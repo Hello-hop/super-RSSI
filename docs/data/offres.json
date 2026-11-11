@@ -1,7 +1,31 @@
 {
- "scan": "2026-11-10T16:40:45+00:00",
+ "scan": "2026-11-11T08:48:13+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-11",
+   "source": "FW ISO 27001",
+   "titre": "IT Risk & Control Governance Specialist H/F",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/autre/it-risk-control-governance-specialist-h-f",
+   "entreprise": "",
+   "extrait": "03/01/2027 · 9 mois · 5 à 10 ans d’expérience · Télétravail partiel · Bruxelles, Bruxelles-Capitale, Belgique — Bruxelles, Belgique | Contrat 9 mois | Hybride (8 jours/mois sur site) | Démarrage janvier 2027 Contexte Rejoignez un acteur international majeur de",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-11-11",
+   "source": "FW Cyber Toulouse",
+   "titre": "Consultant Sécurité Data – SSPM (SaaS Security Posture Management)",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/project-management-officer/consultant-securite-data-sspm-saas-security-posture-management",
+   "entreprise": "Deodis",
+   "extrait": "Deodis — Dès que possible · 12 mois renouvelable · 500-520 €⁄j · 5 à 10 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — Mission sur site à Toulouse, 2/3 jours de télétravail / semaine Accompagnement, expertise technique, tests et déploiement d'u",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 2
+  },
   {
    "date": "2026-11-10",
    "source": "FW ISO 27001",
