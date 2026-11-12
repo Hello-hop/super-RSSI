@@ -1,7 +1,19 @@
 {
- "scan": "2026-11-11T16:46:15+00:00",
+ "scan": "2026-11-12T09:11:38+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-12",
+   "source": "LI GRC remote",
+   "titre": "Leader Gouvernance Cybersécurité — Stratégie & Conseil",
+   "lien": "https://fr.linkedin.com/jobs/view/leader-gouvernance-cybers%C3%A9curit%C3%A9-%E2%80%94-strat%C3%A9gie-conseil-at-wlf-4487410053",
+   "entreprise": "WLF",
+   "extrait": "WLF — Paris — En tant que<br><br>Manager Gouvernance Cybersécurité H/F,<br><br>selon votre expertise et le contexte de la mission, vos principales activités<br><br><strong>Auprès De Nos Clients ",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 4
+  },
   {
    "date": "2026-11-11",
    "source": "FW ISO 27001",
