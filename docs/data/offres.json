@@ -1,7 +1,19 @@
 {
- "scan": "2026-11-13T09:01:22+00:00",
+ "scan": "2026-11-13T16:52:09+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-13",
+   "source": "FW ISO 27001",
+   "titre": "Consultant TPTRM X2",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant/consultant-tptrm-x2",
+   "entreprise": "LeHibou",
+   "extrait": "LeHibou — 22/11/2026 · 36 mois · 550 €⁄j · 5 à 10 ans d’expérience · Télétravail partiel · Nanterre, Île-de-France — Notre client dans le secteur Assurance recherche un/une Consultant TPTRM X2 H/F Description de la mission : Consultant TPTRM TPTRM : Third-Part",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": true,
+   "score": 5
+  },
   {
    "date": "2026-11-13",
    "source": "LI RSSI Toulouse",
