@@ -1,7 +1,19 @@
 {
- "scan": "2026-11-12T17:13:49+00:00",
+ "scan": "2026-11-13T09:01:22+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-13",
+   "source": "LI RSSI Toulouse",
+   "titre": "ADMINISTRATEUR SAUVEGARDE & RESTAURATION XP bancaire",
+   "lien": "https://fr.linkedin.com/jobs/view/administrateur-sauvegarde-restauration-xp-bancaire-at-free-work-4488592581",
+   "entreprise": "Free-Work",
+   "extrait": "Free-Work — Toulouse · 49k€/an — groupe bancaire à toulouse<br><br>Dans le cadre du renforcement de ses équipes infrastructures et production IT, notre client du secteur bancaire recherche un Administrateur Sauveg",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 3
+  },
   {
    "date": "2026-11-12",
    "source": "LI GRC remote",
