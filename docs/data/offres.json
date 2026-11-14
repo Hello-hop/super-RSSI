@@ -1,7 +1,19 @@
 {
- "scan": "2026-11-13T16:52:09+00:00",
+ "scan": "2026-11-14T08:30:33+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-14",
+   "source": "LI AppSec remote",
+   "titre": "Analyste VOC – Sécurité Applicative & DevSecOps",
+   "lien": "https://fr.linkedin.com/jobs/view/analyste-voc-%E2%80%93-s%C3%A9curit%C3%A9-applicative-devsecops-at-act-digital-emea-alter-solutions-4488998326",
+   "entreprise": "act digital EMEA - Alter Solutions",
+   "extrait": "act digital EMEA - Alter Solutions — Versailles — act digital est un groupe international de conseil et d'ingénierie qui accompagne ses clients dans leurs projets de transformation numérique.<br><br>Présent dans 12 pays et fort de",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 5
+  },
   {
    "date": "2026-11-13",
    "source": "FW ISO 27001",
