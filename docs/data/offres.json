@@ -1,7 +1,19 @@
 {
- "scan": "2026-11-14T08:30:33+00:00",
+ "scan": "2026-11-14T15:25:36+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-14",
+   "source": "FW ISO 27001",
+   "titre": "Architecture de cybersécurité",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant-en-architecture/architecture-de-cybersecurite",
+   "entreprise": "",
+   "extrait": "Dès que possible · 1 an renouvelable · 40k-45k €⁄an, 600-750 €⁄j · 5 à 10 ans d’expérience · Télétravail partiel · Paris, Île-de-France — Je suis à la recherche pour un de nos clients d'un Architecture de cybersécurité. Les missions sont les suivantes : Accomp",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 3
+  },
   {
    "date": "2026-11-14",
    "source": "LI AppSec remote",
