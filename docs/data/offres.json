@@ -1,7 +1,19 @@
 {
- "scan": "2026-11-16T08:57:24+00:00",
+ "scan": "2026-11-16T19:02:31+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-16",
+   "source": "FW Cyber Toulouse",
+   "titre": "Expert DLP (Data Loss Prevention) – Cybersécurité",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant-cyber-securite/expert-dlp-data-loss-prevention-cybersecurite-h-f",
+   "entreprise": "HC",
+   "extrait": "HC — Dès que possible · 12 mois renouvelable · 530 €⁄j · Toulouse, Occitanie — Dans le cadre d'un projet de renforcement de la sécurité des données, nous recherchons un Expert DLP afin d'accompagner une équipe spécialisée dans la protection des informations s",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 1
+  },
   {
    "date": "2026-11-14",
    "source": "FW ISO 27001",
