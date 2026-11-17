@@ -1,7 +1,43 @@
 {
- "scan": "2026-11-17T10:05:18+00:00",
+ "scan": "2026-11-17T17:59:14+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-17",
+   "source": "FW Cyber Toulouse",
+   "titre": "Directeur de projet cybersécurité",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant-cyber-securite/directeur-de-projet-cybersecurite-4",
+   "entreprise": "Deodis",
+   "extrait": "Deodis — 20/12/2026 · 24 mois · 530-570 €⁄j · 5 à 10 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — Le département de protection de la donnée recherche un chef de projet sécurité de formation ingénieur ou équivalente pour l'accompagner dans le ",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": true,
+   "score": 2
+  },
+  {
+   "date": "2026-11-17",
+   "source": "FW Cyber Toulouse",
+   "titre": "Expert DLP / Data Leak Prevention – Cybersécurité",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant-cyber-securite/expert-dlp-data-leak-prevention-cybersecurite-h-f",
+   "entreprise": "Freelance.com",
+   "extrait": "Freelance.com — Dès que possible · 1 an renouvelable · 400-500 €⁄j · 5 à 10 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — Dans le cadre d'un projet stratégique de renforcement de la protection des données sensibles, nous recherchons un Expert ",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 3
+  },
+  {
+   "date": "2026-11-17",
+   "source": "LI RSSI Toulouse",
+   "titre": "Architecte Protection et Contrôle-Commande Numérique",
+   "lien": "https://fr.linkedin.com/jobs/view/auditeur-si-it-senior-toulouse-2026-h-f-at-forvis-mazars-en-france-4488392333",
+   "entreprise": "Forvis Mazars en France",
+   "extrait": "Forvis Mazars en France — Toulouse — Votre poste<br><br>Forvis Mazars est un groupe international d'audit, de fiscalité et de conseil. Avec + de 40 000 collaborateurs présents dans une centaine de pays, nous faisons p",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 3
+  },
   {
    "date": "2026-11-17",
    "source": "LI RSSI Toulouse",
