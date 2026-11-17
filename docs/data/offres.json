@@ -1,7 +1,19 @@
 {
- "scan": "2026-11-16T19:02:31+00:00",
+ "scan": "2026-11-17T10:05:18+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-17",
+   "source": "LI RSSI Toulouse",
+   "titre": "RWE Biostatistician",
+   "lien": "https://fr.linkedin.com/jobs/view/rwe-biostatistician-at-resilience-care-4484704040",
+   "entreprise": "Resilience Care",
+   "extrait": "Resilience Care · Toulouse",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 1
+  },
   {
    "date": "2026-11-16",
    "source": "FW Cyber Toulouse",
