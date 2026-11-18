@@ -1,7 +1,43 @@
 {
- "scan": "2026-11-17T17:59:14+00:00",
+ "scan": "2026-11-18T09:41:29+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-18",
+   "source": "FW ISO 27001",
+   "titre": "Offre d'emploi",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant/consultant-senior-en-cyber-conformite-f-h-cdi-cdi-f-h",
+   "entreprise": "",
+   "extrait": "",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 0
+  },
+  {
+   "date": "2026-11-18",
+   "source": "LI GRC Toulouse",
+   "titre": "Senior Cyber & IT Risk Analyst (H/F)",
+   "lien": "https://fr.linkedin.com/jobs/view/senior-cyber-it-risk-analyst-h-f-at-estreem-4492000304",
+   "entreprise": "Estreem",
+   "extrait": "Estreem — Toulouse — <p><strong>Estreem :</strong> la nouvelle référence du processing de paiements en Europe</p><p><br></p><p>Née d’un partenariat stratégique entre deux grands groupes bancaires franç",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-11-18",
+   "source": "LI AppSec remote",
+   "titre": "Ingénieur Sécurité Applicative DevSecOps Senior",
+   "lien": "https://fr.linkedin.com/jobs/view/ing%C3%A9nieur-s%C3%A9curit%C3%A9-applicative-devsecops-senior-at-canopee-group-4491742641",
+   "entreprise": "Canopee",
+   "extrait": "Canopee — Paris — Ingénieur Sécurité Applicative DevSecOps Senior (H/F) – Île-de-France<br><br>Dans le cadre d'une mission auprès de l'un de nos clients, une banque de financement et d'investissemen",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 5
+  },
   {
    "date": "2026-11-17",
    "source": "FW Cyber Toulouse",
