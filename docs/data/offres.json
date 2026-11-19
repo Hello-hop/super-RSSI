@@ -1,7 +1,19 @@
 {
- "scan": "2026-11-19T09:48:51+00:00",
+ "scan": "2026-11-19T17:50:45+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-19",
+   "source": "LI RSSI Toulouse",
+   "titre": "Functional Safety Manager",
+   "lien": "https://fr.linkedin.com/jobs/view/functional-safety-manager-at-rheso-tech-talent-advisory-4492400988",
+   "entreprise": "Rheso.Tech - Talent &amp; Advisory",
+   "extrait": "Rheso.Tech - Talent &amp; Advisory — Toulouse et périphérie — <p>Functional Safety Manager (H/F)</p><p><br></p><p><strong>Type de contrat :</strong> CDI</p><p><strong>Lieu :</strong> Toulouse (31)</p><p><strong>Référence :</strong> 2438</p><p",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 2
+  },
   {
    "date": "2026-11-19",
    "source": "LI GRC remote",
