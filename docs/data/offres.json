@@ -1,7 +1,19 @@
 {
- "scan": "2026-11-18T17:41:19+00:00",
+ "scan": "2026-11-19T09:48:51+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-19",
+   "source": "LI GRC remote",
+   "titre": "Analyste Cybersécurité GRC (H/F) - CDI",
+   "lien": "https://fr.linkedin.com/jobs/view/analyste-cybers%C3%A9curit%C3%A9-grc-h-f-cdi-at-free-work-4491367521",
+   "entreprise": "Free-Work",
+   "extrait": "Free-Work — Courbevoie — Je recherche un <strong>Analyste Cybersécurité GRC (Governance, Risk &amp; Compliance)</strong> pour un poste en <strong>CDI</strong> au sein d'un cabinet de conseil.<br><br>Les mi",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 3
+  },
   {
    "date": "2026-11-18",
    "source": "FW ISO 27001",
