@@ -1,7 +1,21 @@
 {
- "scan": "2026-11-19T17:50:45+00:00",
- "incidents": [],
+ "scan": "2026-11-20T09:37:38+00:00",
+ "incidents": [
+  "LI RSSI Toulouse : HTTP Error 429: Too Many Requests"
+ ],
  "offres": [
+  {
+   "date": "2026-11-20",
+   "source": "FW Sécu Toulouse",
+   "titre": "Expert Sécurité des Données & SSPM (SaaS Security",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/project-management-officer/expert-securite-des-donnees-sspm-saas-security-posture-management-h-f",
+   "entreprise": "Insitoo Freelances",
+   "extrait": "Insitoo Freelances — Dès que possible · 2 ans · 450-580 €⁄j · 5 à 10 ans d’expérience · Toulouse, Occitanie — Basée à Lille, Lyon, Nantes, Grenoble, Marseille, Paris et Bruxelles, Insitoo Freelances est une société du groupe Insitoo, spécialisée dans le placem",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": true,
+   "score": 2
+  },
   {
    "date": "2026-11-19",
    "source": "LI RSSI Toulouse",
