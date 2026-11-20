@@ -1,9 +1,31 @@
 {
- "scan": "2026-11-20T09:37:38+00:00",
- "incidents": [
-  "LI RSSI Toulouse : HTTP Error 429: Too Many Requests"
- ],
+ "scan": "2026-11-20T17:27:38+00:00",
+ "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-20",
+   "source": "LI GRC remote",
+   "titre": "Consultant Cybersécurité GRC (H/F)",
+   "lien": "https://fr.linkedin.com/jobs/view/consultant-cybers%C3%A9curit%C3%A9-grc-h-f-at-cheops-technology-4483553167",
+   "entreprise": "CHEOPS TECHNOLOGY",
+   "extrait": "CHEOPS TECHNOLOGY · Boulogne-Billancourt",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 1
+  },
+  {
+   "date": "2026-11-20",
+   "source": "LI Sécurité applicative remote",
+   "titre": "Analyste VOC, Sécurité applicative & DevSecOps (H/F)",
+   "lien": "https://fr.linkedin.com/jobs/view/analyste-voc-s%C3%A9curit%C3%A9-applicative-devsecops-h-f-at-free-work-4491954024",
+   "entreprise": "Free-Work",
+   "extrait": "Free-Work · Meudon",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 5
+  },
   {
    "date": "2026-11-20",
    "source": "FW Sécu Toulouse",
