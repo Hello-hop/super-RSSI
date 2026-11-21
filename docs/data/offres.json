@@ -1,6 +1,8 @@
 {
- "scan": "2026-11-20T17:27:38+00:00",
- "incidents": [],
+ "scan": "2026-11-21T09:09:15+00:00",
+ "incidents": [
+  "LI GRC remote : HTTP Error 429: Too Many Requests"
+ ],
  "offres": [
   {
    "date": "2026-11-20",
