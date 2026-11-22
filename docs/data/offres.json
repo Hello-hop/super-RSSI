@@ -1,6 +1,8 @@
 {
- "scan": "2026-11-21T16:29:53+00:00",
- "incidents": [],
+ "scan": "2026-11-22T09:17:24+00:00",
+ "incidents": [
+  "LI GRC Toulouse : HTTP Error 429: Too Many Requests"
+ ],
  "offres": [
   {
    "date": "2026-11-20",
