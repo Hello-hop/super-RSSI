@@ -1,7 +1,21 @@
 {
- "scan": "2026-11-22T16:47:14+00:00",
- "incidents": [],
+ "scan": "2026-11-23T10:14:03+00:00",
+ "incidents": [
+  "LI GRC Toulouse : HTTP Error 429: Too Many Requests"
+ ],
  "offres": [
+  {
+   "date": "2026-11-23",
+   "source": "FW ISO 27001",
+   "titre": "Consultant PCA/PRA – Résilience opérationnelle et conformité DORA",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant/consultant-pca-pra-resilience-operationnelle-et-conformite-dora",
+   "entreprise": "",
+   "extrait": "Dès que possible · 1 an renouvelable · 5 à 10 ans d’expérience · Charenton-le-Pont, Île-de-France — Dans un environnement de paiement fortement exposé aux enjeux de disponibilité, de résilience opérationnelle et de conformité réglementaire, vous interviendrez ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
   {
    "date": "2026-11-20",
    "source": "LI GRC remote",
