@@ -1,7 +1,31 @@
 {
- "scan": "2026-11-24T11:57:57+00:00",
+ "scan": "2026-11-24T19:48:20+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-24",
+   "source": "LI RSSI Toulouse",
+   "titre": "Référent technique adjoint de direction rsai (H/F) – CDI – Beaumont de Lomagne (82)",
+   "lien": "https://fr.linkedin.com/jobs/view/r%C3%A9f%C3%A9rent-technique-adjoint-de-direction-rsai-h-f-%E2%80%93-cdi-%E2%80%93-beaumont-de-lomagne-82-at-ifrass-4494386335",
+   "entreprise": "IFRASS",
+   "extrait": "IFRASS — Beaumont-de-Lomagne — Titre du poste: référent technique adjoint de direction rsai<br><br>Type: CDI<br><br>Nom de l’organisme: FAMILLES RURALES TARN ET GARONNE SERVICES<br><br>Lieu: BEAUMONT DE LOMAGNE<",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 1
+  },
+  {
+   "date": "2026-11-24",
+   "source": "LI Sécurité applicative remote",
+   "titre": "Security Engineer - ALSL",
+   "lien": "https://fr.linkedin.com/jobs/view/security-engineer-alsl-at-free-work-4493024807",
+   "entreprise": "Free-Work",
+   "extrait": "Free-Work — Paris · 80k€/an — Vous êtes le partenaire sécurité des équipes produit d’un éditeur SaaS d’environ 200 personnes, rattaché à l’Engineering.<br><br>Vous portez la revue de sécurité des projets, de la",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": true,
+   "score": 4
+  },
   {
    "date": "2026-11-24",
    "source": "LI AppSec remote",
