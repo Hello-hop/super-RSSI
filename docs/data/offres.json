@@ -1,7 +1,19 @@
 {
- "scan": "2026-11-23T20:42:31+00:00",
+ "scan": "2026-11-24T11:57:57+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-24",
+   "source": "LI AppSec remote",
+   "titre": "Senior Application Security Engineer",
+   "lien": "https://fr.linkedin.com/jobs/view/senior-application-security-engineer-at-pennylane-4488421124",
+   "entreprise": "Pennylane",
+   "extrait": "Pennylane — Ville de Paris — Are you looking to have an impact on the daily life of millions of entrepreneurs in France (and tomorrow in Europe)?<br><br>Are you looking for a work environment that values trust",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 5
+  },
   {
    "date": "2026-11-23",
    "source": "FW ISO 27001",
