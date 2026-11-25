@@ -1,9 +1,55 @@
 {
- "scan": "2026-11-25T10:51:10+00:00",
- "incidents": [
-  "LI ISO 27001 France : HTTP Error 429: Too Many Requests"
- ],
+ "scan": "2026-11-25T18:54:37+00:00",
+ "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-25",
+   "source": "FW ISO 27001",
+   "titre": "RSSI Expert ISO 27001",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/expert-seo-consultant-referencement/rssi-expert-iso-27001-h-f",
+   "entreprise": "",
+   "extrait": "Dès que possible · 6 mois renouvelable · > 10 ans d’expérience · Seine-Saint-Denis, France — Notre client, acteur d'un secteur de l'énergie, recherche un RSSI Expert ISO 27001 (H/F) afin de structurer sa gouvernance cybersécurité et de piloter une démarche de ",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-11-25",
+   "source": "FW ISO 27001",
+   "titre": "Consultant GRC – analyse de risques ISO 27005",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant/consultant-grc-analyse-de-risques-iso-27005",
+   "entreprise": "",
+   "extrait": "Dès que possible · 3 mois renouvelable · 5 à 10 ans d’expérience · Télétravail partiel · Paris, Île-de-France — I. Contexte : Dans le cadre du renouvellement de sa certification ISO 27001, UltraEdge souhaite étendre son périmètre certifié de 6 à 8 centres de d",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-11-25",
+   "source": "FW Sécu Toulouse",
+   "titre": "Expert OpenShift – Sécurité Réseau (H/F) – Toulouse",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/administrateur-securite/expert-openshift-securite-reseau-h-f-toulouse",
+   "entreprise": "",
+   "extrait": "Dès que possible · 24 mois · 40k-45k €⁄an, 470-520 €⁄j · 5 à 10 ans d’expérience · Télétravail partiel · Toulouse, Occitanie — Recherche Expert OpenShift – Sécurité Réseau (H/F) – Toulouse Dans le cadre d'une mission longue durée nous cherchons un Expert OpenS",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": false,
+   "score": 2
+  },
+  {
+   "date": "2026-11-25",
+   "source": "LI RSSI Toulouse",
+   "titre": "IT Manager",
+   "lien": "https://fr.linkedin.com/jobs/view/it-manager-at-roundtable-4494917910",
+   "entreprise": "Roundtable",
+   "extrait": "Roundtable — Toulouse — The role<p>We need someone who takes ownership of the IT and security side so the engineering team can focus on product. This is a hands-on role with real scope: device fleet, tool",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
   {
    "date": "2026-11-24",
    "source": "LI RSSI Toulouse",
