@@ -1,7 +1,55 @@
 {
- "scan": "2026-11-25T18:54:37+00:00",
+ "scan": "2026-11-26T10:24:15+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-26",
+   "source": "FW ISO 27001",
+   "titre": "Architecte SI & Gouvernance ISO 27001",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/architecte-de-base-de-donnees/architecte-si-gouvernance-iso-27001",
+   "entreprise": "",
+   "extrait": "Dès que possible · 12 mois · 5 à 10 ans d’expérience · Télétravail partiel · Loiret, France — Nous recherchons un (e) Architecte SI pour accompagner une DSI sur des sujets d'architecture d'entreprise, de gouvernance, de cartographie et de conformité. Vous inte",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": null,
+   "score": 4
+  },
+  {
+   "date": "2026-11-26",
+   "source": "FW ISO 27001",
+   "titre": "Consultant Senior Architecture SI & ISO 27001",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/consultant-en-architecture/consultant-senior-architecture-si-iso-27001-h-f",
+   "entreprise": "CAT-AMANIA",
+   "extrait": "CAT-AMANIA — 03/01/2027 · 3 mois renouvelable · 700-750 €⁄j · > 10 ans d’expérience · Télétravail partiel · Montargis, Centre-Val de Loire — Contexte de la mission Dans le cadre du renforcement de la gouvernance de son système d'information et de ses travaux d",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 5
+  },
+  {
+   "date": "2026-11-26",
+   "source": "FW ISO 27001",
+   "titre": "Ingénieur CYBERSECURITE RSSI senior 520 e par j",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/ingenieur-en-cyber-securite/ingenieur-cybersecurite-rssi-senior-520-e-par-j",
+   "entreprise": "BI SOLUTIONS",
+   "extrait": "BI SOLUTIONS — Dès que possible · 2 ans renouvelable · 400-520 €⁄j · > 10 ans d’expérience · Télétravail partiel · Île-de-France, France — Ingénieur CYBERSECURITE RSSI senior 520 e par j Évaluer la sécurité et estimer les risques d'une solution ou d'une foncti",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": false,
+   "score": 3
+  },
+  {
+   "date": "2026-11-26",
+   "source": "LI RSSI Toulouse",
+   "titre": "Auditeur des Systèmes d'information Junior - Toulouse - Janvier 2027 (H/F)",
+   "lien": "https://fr.linkedin.com/jobs/view/auditeur-des-syst%C3%A8mes-d-information-junior-toulouse-janvier-2027-h-f-at-forvis-mazars-en-france-4494935327",
+   "entreprise": "Forvis Mazars en France",
+   "extrait": "Forvis Mazars en France — Toulouse — Votre poste<br><br>Forvis Mazars est un groupe international et intégré spécialisé dans l’audit, la fiscalité et le conseil ainsi que dans les services comptables et juridiques*. P",
+   "toulouse": true,
+   "remote": false,
+   "remuneration": null,
+   "score": 3
+  },
   {
    "date": "2026-11-25",
    "source": "FW ISO 27001",
