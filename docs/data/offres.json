@@ -1,7 +1,31 @@
 {
- "scan": "2026-11-26T10:24:15+00:00",
+ "scan": "2026-11-26T18:44:25+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-26",
+   "source": "FW ISO 27001",
+   "titre": "Architecte d'Entreprise / Urbaniste SI, gouvernance et conformité ISO 27001",
+   "lien": "https://www.free-work.com/fr/tech-it/job-mission/architecte-dentreprise-urbaniste-si/architecte-d-entreprise-urbaniste-si-gouvernance-et-conformite-iso-27001",
+   "entreprise": "BEEZEN",
+   "extrait": "BEEZEN — 03/01/2027 · 12 mois · 700-750 €⁄j · > 10 ans d’expérience · Télétravail partiel · Montargis, Centre-Val de Loire — Je recherche un A rchitecte d'Entreprise / Urbaniste SI , gouvernance et conformité ISO 27001 sur Montargis (45) Contexte Dans le cadre",
+   "toulouse": false,
+   "remote": false,
+   "remuneration": true,
+   "score": 5
+  },
+  {
+   "date": "2026-11-26",
+   "source": "LI AppSec remote",
+   "titre": "Ingénieur Sécurité Applicative Senior (H/F) - (GAQ)",
+   "lien": "https://fr.linkedin.com/jobs/view/ing%C3%A9nieur-s%C3%A9curit%C3%A9-applicative-senior-h-f-gaq-at-serma-safety-and-security-4493840046",
+   "entreprise": "SERMA Safety and Security",
+   "extrait": "SERMA Safety and Security — Île-de-France — <p><strong>📍 Localisation :</strong> (Île-de-France)</p><p> <strong>🏢 Entreprise : Serma Safety &amp; Security – BU (PSC)</strong></p><p><br></p><p><strong>À propos de nous</strong",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 5
+  },
   {
    "date": "2026-11-26",
    "source": "FW ISO 27001",
