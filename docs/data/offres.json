@@ -1,7 +1,19 @@
 {
- "scan": "2026-11-26T18:44:25+00:00",
+ "scan": "2026-11-27T10:29:39+00:00",
  "incidents": [],
  "offres": [
+  {
+   "date": "2026-11-27",
+   "source": "LI GRC remote",
+   "titre": "Consultant cybersécurité GRC H/F",
+   "lien": "https://fr.linkedin.com/jobs/view/consultant-cybers%C3%A9curit%C3%A9-grc-h-f-at-serma-safety-and-security-4104175237",
+   "entreprise": "SERMA Safety and Security",
+   "extrait": "SERMA Safety and Security — Paris et périphérie — <p><strong><u>Présentation de l'entreprise :</u></strong></p><p><br></p><p>SERMA Safety &amp; Security est l’entité du groupe SERMA dédiée à la cybersécurité. Groupe français indép",
+   "toulouse": false,
+   "remote": true,
+   "remuneration": null,
+   "score": 3
+  },
   {
    "date": "2026-11-26",
    "source": "FW ISO 27001",
